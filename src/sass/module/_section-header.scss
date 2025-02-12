@@ -1,0 +1,26 @@
+@use "global" as *;
+
+.section-header__entitle {
+  font-size: rem(32);
+  font-family: $en-font-family;
+  line-height: calc(40 / 32);
+  text-transform: capitalize;
+  @include mq(md){
+    font-size: rem(40);
+  }
+}
+
+.section-header__entitle::first-letter {
+  color: $ac-color;
+}
+
+.section-header__jatitle {
+  margin-top: rem(4);
+  font-size: rem(12);
+  color: $ac-color;
+  @include mq(md){
+    margin-top: rem(8);
+  }
+}
+
+
