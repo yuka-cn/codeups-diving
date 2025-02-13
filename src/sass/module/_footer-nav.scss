@@ -1,0 +1,69 @@
+@use "global" as *;
+
+.sp-nav {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background: $ac-color;
+  display: flex;
+  font-size: rem(16);
+  color: $white;
+}
+
+.sp-nav.is-active {
+  display: block;
+}
+
+.sp-nav__left,
+.sp-nav__right {
+  margin-top: rem(92);
+  width: 50%;
+}
+
+.sp-nav__left {
+  margin-left: calc(15px + rem(22));
+}
+
+.sp-nav__right {
+  margin-left: rem(22);
+}
+
+.sp-nav__items {
+  margin-top: rem(16);
+  display: flex;
+  flex-direction: column;
+}
+
+.sp-nav__items:first-child {
+  margin-top: 0;
+}
+
+.sp-nav__item:first-child {
+  position: relative;
+  font-weight: $bold;
+}
+
+.sp-nav__item:first-child::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: rem(-22);
+  transform: translateY(-50%);
+  width: rem(18);
+  height: rem(18);
+  background-image: url(../images/common/sp-nav.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.sp-nav__item a{
+  display: flex;
+  align-items: center;
+  padding: rem(12) 0;
+}
+
