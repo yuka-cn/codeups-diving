@@ -1,9 +1,9 @@
 
 @use "global" as *;
 
-.header-layout{
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+.footer-layout{
+  margin-top: rem(100);
+  @include mq(md){
+    margin-top: rem(160);
+  }
 }

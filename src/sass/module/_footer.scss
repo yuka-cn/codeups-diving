@@ -1,9 +1,65 @@
-
 @use "global" as *;
 
-.header-layout{
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+.footer {
+  padding: rem(48) 0 rem(56);
+  color: $white;
+  background: $ac-color;
+  @include mq(md) {
+    padding: rem(80) 0;
+  }
+}
+
+.footer__header {
+  @include mq(md) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.footer__logo {
+  max-width: rem(120);
+  width: 100%;
+  height: inherit;
+  @include mq(md) {
+    max-width: rem(200);
+  }
+}
+
+.footer__sns {
+  margin-top: rem(16);
+  @include mq(md) {
+    margin-top: initial;
+    margin-left: rem(40);
+  }
+}
+
+.footer__facebooklink,
+.footer__instagramlink {
+  display: inline-block;
+  max-width: rem(24);
+  width: 100%;
+  height: inherit;
+  @include mq(md) {
+    max-width: rem(32);
+  }
+}
+
+.footer__instagramlink {
+  margin-left: rem(16);
+  @include mq(md) {
+    margin-left: rem(19);
+  }
+}
+
+.footer__copyright {
+  margin-top: rem(40);
+  text-align: center;
+  font-family: $en-font-family;
+  white-space: nowrap;
+  width: 100%;
+  font-size: min(5vw, rem(12));
+  @include mq(md) {
+    margin-top: rem(80);
+    font-size: rem(14);
+  }
 }
