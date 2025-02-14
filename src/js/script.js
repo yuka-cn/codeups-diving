@@ -16,10 +16,10 @@ $(".js-hamburger").click(function () {
 
 //メインビューのスライダー
     let swiper = new Swiper(".js-mv-swiper", {
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,  // ユーザーの操作後も自動スライドが止まらないようにする
-      },
-      loop: true,
+      // autoplay: {
+      //   delay: 3000,
+      //   disableOnInteraction: false,  // ユーザーの操作後も自動スライドが止まらないようにする
+      // },
+      // loop: true,
     });
 });

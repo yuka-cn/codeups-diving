@@ -5,15 +5,36 @@
   display: inline-block;
   padding: rem(15) 0;
   background: $ac-color;
+  transition: color 0.8s cubic-bezier(0.45, 0, 0.55, 1);
+  box-sizing: border-box;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid $ac-color;
+  background: $white;
+  transform: scale(0, 1);
+  transform-origin: left;
+  transition: 0.8s cubic-bezier(0.45, 0, 0.55, 1);
+}
+
+.button:hover::before {
+  transform: scale(1, 1);
 }
 
 .button::after {
   content: "";
   position: absolute;
-  top: 4px;
-  left: 4px;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+  transform: translate(4px, 4px);
   border: 1px solid $ac-color;
   background: $white;
   z-index: -1;
@@ -29,7 +50,6 @@
   font-family: $en-font-family;
   line-height: 1;
   color: $white;
-  background: $ac-color;
 }
 
 .button__link::before {
@@ -54,3 +74,14 @@
   background: $white;
 }
 
+.button__link:hover{
+  color: $ac-color;
+}
+
+.button__link:hover::before{
+  border-top: 1px solid $ac-color;
+}
+
+.button__link:hover::after{
+  background: $ac-color;
+}
