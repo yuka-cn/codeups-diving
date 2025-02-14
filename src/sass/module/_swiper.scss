@@ -1,0 +1,40 @@
+@use "global" as *;
+
+.swiper {
+  width: 100%;
+  height: inherit;
+  // margin-left: calc(50% - 50vw);
+}
+
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 375 / 667;
+}
+
+.slide1 {
+  background-image: url(../images/common/mv-sp_1.jpg);
+  @include mq(md) {
+    background-image: url(../images/common/mv-pc_1.jpg);
+  }
+}
+
+.slide2 {
+  background-image: url(../images/common/mv-sp_2.jpg);
+  @include mq(md) {
+    background-image: url(../images/common/mv-pc_2.jpg);
+  }
+}
+.slide3 {
+  background-image: url(../images/common/mv-sp_3.jpg);
+  @include mq(md) {
+    background-image: url(../images/common/mv-pc_3.jpg);
+  }
+}
+.slide4 {
+  background-image: url(../images/common/mv-sp_4.jpg);
+  @include mq(md) {
+    background-image: url(../images/common/mv-pc_4.jpg);
+  }
+}

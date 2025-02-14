@@ -27,8 +27,13 @@
     />
     <!-- css -->
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <!-- JavaScript -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script defer src="./assets/js/script.js"></script>
   </head>
   <body>
@@ -155,6 +160,21 @@
     </header>
 
     <main>
+      <section class="mv">
+        <div class="mv__image swiper js-mv-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide slide1"></div>
+            <div class="swiper-slide slide2"></div>
+            <div class="swiper-slide slide3"></div>
+            <div class="swiper-slide slide4"></div>
+          </div>
+        </div>
+        <div class="mv__header">
+          <h2 class="mv__title">DIVING</h2>
+          <p class="mv__subtitle">into the ocean</p>
+        </div>
+      </section>
+
       <div class="section-header">
         <h2 class="section-header__entitle">campaign</h2>
         <p class="section-header__jatitle">キャンペーン</p>
@@ -224,8 +244,12 @@
             /></a>
           </div>
           <div class="footer__sns">
-            <a href="#" class="footer__facebooklink"><img src="../assets/images/common/facebook.png" alt="facebook"></a>
-            <a href="#" class="footer__instagramlink"><img src="../assets/images/common/instagram.png" alt=""></a>
+            <a href="#" class="footer__facebooklink"
+              ><img src="../assets/images/common/facebook.png" alt="facebook"
+            /></a>
+            <a href="#" class="footer__instagramlink"
+              ><img src="../assets/images/common/instagram.png" alt=""
+            /></a>
           </div>
         </div>
         <div class="footer__nav footer-nav">
@@ -234,8 +258,12 @@
               <ul class="footer-nav__items">
                 <li class="footer-nav__item"><a href="#">キャンペーン</a></li>
                 <li class="footer-nav__item"><a href="#">ライセンス取得</a></li>
-                <li class="footer-nav__item"><a href="#">貸切体験ダイビング</a></li>
-                <li class="footer-nav__item"><a href="#">ナイトダイビング</a></li>
+                <li class="footer-nav__item">
+                  <a href="#">貸切体験ダイビング</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="#">ナイトダイビング</a>
+                </li>
               </ul>
               <ul class="footer-nav__items">
                 <li class="footer-nav__item"><a href="#">私たちについて</a></li>
@@ -246,7 +274,9 @@
                 <li class="footer-nav__item"><a href="#">ダイビング情報</a></li>
                 <li class="footer-nav__item"><a href="#">ライセンス講習</a></li>
                 <li class="footer-nav__item"><a href="#">体験ダイビング</a></li>
-                <li class="footer-nav__item"><a href="#">ファンダイビング</a></li>
+                <li class="footer-nav__item">
+                  <a href="#">ファンダイビング</a>
+                </li>
               </ul>
               <ul class="footer-nav__items">
                 <li class="footer-nav__item"><a href="#">ブログ</a></li>
@@ -262,7 +292,9 @@
                 <li class="footer-nav__item"><a href="#">料金一覧</a></li>
                 <li class="footer-nav__item"><a href="#">ライセンス講習</a></li>
                 <li class="footer-nav__item"><a href="#">体験ダイビング</a></li>
-                <li class="footer-nav__item"><a href="#">ファンダイビング</a></li>
+                <li class="footer-nav__item">
+                  <a href="#">ファンダイビング</a>
+                </li>
               </ul>
             </div>
             <div class="footer-nav__block">
@@ -287,7 +319,9 @@
             </div>
           </div>
         </div>
-        <p class="footer__copyright">Copyright &copy; 2021 - 2023 CodeUps LLC. All Rights Reserved.</p>
+        <p class="footer__copyright">
+          Copyright &copy; 2021 - 2023 CodeUps LLC. All Rights Reserved.
+        </p>
       </div>
     </footer>
   </body>

@@ -4,6 +4,8 @@
   height: rem(80);
   background: rgba(13, 41, 54, 0.68);
   z-index: 1000;
+  position: fixed;
+  width: 100%;
   @include mq(md) {
     height: rem(90);
   }
