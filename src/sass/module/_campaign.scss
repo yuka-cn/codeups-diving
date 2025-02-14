@@ -1,0 +1,55 @@
+@use "global" as *;
+
+.campaign__inner {
+  position: relative;
+}
+
+.campaign__header {
+  text-align: center;
+}
+
+.campaign__cards {
+  margin-top: rem(24);
+  @include mq(md) {
+    margin-top: rem(40);
+  }
+}
+
+.campaign__card {
+  max-width: rem(280);
+  width: 100%;
+  @include mq(md) {
+    max-width: rem(333);
+  }
+}
+
+.campaign__next-button.swiper-button-next,
+.campaign__prev-button.swiper-button-prev {
+  display: none;
+  @include mq(md){
+display: block;  
+  position: absolute;
+  top: 0;
+  width: auto;
+  margin-top: 0;
+  }}
+
+.campaign__next-button.swiper-button-next {
+  right: 25px;
+}
+
+.campaign__prev-button.swiper-button-prev {
+  left: auto;
+  right: calc(25px + rem(160));
+}
+
+.campaign__next-button::after,
+.campaign__prev-button::after {
+  display: none;
+}
+
+.campaign__next-button img,
+.campaign__prev-button img {
+  max-width: rem(80);
+  width: 100%;
+}

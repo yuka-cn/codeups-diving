@@ -5,6 +5,41 @@
   height: 100vh;
 }
 
+.mv__slide {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 375 / 667;
+}
+
+.mv__slide:nth-child(1) {
+  background-image: url(../images/common/mv-sp_1.jpg);
+  @include mq(md) {
+    background-image: url(../images/common/mv-pc_1.jpg);
+  }
+}
+
+.mv__slide:nth-child(2) {
+  background-image: url(../images/common/mv-sp_2.jpg);
+  @include mq(md) {
+    background-image: url(../images/common/mv-pc_2.jpg);
+  }
+}
+
+.mv__slide:nth-child(3) {
+  background-image: url(../images/common/mv-sp_3.jpg);
+  @include mq(md) {
+    background-image: url(../images/common/mv-pc_3.jpg);
+  }
+}
+
+.mv__slide:nth-child(4) {
+  background-image: url(../images/common/mv-sp_4.jpg);
+  @include mq(md) {
+    background-image: url(../images/common/mv-pc_4.jpg);
+  }
+}
+
 .mv__header {
   position: absolute;
   top: 50%;
