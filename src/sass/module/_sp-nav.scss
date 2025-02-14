@@ -10,13 +10,16 @@
   height: 100vh;
   padding-top: rem(92);
   background: $ac-color;
-  display: flex;
   font-size: rem(16);
   color: $white;
 }
 
 .sp-nav.is-active {
   display: block;
+}
+
+.sp-nav__flex{
+  display: flex; //.sp-navに入れると、更新時にis-activeが表示されてしまう
 }
 
 .sp-nav__left,
