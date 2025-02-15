@@ -2,8 +2,11 @@
 
 .button {
   position: relative;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: rem(15) 0;
+  gap: rem(8);
   background: $ac-color;
   transition: color 0.8s cubic-bezier(0.45, 0, 0.55, 1);
   box-sizing: border-box;
@@ -41,47 +44,48 @@
 }
 
 .button__link {
-  position: relative;
   height: inherit;
-  padding-left: rem(40);
-  padding-right: rem(88);
-  text-align: center;
+  padding: 0 rem(40);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-size: rem(14);
   font-family: $en-font-family;
   line-height: 1;
   color: $white;
+  z-index: 1
 }
 
-.button__link::before {
+.button__link span {
   content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  right: 42px;
-  top: 50%;
-  transform: translateY(-40%) rotate(45deg);
-  border-top: 1px solid #fff;
-}
-
-.button__link::after {
-  content: "";
-  position: absolute;
+  position: relative;
   width: 40px;
   height: 1px;
-  right: 40px;
-  top: 54%;
-  transform: translateY(-40%);
+  margin-left: rem(8);
+  border-radius: 9999px;
   background: $white;
 }
 
-.button__link:hover{
+.button__link span::before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 2px);
+  right: 0;
+  width: 10px;
+  height: 1px;
+  border-radius: 9999px;
+  rotate: 45deg;
+  transform-origin: calc(100% - 2px) 50%;
+  background: $white;
+  margin-left: rem(8);
+}
+
+.button__link:hover {
   color: $ac-color;
 }
 
-.button__link:hover::before{
-  border-top: 1px solid $ac-color;
-}
-
-.button__link:hover::after{
+.button__link:hover span,
+.button__link:hover span::before {
   background: $ac-color;
 }
+
