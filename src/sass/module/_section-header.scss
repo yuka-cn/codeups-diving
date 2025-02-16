@@ -5,7 +5,6 @@
   font-family: $en-font-family;
   font-weight: $regular;
   line-height: calc(40 / 32);
-  text-transform: capitalize;
   @include mq(md) {
     font-size: rem(40);
   }
