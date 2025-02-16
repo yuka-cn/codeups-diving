@@ -26,6 +26,13 @@
   @include mq(md) {
     margin-top: rem(80);
     flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.blog__card{
+  @include mq(md){
+    width: calc((100% - rem(80)) / 3);
   }
 }
 
