@@ -28,9 +28,21 @@
 
 .information__image {
   aspect-ratio: 345 / 227;
+  position: relative;
+  overflow: scroll; //アニメーションを綺麗にする
   @include mq(md) {
     width: 50%;
   }
+}
+
+.information__image .color{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background:$ac-color;
 }
 
 .information__image img {

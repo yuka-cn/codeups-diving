@@ -23,7 +23,6 @@ jQuery(function ($) {
   });
 
   // キャンペーンカードのスライダー
-
   // inner幅の基準値を設定
   const INNER_WIDTH = 1080;
 
@@ -75,4 +74,40 @@ jQuery(function ($) {
 
   // リサイズ時にSwiperを再初期化
   window.addEventListener("resize", initSwiper);
+
+  // 画像アニメーション
+  // 要素の取得とスピードの設定
+  let imageAnimation = $(".information__image, .card-3__image, .price__image"),
+    speed = 700;
+
+  // ..information__image, .card-3__image, .price__image の付いた全ての要素に対して処理を行う
+  imageAnimation.each(function () {
+    let $this = $(this);
+
+    // <div class="color"></div> を追加
+    $this.append('<div class="color"></div>');
+
+    let color = $this.find(".color"),
+      image = $this.find("img"),
+      counter = 0;
+
+    // 初期スタイル設定
+    image.css("opacity", "0");
+    color.css("width", "0%");
+
+    // inviewイベントを適用（背景色が画面に現れたら処理をする）
+    $this.on("inview", function (event, isInView) {
+      if (isInView && counter === 0) {
+        color.delay(200).animate({ width: "100%" }, speed, function () {
+          image.css("opacity", "1");
+          $(this).css({ left: "0", right: "auto" });
+          $(this).animate({ width: "0%" }, speed);
+        });
+        counter = 1; // 2回目の起動を制御
+      }
+    });
+  });
 });
+
+console.log(typeof jQuery);
+

@@ -67,11 +67,22 @@
 }
 
 .card-3__image {
+  position: relative;
   width: 51%;
   aspect-ratio: 151 / 117;
   @include mq(md) {
    width: 39%;
   }
+}
+
+.card-3__image .color{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background:$ac-color;
 }
 
 .card-3__image img {
