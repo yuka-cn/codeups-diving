@@ -1,0 +1,82 @@
+@use "global" as *;
+
+.company {
+  position: relative;
+}
+.company__name {
+  margin: auto;
+  max-width: rem(174);
+  width: 100%;
+  text-align: center;
+  @include mq(md) {
+    max-width: rem(200);
+  }
+}
+
+.company::after {
+  // 両端が丸い下線
+  content: "";
+  position: absolute;
+  left: 0;
+  top: rem(71);
+  width: 100%;
+  height: 1px;
+  background: $ac-color;
+  border-radius: 1px;
+  @include mq(md) {
+    top: rem(83);
+  }
+}
+
+.company::before {
+  // 両端が丸い右端の線
+  @include mq(md) {
+  content: "";
+  position: absolute;
+  right: rem(-90);
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background: $ac-color;
+  border-radius: 1px;
+  }
+}
+
+.company__flex {
+  margin-top: rem(16);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // justify-content: center;
+  gap: rem(16);
+  @include mq(md) {
+    margin-top: rem(24);
+    flex-direction: row;
+    justify-content: space-between;
+    gap: rem(21);
+  }
+}
+
+.company__details {
+  text-align: center;
+  font-size: rem(16);
+  @include mq(md) {
+    text-align: left;
+  }
+}
+
+.company__details p:not(:first-child) {
+  margin-top: rem(4);
+}
+
+.company__map {
+  width: calc(295 / 375 * 100vw);
+  height: calc(160 / 375 * 100vw);
+  background: #d9d9d9;
+  @include mq(md) {
+    max-width: rem(273);
+    width: calc(273 / 1440 * 100vw);
+    max-height: rem(148);
+    height: calc(148 / 1440 * 100vw);
+  }
+}

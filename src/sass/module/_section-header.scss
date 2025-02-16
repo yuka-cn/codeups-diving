@@ -3,6 +3,7 @@
 .section-header__entitle {
   font-size: rem(32);
   font-family: $en-font-family;
+  font-weight: $regular;
   line-height: calc(40 / 32);
   text-transform: capitalize;
   @include mq(md) {
@@ -28,6 +29,11 @@
 
 .section-header__entitle--big {
   font-size: rem(80);
+  line-height: 1;
+  @include mq(md) {
+    font-size: rem(80);
+    line-height: 1;
+  }
 }
 
 .section-header__jatitle {
@@ -43,4 +49,10 @@
   @include mq(md) {
     color: $white;
   }
+}
+
+.section-header__jatitle--big {
+  margin-top: rem(-6);
+  @include mq(md){
+  margin-top: rem(-6);}
 }

@@ -26,8 +26,6 @@
 
 .price__image {
   aspect-ratio: 345 /227;
-  max-width: rem(345);
-  width: 100%;
   @include mq(md) {
     aspect-ratio: 746 /492;
     max-width: rem(492);
