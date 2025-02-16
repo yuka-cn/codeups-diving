@@ -1,0 +1,38 @@
+@use "global" as *;
+
+.blog {
+  @include mq(md) {
+    padding-top: rem(100);
+    background: linear-gradient(
+      to bottom,
+      transparent 62%,
+      $white 62%
+    ), url(../images/common/blog-bg-pc.jpg);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+  }
+}
+
+.blog__header {
+  text-align: center;
+}
+
+.blog__cards {
+  margin-top: rem(24);
+  display: flex;
+  flex-direction: column;
+  gap: rem(40);
+  @include mq(md) {
+    margin-top: rem(80);
+    flex-direction: row;
+  }
+}
+
+.blog__button {
+  margin-top: rem(40);
+  text-align: center;
+  @include mq(md) {
+    margin-top: rem(80);
+  }
+}

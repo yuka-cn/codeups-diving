@@ -5,7 +5,7 @@
   font-family: $en-font-family;
   line-height: calc(40 / 32);
   text-transform: capitalize;
-  @include mq(md){
+  @include mq(md) {
     font-size: rem(40);
   }
 }
@@ -14,13 +14,33 @@
   color: $ac-color;
 }
 
+.section-header__entitle--white {
+  @include mq(md) {
+    color: $white;
+  }
+}
+
+.section-header__entitle--white::first-letter {
+  @include mq(md) {
+    color: $white;
+  }
+}
+
+.section-header__entitle--big {
+  font-size: rem(80);
+}
+
 .section-header__jatitle {
   margin-top: rem(4);
   font-size: rem(12);
   color: $ac-color;
-  @include mq(md){
+  @include mq(md) {
     margin-top: rem(8);
   }
 }
 
-
+.section-header__jatitle--white {
+  @include mq(md) {
+    color: $white;
+  }
+}
