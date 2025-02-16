@@ -15,7 +15,7 @@
   object-fit: cover;
 }
 
-.card-2__body{
+.card-2__body {
   margin-top: rem(24);
 }
 
@@ -25,14 +25,25 @@
 }
 
 .card-2__title {
+  position: relative;
   padding-bottom: rem(4);
-  border-bottom: 1px solid $ac-color;
   font-size: rem(16);
   font-weight: $medium;
+}
+
+.card-2__title::after {
+  // 両端が丸い下線
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: $ac-color;
+  border-radius: 1px;
 }
 
 .card-2__text {
   margin-top: rem(16);
   font-size: rem(16);
 }
-

@@ -1,6 +1,7 @@
 @use "global" as *;
 
 .button {
+  margin-bottom: 4px; //// 右下の影のような四角形分
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -31,6 +32,7 @@
 }
 
 .button::after {
+  // 右下の影のような四角形
   content: "";
   position: absolute;
   top: 0;
