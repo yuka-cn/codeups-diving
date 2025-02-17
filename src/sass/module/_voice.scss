@@ -1,5 +1,36 @@
 @use "global" as *;
 
+.voice__embellishment{
+  position: relative;
+}
+
+.voice__embellishment::before {
+  @include mq(md) {
+    content: "";
+    position: absolute;
+    top: rem(-120);
+    left: rem(50);
+    width: rem(301);
+    height: rem(138);
+    background-image: url(../images/common/embellishment_3.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.voice__embellishment::after {
+  @include mq(md) {
+    content: "";
+    position: absolute;
+    right: rem(165);
+    bottom: rem(-67);
+    width: rem(71);
+    height: rem(162);
+    background-image: url(../images/common/embellishment_4.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
 
 .voice__header{
   text-align: center;

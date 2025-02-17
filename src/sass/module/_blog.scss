@@ -14,6 +14,24 @@
   }
 }
 
+.blog__embellishment{
+  position: relative;
+}
+
+.blog__embellishment::before {
+  @include mq(md) {
+    content: "";
+    position: absolute;
+    top: rem(-76);
+    left: rem(50);
+    width: rem(437);
+    height: rem(201);
+    background-image: url(../images/common/embellishment_2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
 .blog__header {
   text-align: center;
 }

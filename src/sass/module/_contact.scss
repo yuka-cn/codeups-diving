@@ -5,6 +5,28 @@
   }
 }
 
+.contact__embellishment{
+  position: relative;
+}
+
+.contact__embellishment::before {
+  content: "";
+  position: absolute;
+  top:rem(-26);
+  right: 0;
+  width: rem(109);
+  height: rem(50);
+  background-image: url(../images/common/embellishment_5.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  @include mq(md) {
+    top:rem(-40);
+    right: 0;
+    width: rem(301);
+    height: rem(138);
+  }
+}
+
 .contact__box {
   padding: 0 rem(25);
   display: flex;

@@ -8,6 +8,24 @@
   }
 }
 
+.price__embellishment{
+  position: relative;
+}
+
+.price__embellishment::before {
+  @include mq(md) {
+    content: "";
+    position: absolute;
+    left: rem(50);
+    bottom: rem(-40);
+    width: rem(437);
+    height: rem(201);
+    background-image: url(../images/common/embellishment_5.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
 .price__header {
   text-align: center;
 }

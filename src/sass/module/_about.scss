@@ -1,5 +1,23 @@
 @use "global" as *;
 
+.about__embellishment {
+  position: relative;
+}
+
+.about__embellishment::before {
+  @include mq(md) {
+    content: "";
+    position: absolute;
+    right: rem(33);
+    bottom: calc(rem(-181) / 2);
+    width: rem(194);
+    height: rem(181);
+    background-image: url(../images/common/embellishment_1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
 .about__inner {
   position: relative;
 }
@@ -17,12 +35,14 @@
     padding-bottom: rem(55);
   }
 }
+
 .about__left-image {
   aspect-ratio: 128 / 194;
   width: calc(128 / 375 * 100vw);
   @include mq(md) {
     aspect-ratio: 400 / 606;
     max-width: rem(400);
+    position: relative;
   }
 }
 
@@ -46,6 +66,7 @@
   height: 100%;
   object-fit: cover;
 }
+
 
 .about__body {
   margin-top: rem(40);
