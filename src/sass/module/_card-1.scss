@@ -15,7 +15,7 @@
 }
 
 .card-1__body {
-  padding: rem(16) rem(16) rem(24);
+  padding: rem(16);
   @include mq(md) {
     padding-top: rem(24);
   }
@@ -23,9 +23,9 @@
 
 .card-1__category {
   display: inline-block;
-  padding: rem(4) rem(12);
+  padding: rem(4) rem(11);
   font-size: rem(12);
-  line-height: calc(22 / 12);
+  line-height: 1.7;
   color: $ac-color;
   border: 1px solid $ac-color;
   @include mq(md) {
@@ -35,8 +35,8 @@
 
 .card-1__title {
   position: relative;
-  margin-top: rem(4);
-  padding-bottom: rem(8);
+  margin-top: rem(3);
+  padding-bottom: rem(9);
   font-size: rem(16);
   font-weight: $medium;
 }
@@ -54,7 +54,7 @@
 }
 
 .card-1__text {
-  margin-top: rem(8);
+  margin-top: rem(10);
   text-align: center;
   font-size: rem(14);
   @include mq(md) {
@@ -64,7 +64,7 @@
 }
 
 .card-1__price {
-  margin-top: rem(8);
+  margin-top: rem(1);
   display: flex;
   gap: rem(16);
   align-items: flex-end;
@@ -74,19 +74,32 @@
 }
 
 .card-1__selling {
+  position: relative;
   padding-bottom: rem(4);
   font-size: rem(20);
-  text-decoration: line-through;
-  text-decoration-thickness: rem(3);
-  text-decoration-color: #c94800;
+  // text-decoration: line-through;
+  // text-decoration-thickness: rem(3);
+  // text-decoration-color: #c94800;
+  // text-underline-offset: rem(4);
   @include mq(md) {
     font-size: rem(24);
   }
 }
 
+.card-1__selling::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 33%;
+  width: 103%;
+  height: rem(3);
+  background: #c94800;
+}
+
 .card-1__special {
   font-size: rem(32);
   color: $ac-color;
+  transform: translateX(rem(2));
   @include mq(md) {
     font-size: rem(40);
   }

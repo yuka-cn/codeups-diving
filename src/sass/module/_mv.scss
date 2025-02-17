@@ -51,9 +51,12 @@
 }
 
 .mv__title{
+  transform: translate(rem(11),rem(-1));
   font-size: rem(40);
   font-family: "Lato", serif;
-  letter-spacing: 0.54em;
+  font-weight: $regular;
+  line-height: 1.2;
+  letter-spacing: 0.53em;
   @include mq(md){
     font-size: rem(80);
   }

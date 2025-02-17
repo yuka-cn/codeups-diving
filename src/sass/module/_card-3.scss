@@ -10,30 +10,48 @@
 
 .card-3__header {
   display: flex;
-  gap: rem(13);
+  gap: rem(15);
   align-items: end;
 }
 
 .card-3__text-block {
-  width: 49%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: calc((100% - rem(15)) / 2);
   @include mq(md){
     width: 61%;
   }
 }
+
+.card-3__text-block::after {
+  // 両端が丸い下線
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: rem(-1);
+  width: 100%;
+  height: 1px;
+  background: $ac-color;
+  border-radius: 1px;
+}
+
 
 .card-3__meta {
   font-size: rem(12);
   @include mq(md) {
     display: flex;
     justify-content: space-between;
+    align-items: end;
   }
 }
 
 .card-3__category {
   display: inline-block;
-  padding: rem(4) rem(12);
+  padding: rem(4) rem(11);
   font-size: rem(12);
-  line-height: calc(22 / 12);
+  line-height: 1.6;
   color: $ac-color;
   border: 1px solid $ac-color;
   @include mq(md) {
@@ -42,9 +60,11 @@
 }
 
 .card-3__title {
-  position: relative;
-  margin-top: rem(4);
-  padding-bottom: rem(4);
+  margin-top: rem(1);
+  padding: rem(3) 0 rem(1);
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
   font-size: rem(16);
   font-weight: $medium;
   @include mq(md) {
@@ -54,21 +74,9 @@
   }
 }
 
-.card-3__title::after {
-   // 両端が丸い下線
-   content: "";
-   position: absolute;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   height: 1px;
-   background: $ac-color;
-   border-radius: 1px;
-}
-
 .card-3__image {
   position: relative;
-  width: 51%;
+  width: calc((100% - rem(15)) / 2);
   aspect-ratio: 151 / 117;
   @include mq(md) {
    width: 39%;

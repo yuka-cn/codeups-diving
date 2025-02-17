@@ -114,7 +114,7 @@ jQuery(function ($) {
 
   // ボタンの表示設定
   $(window).scroll(function () {
-    if ($(this).scrollTop() > 70) {
+    if ($(this).scrollTop() > 90) {
       // 指定px以上のスクロールでボタンを表示
       topBtn.fadeIn();
     } else {

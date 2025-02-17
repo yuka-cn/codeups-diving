@@ -6,7 +6,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: rem(15) 0;
+  padding: rem(20) 0;
   gap: rem(8);
   background: $ac-color;
   transition: color 0.8s cubic-bezier(0.45, 0, 0.55, 1);
@@ -73,7 +73,7 @@
   position: absolute;
   top: calc(50% - 2px);
   right: 0;
-  width: 10px;
+  width: 7px;
   height: 1px;
   border-radius: 9999px;
   rotate: 45deg;
