@@ -8,7 +8,7 @@
   right: 0;
   width: 100%;
   height: 100vh;
-  padding-top: rem(92);
+  padding-top: rem(91);
   background: $ac-color;
   font-size: rem(16);
   color: $white;
@@ -67,6 +67,24 @@
 .sp-nav__item a{
   display: flex;
   align-items: center;
-  padding: rem(12) 0;
+  padding: rem(9) 0;
+}
+
+.sp-nav__item--multiline{
+  position: relative;
+  line-height: 1.3;
+}
+
+.sp-nav__items .sp-nav__item--multiline::before {
+  display: inline-block;
+  position: absolute;
+  top: 37%;
+  left: rem(-22);
+  transform: translateY(-50%);
+  width: rem(18);
+  height: rem(18);
+  background-image: url(../images/common/nav.png);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 

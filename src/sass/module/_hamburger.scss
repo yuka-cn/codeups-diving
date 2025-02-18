@@ -2,14 +2,15 @@
 
 .hamburger {
   position: relative;
-  width: rem(32);
+  width: rem(42);
   height: rem(32);
   z-index: 100;
 }
 
 .hamburger span {
   position: absolute;
-  width: inherit;
+  right: 0;
+  width: 76%;
   height: rem(1);
   background: $white;
   transition: 0.3s;
@@ -27,7 +28,9 @@
 }
 .hamburger.is-active span:nth-child(1){
   top: 50%;
-  rotate: 45deg;
+  right: rem(-5);
+  width: inherit;
+  rotate: 38deg;
 }
 .hamburger.is-active span:nth-child(2){
   top: 50%;
@@ -35,7 +38,9 @@
 }
 .hamburger.is-active span:nth-child(3){
   top: 50%;
-  rotate: -45deg;
+  right: rem(-5);
+  width: inherit;
+  rotate: -38deg;
 }
 
 
