@@ -51,18 +51,22 @@
 }
 
 .mv__title{
-  transform: translate(rem(10),rem(-1));
   font-size: rem(40);
   font-family: "Lato", serif;
   font-weight: $regular;
   line-height: 1.2;
   letter-spacing: 0.53em;
+  transform: translate(rem(10),rem(-1));
   @include mq(md){
     font-size: rem(80);
+    transform: translate(rem(21),rem(2));
   }
 }
 
 .mv__subtitle{
 font-size: rem(20);
 font-family: $en-font-family;
+@include mq(md){
+  margin-top: rem(5);
+}
 }

@@ -33,8 +33,9 @@
   @include mq(md) {
     display: block;
     position: absolute;
-    top: 0;
+    top: rem(6);
     width: auto;
+    height: inherit;
     margin-top: 0;
   }
 }

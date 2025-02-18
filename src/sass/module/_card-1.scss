@@ -18,6 +18,7 @@
   padding: rem(16);
   @include mq(md) {
     padding-top: rem(24);
+    padding-bottom: rem(30);
   }
 }
 
@@ -29,7 +30,7 @@
   color: $ac-color;
   border: 1px solid $ac-color;
   @include mq(md) {
-    padding: rem(6) rem(16);
+    padding: rem(6) rem(15);
   }
 }
 
@@ -58,7 +59,7 @@
   text-align: center;
   font-size: rem(14);
   @include mq(md) {
-    margin-top: rem(16);
+    margin-top: rem(14);
     font-size: rem(16);
   }
 }
@@ -71,6 +72,12 @@
   justify-content: center;
   font-family: "Lato", serif;
   font-weight: $bold;
+  @include mq(md){
+    margin-top: 0;
+    padding-left: rem(19);
+    gap: rem(25);
+    justify-content: start;
+  }
 }
 
 .card-1__selling {
@@ -83,6 +90,7 @@
   // text-underline-offset: rem(4);
   @include mq(md) {
     font-size: rem(24);
+    padding-bottom: rem(7);
   }
 }
 
@@ -94,6 +102,10 @@
   width: 103%;
   height: rem(3);
   background: #c94800;
+  @include mq(md){
+    top: 40%;
+    width: 100%;
+  }
 }
 
 .card-1__special {

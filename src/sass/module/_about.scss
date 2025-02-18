@@ -8,7 +8,7 @@
   @include mq(md) {
     content: "";
     position: absolute;
-    right: rem(33);
+    right: rem(58);
     bottom: calc(rem(-181) / 2);
     width: rem(194);
     height: rem(181);
@@ -79,8 +79,8 @@
     max-width: rem(840);
     margin-top: 0;
     position: absolute;
-    top: rem(306);
-    left: rem(200);
+    top: rem(310);
+    left: rem(224);
     z-index: 0;
   }
 }
@@ -92,6 +92,7 @@
   line-height: 1;
   color: $ac-color;
   @include mq(md) {
+    padding-top: rem(2);
     font-size: rem(80);
     line-height: calc(100 / 80);
     width: calc((100% - rem(40)) / 2);
@@ -118,6 +119,6 @@
   text-align: center;
   transform: translateX(rem(-2));
   @include mq(md) {
-    margin-top: rem(40);
+    margin-top: rem(42);
   }
 }
