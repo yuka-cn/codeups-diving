@@ -17,16 +17,17 @@
 }
 
 .footer__logo {
-  max-width: rem(120);
+  max-width: rem(127);
   width: 100%;
   height: inherit;
+  transform: translateX(rem(-3));
   @include mq(md) {
     max-width: rem(200);
   }
 }
 
 .footer__sns {
-  margin-top: rem(16);
+  margin-top: rem(9);
   @include mq(md) {
     margin-top: initial;
     margin-left: rem(40);
@@ -45,14 +46,18 @@
 }
 
 .footer__instagramlink {
-  margin-left: rem(16);
+  margin-left: rem(12);
   @include mq(md) {
     margin-left: rem(19);
   }
 }
 
+.footer__nav{
+  margin-top: rem(22);
+}
+
 .footer__copyright {
-  margin-top: rem(40);
+  margin-top: rem(27);
   text-align: center;
   font-family: $en-font-family;
   white-space: nowrap;

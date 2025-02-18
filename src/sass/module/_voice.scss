@@ -55,9 +55,9 @@
 }
 
 .voice__button{
-  margin-top: rem(42);
+  margin-top: rem(41);
   text-align: center;
-  transform: translateX(rem(-1));
+  transform: translateX(rem(-2));
   @include mq(md){
     margin-top: rem(80);
   }

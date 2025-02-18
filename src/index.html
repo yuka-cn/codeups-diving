@@ -326,7 +326,9 @@
         <div class="blog__embellishment embellishment-inner">
           <div class="blog__inner inner">
             <div class="blog__header section-header">
-              <h2 class="section-header__entitle section-header__entitle--white">
+              <h2
+                class="section-header__entitle section-header__entitle--white"
+              >
                 Blog
               </h2>
               <p class="section-header__jatitle section-header__jatitle--white">
@@ -527,7 +529,10 @@
             <div class="contact__box">
               <div class="contact__company-overview company">
                 <div class="company__name">
-                  <img src="../assets/images/common/codeups.png" alt="CodeUps" />
+                  <img
+                    src="../assets/images/common/codeups.png"
+                    alt="CodeUps"
+                  />
                 </div>
                 <div class="company__flex">
                   <div class="company__details">
@@ -546,7 +551,9 @@
                   >
                     Contact
                   </h2>
-                  <p class="section-header__jatitle section-header__jatitle--big">
+                  <p
+                    class="section-header__jatitle section-header__jatitle--big"
+                  >
                     お問い合わせ
                   </p>
                 </div>
@@ -563,9 +570,19 @@
       </section>
 
       <div class="to-top">
-        <a href="#top"><img src="../assets/images/common/to-top.png" alt=""></a>
+        <a href="#top">
+          <picture>
+            <source
+              media="(max-width: 767px)"
+              srcset="../assets/images/common/to-top-sp.png"
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="../assets/images/common/to-top-pc.png"
+            />
+            <img src="../assets/images/common/to-top-sp.png" alt="" />
+          </picture></a>
       </div>
-
     </main>
 
     <footer class="footer footer-layout">
@@ -635,7 +652,7 @@
                 <li class="footer-nav__item"><a href="#">よくある質問</a></li>
               </ul>
               <ul class="footer-nav__items">
-                <li class="footer-nav__item">
+                <li class="footer-nav__item footer-nav__item--multiline">
                   <a href="#">プライバシー<br />ポリシー</a>
                 </li>
               </ul>

@@ -7,7 +7,6 @@
 
 .footer-nav__left,
 .footer-nav__right {
-  margin-top: rem(40);
   width: 50%;
   @include mq(md) {
     display: flex;
@@ -15,16 +14,24 @@
 }
 
 .footer-nav__left {
-  padding-left: rem(24);
+  padding-left: rem(22);
 }
 
 .footer-nav__right {
-  padding-left: rem(34);
+  padding-left: rem(33);
 }
 
 .footer-nav__block {
+  @include mq(md) {
+    width: 50%;
+  }
+}
+
+.footer-nav__block:nth-child(2){
+  margin-top: rem(16);
   @include mq(md){
-  width: 50%;}
+    margin-top: 0;
+  }
 }
 
 .footer-nav__items {
@@ -34,7 +41,7 @@
 }
 
 .footer-nav__items:first-child {
-  margin-top: 0;
+    margin-top: 0;
 }
 
 .footer-nav__item:first-child {
@@ -59,5 +66,23 @@
 .footer-nav__item a {
   display: flex;
   align-items: center;
-  padding: rem(12) 0;
+  padding: rem(9) 0;
+}
+
+.footer-nav__item--multiline{
+  position: relative;
+  line-height: 1.39;
+}
+
+.footer-nav__items .footer-nav__item--multiline::before {
+  display: inline-block;
+  position: absolute;
+  top: 37%;
+  left: rem(-22);
+  transform: translateY(-50%);
+  width: rem(18);
+  height: rem(18);
+  background-image: url(../images/common/nav.png);
+  background-size: contain;
+  background-repeat: no-repeat;
 }

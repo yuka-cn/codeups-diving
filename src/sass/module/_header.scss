@@ -6,7 +6,7 @@
   z-index: 1000;
   position: fixed;
   width: 100%;
-  display: none;
+  // display: none;
   @include mq(md) {
     height: rem(90);
   }
@@ -24,7 +24,7 @@
 }
 
 .header__logo {
-  transform: translate(rem(-1),rem(3));
+  transform: translate(rem(-3),rem(3));
   max-width: rem(108);
   width: 100%;
   height: inherit;

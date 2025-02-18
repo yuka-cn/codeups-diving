@@ -8,7 +8,7 @@
   }
 }
 
-.price__embellishment{
+.price__embellishment {
   position: relative;
 }
 
@@ -31,7 +31,7 @@
 }
 
 .price__body {
-  margin-top: rem(24);
+  margin-top: rem(27);
   display: flex;
   flex-direction: column;
   gap: rem(40);
@@ -52,14 +52,14 @@
   }
 }
 
-.price__image .color{
+.price__image .color {
   position: absolute;
   top: 0;
   right: 0;
   width: 100%;
   height: 100%;
   z-index: 2;
-  background:$ac-color;
+  background: $ac-color;
 }
 
 .price__image img {
@@ -75,17 +75,13 @@
   }
 }
 
-.price__list {
-  margin-top: rem(40);
-}
-
-.price__list:first-child {
-  margin-top: 0;
+.price__list:not(:first-child) {
+  margin-top: rem(42);
 }
 
 .price__list-title {
   position: relative;
-  padding-bottom: rem(4);
+  padding-bottom: rem(5);
   font-size: rem(16);
   font-weight: $bold;
 }
@@ -115,20 +111,21 @@
 }
 
 .price__list-item dt {
-  margin-top: rem(8);
+  margin-top: rem(10);
   width: 80%;
 }
 
 .price__list-item dd {
-  margin-top: rem(8);
+  margin-top: rem(10);
   width: 20%;
   text-align: right;
 }
 
-.price__button{
-  margin-top: rem(40);
+.price__button {
+  margin-top: rem(44);
   text-align: center;
-  @include mq(md){
+  transform: translateX(rem(-2));
+  @include mq(md) {
     margin-top: rem(80);
   }
 }

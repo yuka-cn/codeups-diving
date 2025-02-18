@@ -99,7 +99,7 @@
 .card-1__special {
   font-size: rem(32);
   color: $ac-color;
-  transform: translateX(rem(2));
+  transform: translateX(rem(1));
   @include mq(md) {
     font-size: rem(40);
   }

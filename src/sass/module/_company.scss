@@ -43,11 +43,10 @@
 }
 
 .company__flex {
-  margin-top: rem(16);
+  margin-top: rem(22);
   display: flex;
   flex-direction: column;
   align-items: center;
-  // justify-content: center;
   gap: rem(16);
   @include mq(md) {
     margin-top: rem(24);
