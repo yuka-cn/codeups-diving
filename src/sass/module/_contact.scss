@@ -5,14 +5,14 @@
   }
 }
 
-.contact__embellishment{
+.contact__embellishment {
   position: relative;
 }
 
 .contact__embellishment::before {
   content: "";
   position: absolute;
-  top:rem(-26);
+  top: rem(-26);
   right: rem(15);
   width: rem(109);
   height: rem(50);
@@ -20,8 +20,8 @@
   background-repeat: no-repeat;
   background-size: contain;
   @include mq(md) {
-    top:rem(-40);
-    right: 0;
+    top: rem(-40);
+    right: rem(25);
     width: rem(301);
     height: rem(138);
   }
@@ -34,11 +34,30 @@
   gap: rem(41);
   align-items: center;
   @include mq(md) {
+    position: relative;
     padding: rem(80) rem(112) rem(80) rem(50);
     flex-direction: row;
     justify-content: space-between;
-    gap: rem(163);
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.contact__box::before {
+  // 両端が丸い真ん中の線
+  @include mq(md) {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+    width: 1px;
+    height: calc(100% - rem(160));
+    background: $ac-color;
+    border-radius: 1px;
+  }
+  @media (max-width: 1400px) {
+    // 画面幅が狭くなると線の位置が右に寄り過ぎるのを調整
+    left: 50%;
   }
 }
 
@@ -59,7 +78,7 @@
 }
 
 .contact__text {
-  margin-top: rem(6);
+  margin-top: rem(7);
   text-align: center;
   font-size: rem(14);
   color: $ac-color;

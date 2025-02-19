@@ -47,4 +47,7 @@
 .card-2__text {
   margin-top: rem(16);
   font-size: rem(16);
+  @include mq(md){
+    margin-top: rem(15);
+  }
 }

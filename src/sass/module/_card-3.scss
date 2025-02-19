@@ -11,7 +11,10 @@
 .card-3__header {
   display: flex;
   gap: rem(15);
-  align-items: end;
+  justify-content: space-between;
+  @include mq(md) {
+    align-items: end;
+  }
 }
 
 .card-3__text-block {
@@ -19,9 +22,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: calc((100% - rem(15)) / 2);
-  @include mq(md){
-    width: 61%;
+  width: 47%;
+  @include mq(md) {
+    width: 60%;
   }
 }
 
@@ -30,20 +33,21 @@
   content: "";
   position: absolute;
   left: 0;
-  bottom: rem(-1);
+  bottom: 0;
   width: 100%;
   height: 1px;
   background: $ac-color;
   border-radius: 1px;
 }
 
-
 .card-3__meta {
+  align-self: flex-start;
   font-size: rem(12);
   @include mq(md) {
     display: flex;
     justify-content: space-between;
     align-items: end;
+    align-self: auto;
   }
 }
 
@@ -55,42 +59,44 @@
   color: $ac-color;
   border: 1px solid $ac-color;
   @include mq(md) {
-    padding: rem(6) rem(16);
+    padding: rem(6) rem(15);
   }
 }
 
 .card-3__title {
-  margin-top: rem(1);
-  padding: rem(3) 0 rem(1);
+  padding-top: rem(4);
+  padding-bottom: rem(2);
   flex-grow: 1;
   display: flex;
   align-items: center;
   font-size: rem(16);
   font-weight: $medium;
   @include mq(md) {
-    margin-top: rem(8);
-    padding-bottom: rem(16);
+    padding-top: rem(8);
+    padding-bottom: rem(2);
     font-size: rem(24);
   }
 }
 
 .card-3__image {
   position: relative;
-  width: calc((100% - rem(15)) / 2);
+  width: 48%;
   aspect-ratio: 151 / 117;
+  align-self: flex-end;
   @include mq(md) {
-   width: 39%;
+    width: 39%;
+    aspect-ratio: 180 / 140;
   }
 }
 
-.card-3__image .color{
+.card-3__image .color {
   position: absolute;
   top: 0;
   right: 0;
   width: 100%;
   height: 100%;
   z-index: 2;
-  background:$ac-color;
+  background: $ac-color;
 }
 
 .card-3__image img {

@@ -28,19 +28,19 @@
   }
 }
 
-.company::before {
-  // 両端が丸い右端の線
-  @include mq(md) {
-  content: "";
-  position: absolute;
-  right: rem(-90);
-  top: 0;
-  width: 1px;
-  height: 100%;
-  background: $ac-color;
-  border-radius: 1px;
-  }
-}
+// .company::before {
+//   // 両端が丸い右端の線
+//   @include mq(md) {
+//   content: "";
+//   position: absolute;
+//   right: rem(-84);
+//   top: 0;
+//   width: 1px;
+//   height: 100%;
+//   background: $ac-color;
+//   border-radius: 1px;
+//   }
+// }
 
 .company__flex {
   margin-top: rem(22);
@@ -49,8 +49,9 @@
   align-items: center;
   gap: rem(16);
   @include mq(md) {
-    margin-top: rem(24);
+    margin-top: rem(33);
     flex-direction: row;
+    align-items: start;
     justify-content: space-between;
     gap: rem(21);
   }

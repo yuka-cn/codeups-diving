@@ -4,7 +4,8 @@
   padding: rem(80) 0;
   background: $bg-color;
   @include mq(md) {
-    padding: rem(100) 0;
+    padding-top: rem(96);
+    padding-bottom: rem(100);
   }
 }
 
@@ -16,7 +17,7 @@
   @include mq(md) {
     content: "";
     position: absolute;
-    left: rem(50);
+    left: rem(75);
     bottom: rem(-40);
     width: rem(437);
     height: rem(201);
@@ -36,8 +37,9 @@
   flex-direction: column;
   gap: rem(40);
   @include mq(md) {
-    margin-top: rem(40);
+    margin-top: rem(39);
     flex-direction: row-reverse;
+    justify-content: space-between;
     gap: rem(93);
   }
 }
@@ -48,6 +50,7 @@
   @include mq(md) {
     aspect-ratio: 746 /492;
     max-width: rem(492);
+    width: 100%;
     height: calc(746 / 1440 * 100vw);
   }
 }
@@ -70,7 +73,7 @@
 
 .price__lists {
   @include mq(md) {
-    max-width: rem(492);
+    max-width: rem(494);
     width: 100%;
   }
 }
@@ -111,13 +114,13 @@
 }
 
 .price__list-item dt {
-  margin-top: rem(10);
-  width: 80%;
+  margin-top: rem(7);
+  width: 81%;
 }
 
 .price__list-item dd {
-  margin-top: rem(10);
-  width: 20%;
+  margin-top: rem(7);
+  width: 19%;
   text-align: right;
 }
 

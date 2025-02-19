@@ -8,8 +8,8 @@
   @include mq(md) {
     content: "";
     position: absolute;
-    top: rem(-120);
-    left: rem(50);
+    top: rem(-115);
+    left: rem(75);
     width: rem(301);
     height: rem(138);
     background-image: url(../images/common/embellishment_3.png);
@@ -22,7 +22,7 @@
   @include mq(md) {
     content: "";
     position: absolute;
-    right: rem(165);
+    right: rem(155);
     bottom: rem(-67);
     width: rem(71);
     height: rem(162);
@@ -55,7 +55,7 @@
 }
 
 .voice__button{
-  margin-top: rem(41);
+  margin-top: rem(39);
   text-align: center;
   transform: translateX(rem(-2));
   @include mq(md){
