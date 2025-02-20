@@ -26,7 +26,7 @@
   }
 }
 
-.mv__slide:nth-child(3) {
+.mv__slide:nth-child(3){
   background-image: url(../images/common/mv-sp_3.jpg);
   @include mq(md) {
     background-image: url(../images/common/mv-pc_3.jpg);
