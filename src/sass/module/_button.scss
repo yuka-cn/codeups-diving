@@ -6,7 +6,6 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: rem(20) 0;
   gap: rem(8);
   background: $ac-color;
   transition: color 0.8s cubic-bezier(0.45, 0, 0.55, 1);
@@ -47,7 +46,7 @@
 
 .button__link {
   height: inherit;
-  padding: 0 rem(40);
+  padding: rem(20) rem(40);
   display: inline-flex;
   align-items: center;
   justify-content: center;

@@ -67,7 +67,6 @@
   object-fit: cover;
 }
 
-
 .about__body {
   margin-top: rem(40);
   display: flex;
@@ -77,10 +76,11 @@
     flex-direction: row;
     gap: rem(40);
     max-width: rem(840);
+    width: 100%;
     margin-top: 0;
     position: absolute;
     top: rem(310);
-    left: rem(224);
+    right: rem(66);
     z-index: 0;
   }
 }

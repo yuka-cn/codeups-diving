@@ -57,9 +57,9 @@ jQuery(function ($) {
     campaignSwiper = new Swiper(".js-campaignSwiper", {
       delay: 2000,
       disableOnInteraction: false,
-      loop: true,
+      loopAdditionalSlides: 1,
       spaceBetween: spaceBetweenValue,
-      slidesPerView: 1,
+      slidesPerView: "auto",
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
