@@ -75,7 +75,7 @@
   width: 7px;
   height: 1px;
   border-radius: 9999px;
-  rotate: 45deg;
+  transform: rotate(45deg);
   transform-origin: calc(100% - 2px) 50%;
   background: $white;
   margin-left: rem(8);

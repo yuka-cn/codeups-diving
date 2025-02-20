@@ -30,7 +30,7 @@
   top: 50%;
   right: rem(-5);
   width: inherit;
-  rotate: 38deg;
+  transform: rotate(38deg);
 }
 .hamburger.is-active span:nth-child(2){
   top: 50%;
@@ -40,7 +40,7 @@
   top: 50%;
   right: rem(-5);
   width: inherit;
-  rotate: -38deg;
+  transform: rotate(-38deg);
 }
 
 
