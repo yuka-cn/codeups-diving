@@ -4,12 +4,12 @@
   position: relative;
   padding: rem(80) 0;
   background: $bg-color;
-  z-index: -2;
   @include mq(md) {
     padding-top:rem(96); 
     padding-bottom:rem(100);
   }
 }
+
 .information__header {
   text-align: center;
 }
@@ -30,7 +30,6 @@
 .information__image {
   aspect-ratio: 345 / 227;
   position: relative;
-  overflow: scroll; //アニメーションを綺麗にする
   @include mq(md) {
     width: 50%;
   }
