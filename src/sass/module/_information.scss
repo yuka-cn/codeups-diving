@@ -52,6 +52,7 @@
 
 .information__content {
   @include mq(md) {
+    position: relative;
     width: calc(50% - rem(48));
     transform: translate(rem(-3),rem(-4));
   }
