@@ -50,6 +50,19 @@
   flex-direction: column;
 }
 
+.footer-nav__items.u-mobile {
+  @include mq("md") {
+    display: none;
+  }
+}
+
+.footer-nav__items.u-desktop {
+  display: none;
+  @include mq("md") {
+    display: block;
+  }
+}
+
 .footer-nav__items:first-child {
   margin-top: 0;
 }
@@ -95,7 +108,7 @@
   background-image: url(../images/common/nav.png);
   background-size: contain;
   background-repeat: no-repeat;
-  @include mq(md){
+  @include mq(md) {
     top: 50%;
   }
 }

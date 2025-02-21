@@ -114,14 +114,20 @@
 }
 
 .price__list-item dt {
-  margin-top: rem(7);
+  margin-top: rem(10);
   width: 81%;
+  @include mq(md){
+    margin-top: rem(7);
+  }
 }
 
 .price__list-item dd {
-  margin-top: rem(7);
+  margin-top: rem(10);
   width: 19%;
   text-align: right;
+  @include mq(md){
+    margin-top: rem(7);
+  }
 }
 
 .price__button {

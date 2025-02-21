@@ -72,8 +72,8 @@
   font-size: rem(16);
   font-weight: $medium;
   @include mq(md) {
-    padding-top: rem(8);
-    padding-bottom: rem(2);
+    padding-top: rem(6);
+    padding-bottom: rem(5);
     font-size: rem(24);
   }
 }

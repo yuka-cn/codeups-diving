@@ -27,6 +27,10 @@
   }
 }
 
+.campaign__card.swiper-slide{
+  height: auto;
+}
+
 .campaign__button-next.swiper-button-next,
 .campaign__button-prev.swiper-button-prev {
   display: none;
