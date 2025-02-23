@@ -3,11 +3,8 @@
 .blog {
   @include mq(md) {
     padding-top: rem(95);
-    background: linear-gradient(
-      to bottom,
-      transparent 60%,
-      $white 60%
-    ), url(../images/common/blog-bg-pc.jpg);
+    background: linear-gradient(to bottom, transparent 60%, $white 60%),
+      url(../images/common/blog-bg-pc.jpg);
     background-size: contain;
     background-position: top center;
     background-repeat: no-repeat;
@@ -17,7 +14,7 @@
   }
 }
 
-.blog__embellishment{
+.blog__embellishment {
   position: relative;
 }
 
@@ -53,11 +50,15 @@
   }
 }
 
-.blog__card{
-  @include mq(md){
+.blog__card {
+  @include mq(md) {
     width: calc((100% - rem(80)) / 3);
   }
 }
+
+// .blog__card:hover {
+//   opacity: 0.7;
+// }
 
 .blog__button {
   margin-top: rem(40);

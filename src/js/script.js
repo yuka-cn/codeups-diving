@@ -5,14 +5,23 @@ jQuery(function ($) {
   $(".js-hamburger").click(function () {
     if ($(".js-hamburger").hasClass("is-active")) {
       $(".js-hamburger").removeClass("is-active");
-      // $("html").toggleClass("is-fixed");
+      $(".header").removeClass("is-active");
       $(".js-sp-nav").fadeOut(300);
     } else {
       $(".js-hamburger").addClass("is-active");
+      $(".header").addClass("is-active");
       $(".js-sp-nav").fadeIn(300);
     }
   });
 
+  //pc画面幅ではドロワーメニューを非表示にする
+  $(window).resize(function () {
+    if ($(window).width() >= 768) {
+      $(".js-sp-nav").removeClass("is-active").css("display", ""); // is-active を削除
+      $(".header").removeClass("is-active").css("display", ""); // is-active を削除
+    }
+  });
+  
   //メインビューのスライダー
   let mvSwiper = new Swiper(".js-mvSwiper", {
     autoplay: {

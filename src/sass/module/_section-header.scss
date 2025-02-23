@@ -31,13 +31,13 @@
   line-height: 1;
   @include mq(md) {
     font-size: rem(80);
-    line-height: 1;
   }
 }
 
 .section-header__jatitle {
   margin-top: rem(4);
   font-size: rem(12);
+  font-weight: $regular;
   color: $ac-color;
   @include mq(md) {
     margin-top: rem(3);
