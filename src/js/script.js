@@ -1,6 +1,20 @@
 jQuery(function ($) {
   // この中であればWordpressでも「$」が使用可能になる
 
+// MVとヘッダーの下ラインが重なった時に、ヘッダーに背景色をつける
+let header = $(".header");
+let headerHeight = $(".header").height();
+let height = $(".mv").height();
+
+$(window).scroll(function () {
+  if ($(this).scrollTop() > height - headerHeight) {
+    header.addClass("is-color");
+  } else {
+    header.removeClass("is-color");
+  }
+});
+
+
   //ドロワーメニュー
   $(".js-hamburger").click(function () {
     if ($(".js-hamburger").hasClass("is-active")) {

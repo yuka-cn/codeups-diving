@@ -6,6 +6,7 @@
   z-index: 1000;
   position: fixed;
   width: 100%;
+  transition: 0.3s;
   @include mq(md) {
     height: rem(90);
   }
@@ -16,6 +17,10 @@
   @include mq(md){
     background: rgba(13, 41, 54, 0.68);
   }
+}
+
+.header.is-color{
+  background:#9A9A9A;
 }
 
 .header__inner {
