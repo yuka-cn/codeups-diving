@@ -12,7 +12,8 @@
   }
 }
 
-.header.is-active{
+.header.is-active,
+.header.is-active.is-color{
   background:$ac-color;
   @include mq(md){
     background: rgba(13, 41, 54, 0.68);
