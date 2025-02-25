@@ -2,7 +2,11 @@
 
 .company {
   position: relative;
+  @include mq(md){
+    display: none;
+  }
 }
+
 .company__name {
   margin: auto;
   max-width: rem(174);

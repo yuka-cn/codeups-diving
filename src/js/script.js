@@ -1,43 +1,27 @@
 jQuery(function ($) {
   // この中であればWordpressでも「$」が使用可能になる
 
-// ローディングアニメーション
-document.addEventListener('DOMContentLoaded', function() {
-  // ローディング要素を取得
-  const loading = document.querySelector('.loading');
-  const mask = document.querySelector('.js-mask');
-  const imgLeft = document.querySelector('.loading__img-left');
-  const imgRight = document.querySelector('.loading__img-right');
+  // ローディングアニメーション
+  document
+    .querySelector(".loading")
+    .addEventListener("animationend", function () {
+      setTimeout(function () {
+        document.body.classList.add("loading-end");
+      }, 5000);
+    });
 
-  // ローディングを表示
-  loading.classList.add('is-active');
+  // MVとヘッダーの下ラインが重なった時に、ヘッダーに背景色をつける
+  let header = $(".header");
+  let headerHeight = $(".header").height();
+  let height = $(".mv").height();
 
-  // 右側の画像のアニメーションが終わったら実行
-  imgRight.addEventListener('animationend', function() {
-      // 非表示にする
-      mask.classList.add('is-hidden');
-
-      // マスクのフェードアウトが終わった後にローディングを非表示にする
-      setTimeout(() => {
-          loading.classList.add('is-hidden');
-      }, 3000); // マスクのフェードアウト時間
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > height - headerHeight) {
+      header.addClass("is-color");
+    } else {
+      header.removeClass("is-color");
+    }
   });
-});
-
-
-// MVとヘッダーの下ラインが重なった時に、ヘッダーに背景色をつける
-let header = $(".header");
-let headerHeight = $(".header").height();
-let height = $(".mv").height();
-
-$(window).scroll(function () {
-  if ($(this).scrollTop() > height - headerHeight) {
-    header.addClass("is-color");
-  } else {
-    header.removeClass("is-color");
-  }
-});
-
 
   //ドロワーメニュー
   $(".js-hamburger").click(function () {
@@ -59,7 +43,7 @@ $(window).scroll(function () {
       $(".header").removeClass("is-active").css("display", ""); // is-active を削除
     }
   });
-  
+
   //メインビューのスライダー
   let mvSwiper = new Swiper(".js-mvSwiper", {
     autoplay: {

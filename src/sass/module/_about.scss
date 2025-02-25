@@ -1,5 +1,11 @@
 @use "global" as *;
 
+.about{
+  @include mq(md){
+    display: none;
+  }
+}
+
 .about__embellishment {
   position: relative;
 }

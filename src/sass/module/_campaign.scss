@@ -2,7 +2,11 @@
 
 .campaign {
   overflow: hidden;
+  @include mq(md){
+    display: none;
+  }
 }
+
 .campaign__inner {
   position: relative;
 }

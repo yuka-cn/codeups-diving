@@ -8,14 +8,9 @@
     height: 100vh;
     opacity: 1;
     visibility: visible;
-    transition: opacity 2s ease-in-out, visibility 2s;
     background: $white;
+    animation: loadingFadeOut 12s ease forwards;
   }
-}
-
-.loading.is-hidden {
-  opacity: 0;
-  visibility: hidden;
 }
 
 .loading__header {
@@ -26,6 +21,7 @@
   text-align: center;
   z-index: 100;
   color: $ac-color;
+  animation: fadeInOut 6s ease-out forwards;
 }
 
 .loading__title {
@@ -50,43 +46,40 @@
   display: flex;
   width: 100%;
   z-index: 1;
-  transition: opacity 3s ease-in-out, visibility 3s;
 }
 
-/* マスクを非表示にする（フェードアウト） */
-.loading__mask.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-}
-
-/* 画像の基本スタイル */
 .loading__img {
   aspect-ratio: 720 / 768;
   width: 50%;
   height: 100vh;
   opacity: 0;
-  transition: opacity 3s ease-out;
 }
 
 .loading__img-left {
   object-fit: cover;
   object-position: right;
+  animation: fadeUpLeft 4s 3s forwards;
 }
 
 .loading__img-right {
   object-fit: cover;
   object-position: left;
+  animation: fadeUpRight 4s 3.5s forwards;
 }
 
-.loading__img-left--fadeUp1 {
-  animation: fadeUpAnime1 4s forwards;
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
-.loading__img-right--fadeUp2 {
-  animation: fadeUpAnime2 3.5s 0.5s forwards;
-}
-
-@keyframes fadeUpAnime1 {
+@keyframes fadeUpLeft {
   0% {
     opacity: 0;
     transform: translateY(50vh);
@@ -97,7 +90,7 @@
   }
 }
 
-@keyframes fadeUpAnime2 {
+@keyframes fadeUpRight {
   0% {
     opacity: 0;
     transform: translateY(50vh);
@@ -106,4 +99,36 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+@keyframes loadingFadeOut{
+  0% {
+    opacity: 0;
+  }
+  5%{
+    opacity:1;
+  }
+  90%{
+    opacity: 1;
+  }
+  100%{
+   opacity: 0; 
+   display: none;
+  }
+}
+
+.loading-end .header,
+.loading-end .mv,
+.loading-end .campaign,
+.loading-end .about,
+.loading-end .information,
+.loading-end .blog,
+.loading-end .voice,
+.loading-end .price,
+.loading-end .contact,
+.loading-end .to-top,
+.loading-end .footer
+{
+display: block;
+transition: opacity 1s ease;
 }

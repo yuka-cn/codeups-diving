@@ -2,6 +2,7 @@
 
 .blog {
   @include mq(md) {
+    display: none;
     padding-top: rem(95);
     background: linear-gradient(to bottom, transparent 60%, $white 60%),
       url(../images/common/blog-bg-pc.jpg);

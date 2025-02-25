@@ -1,5 +1,11 @@
 @use "global" as *;
 
+.voice{
+  @include mq(md){
+    display: none;
+  }
+}
+
 .voice__embellishment{
   position: relative;
 }
