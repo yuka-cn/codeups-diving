@@ -9,7 +9,8 @@
     opacity: 1;
     visibility: visible;
     background: $white;
-    animation: loadingFadeOut 12s ease forwards;
+    animation: loadingFadeOut 15s ease forwards;
+    overflow: hidden;
   }
 }
 
@@ -21,7 +22,7 @@
   text-align: center;
   z-index: 100;
   color: $ac-color;
-  animation: fadeInOut 6s ease-out forwards;
+  animation: fadeInOut 6s ease-out forwards, changeColor 1s 9s forwards;
 }
 
 .loading__title {
@@ -79,10 +80,24 @@
   }
 }
 
+@keyframes changeColor {
+  0% {
+    opacity: 0;
+    color: $ac-color;
+  }
+  100% {
+    opacity: 1;
+    color: $white;
+  }
+}
+
 @keyframes fadeUpLeft {
   0% {
     opacity: 0;
     transform: translateY(50vh);
+  }
+  12.5% {
+    transform: translateY(calc(50vh - 80px));
   }
   100% {
     opacity: 1;
@@ -108,7 +123,7 @@
   5% {
     opacity: 1;
   }
-  90% {
+  95% {
     opacity: 1;
   }
   100% {
@@ -116,4 +131,3 @@
     display: none;
   }
 }
-

@@ -7,7 +7,7 @@
   }
 }
 
-.mv__image{
+.mv__image {
   position: relative;
   width: 100%;
   height: inherit;
@@ -36,7 +36,7 @@
 
 .mv__slide:nth-child(2) {
   background-image: url(../images/common/mv-sp_2.jpg);
-  animation: mvSwiper 24s infinite 6s; 
+  animation: mvSwiper 24s infinite 6s;
   @include mq(md) {
     background-image: url(../images/common/mv-pc_2.jpg);
   }
@@ -44,7 +44,7 @@
 
 .mv__slide:nth-child(3) {
   background-image: url(../images/common/mv-sp_3.jpg);
-  animation: mvSwiper 24s infinite 12s; 
+  animation: mvSwiper 24s infinite 12s;
   @include mq(md) {
     background-image: url(../images/common/mv-pc_3.jpg);
   }
@@ -52,30 +52,30 @@
 
 .mv__slide:nth-child(4) {
   background-image: url(../images/common/mv-sp_4.jpg);
-  animation: mvSwiper 24s infinite 18s; 
+  animation: mvSwiper 24s infinite 18s;
   @include mq(md) {
     background-image: url(../images/common/mv-pc_4.jpg);
   }
 }
 
-@keyframes mvSwiper{
-  0%{
+@keyframes mvSwiper {
+  0% {
     opacity: 0;
     z-index: 9;
   }
-  12.5%{
+  12.5% {
     opacity: 1;
     z-index: 10;
   }
-  25%{
+  25% {
     opacity: 1;
     z-index: 10;
   }
-  37.5%{
+  37.5% {
     opacity: 0;
     z-index: 9;
   }
-  100%{
+  100% {
     opacity: 0;
     z-index: 9;
   }
@@ -89,7 +89,7 @@
   text-align: center;
   z-index: 100;
   color: $white;
-  @include mq(md){
+  @include mq(md) {
     opacity: 0;
   }
 }

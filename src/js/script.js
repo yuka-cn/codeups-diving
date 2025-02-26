@@ -10,7 +10,7 @@ jQuery(function ($) {
         setTimeout(function () {
           document.querySelector(".mv__header").style.opacity = "1";
         }, 1000);
-      }, 5000);
+      }, 6000);
     });
 
   // MVとヘッダーの下ラインが重なった時に、ヘッダーに背景色をつける
@@ -60,7 +60,6 @@ jQuery(function ($) {
   //<div class="mv__image swiper js-mvSwiper">
   //<div class="swiper-slide mv__slide">
 
-  
   // キャンペーンカードのスライダー
   // inner幅の基準値を設定
   const INNER_WIDTH = 1080;

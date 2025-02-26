@@ -1,20 +1,10 @@
 @use "global" as *;
 
-.loading-end .mv,
-.loading-end .campaign,
-.loading-end .about,
-.loading-end .information,
-.loading-end .blog,
-.loading-end .voice,
-.loading-end .price,
-.loading-end .contact,
-.loading-end .to-top,
-.loading-end .footer {
+.loading-end .js-loadingTarget {
   display: block;
-  transition: 1s ease;
 }
 
-.loading-end .header {
-  opacity: 1;
-  transition: opacity 3.5s ease;
-}
+// .loading-end .header {
+//   opacity: 1;
+//   transition: opacity 3s ease-in;
+// }
