@@ -28,7 +28,7 @@
 
 .mv__slide:nth-child(1) {
   background-image: url(../images/common/mv-sp_1.jpg);
-  // animation: mvSwiper 24s infinite;
+  animation: mvSwiper 24s infinite;
   @include mq(md) {
     background-image: url(../images/common/mv-pc_1.jpg);
   }
@@ -36,7 +36,7 @@
 
 .mv__slide:nth-child(2) {
   background-image: url(../images/common/mv-sp_2.jpg);
-  // animation: mvSwiper 24s infinite 6s; 
+  animation: mvSwiper 24s infinite 6s; 
   @include mq(md) {
     background-image: url(../images/common/mv-pc_2.jpg);
   }
@@ -44,7 +44,7 @@
 
 .mv__slide:nth-child(3) {
   background-image: url(../images/common/mv-sp_3.jpg);
-  // animation: mvSwiper 24s infinite 12s; 
+  animation: mvSwiper 24s infinite 12s; 
   @include mq(md) {
     background-image: url(../images/common/mv-pc_3.jpg);
   }
@@ -52,7 +52,7 @@
 
 .mv__slide:nth-child(4) {
   background-image: url(../images/common/mv-sp_4.jpg);
-  // animation: mvSwiper 24s infinite 18s; 
+  animation: mvSwiper 24s infinite 18s; 
   @include mq(md) {
     background-image: url(../images/common/mv-pc_4.jpg);
   }
