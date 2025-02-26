@@ -9,7 +9,7 @@
   transition: 0.3s;
   @include mq(md) {
     height: rem(90);
-    display: none;
+    opacity: 0;
   }
 }
 

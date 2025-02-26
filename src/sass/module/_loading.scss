@@ -101,34 +101,19 @@
   }
 }
 
-@keyframes loadingFadeOut{
+@keyframes loadingFadeOut {
   0% {
     opacity: 0;
   }
-  5%{
-    opacity:1;
-  }
-  90%{
+  5% {
     opacity: 1;
   }
-  100%{
-   opacity: 0; 
-   display: none;
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
   }
 }
 
-.loading-end .header,
-.loading-end .mv,
-.loading-end .campaign,
-.loading-end .about,
-.loading-end .information,
-.loading-end .blog,
-.loading-end .voice,
-.loading-end .price,
-.loading-end .contact,
-.loading-end .to-top,
-.loading-end .footer
-{
-display: block;
-transition: opacity 1s ease;
-}

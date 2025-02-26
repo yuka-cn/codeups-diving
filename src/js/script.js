@@ -7,6 +7,9 @@ jQuery(function ($) {
     .addEventListener("animationend", function () {
       setTimeout(function () {
         document.body.classList.add("loading-end");
+        setTimeout(function () {
+          document.querySelector(".mv__header").style.opacity = "1";
+        }, 1000);
       }, 5000);
     });
 
@@ -45,14 +48,19 @@ jQuery(function ($) {
   });
 
   //メインビューのスライダー
-  let mvSwiper = new Swiper(".js-mvSwiper", {
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false, // ユーザーの操作後も自動スライドが止まらないようにする
-    },
-    loop: false,
-  });
+  // let mvSwiper = new Swiper(".js-mvSwiper", {
+  //   autoplay: {
+  //     delay: 3000,
+  //     disableOnInteraction: false, // ユーザーの操作後も自動スライドが止まらないようにする
+  //   },
+  //   loop: false,
+  // });
 
+  //swiperを使うときは、以下クラス名の変更要
+  //<div class="mv__image swiper js-mvSwiper">
+  //<div class="swiper-slide mv__slide">
+
+  
   // キャンペーンカードのスライダー
   // inner幅の基準値を設定
   const INNER_WIDTH = 1080;
