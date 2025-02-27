@@ -5,7 +5,9 @@ jQuery(function ($) {
   document
     .querySelector(".loading")
     .addEventListener("animationend", function () {
+      const loadingElement = this;
       setTimeout(function () {
+        loadingElement.style.display = "none";
         document.body.classList.add("loading-end");
         setTimeout(function () {
           document.querySelector(".mv__header").style.opacity = "1";
