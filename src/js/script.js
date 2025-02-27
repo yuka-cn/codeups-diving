@@ -5,7 +5,7 @@ jQuery(function ($) {
   document
     .querySelector(".loading")
     .addEventListener("animationend", function () {
-      const loadingElement = this;
+      let loadingElement = this;
       setTimeout(function () {
         loadingElement.style.display = "none";
         document.body.classList.add("loading-end");
