@@ -1,19 +1,48 @@
 jQuery(function ($) {
   // この中であればWordpressでも「$」が使用可能になる
 
-  // ローディングアニメーション
-  document
-    .querySelector(".loading")
-    .addEventListener("animationend", function () {
-      let loadingElement = this;
-      setTimeout(function () {
-        loadingElement.style.display = "none";
-        document.body.classList.add("loading-end");
+  // ローディングアニメーション終了後に全セクションを表示する
+  if (window.matchMedia("(max-width: 767px)").matches) {
+    window.addEventListener("load", function () {
+      mvSwiper();
+    });
+  } else {
+    document
+      .querySelector(".loading")
+      .addEventListener("animationend", function () {
+        document.body.classList.add("is-visible");
+        setTimeout(mvSwiper, 3000);
         setTimeout(function () {
           document.querySelector(".mv__header").style.opacity = "1";
-        }, 1000);
-      }, 6000);
+          document.querySelector(".loading").style.display = "none";
+        }, 6000);
+      });
+  }
+
+  //メインビューのスライダー
+  // let mvSwiper = new Swiper(".js-mvSwiper", {
+  //   effect: "fade",
+  //   fadeEffect: { crossFade: true },
+  //   speed: 3000, //フェード切り替え速度
+  //   autoplay: {
+  //     delay: 5000, //スライド切り替え速度
+  //     disableOnInteraction: false,
+  //   },
+  //   loop: true,
+  // });
+
+  function mvSwiper() {
+    new Swiper(".js-mvSwiper", {
+      effect: "fade",
+      fadeEffect: { crossFade: true },
+      speed: 3000, //フェード切り替え速度
+      autoplay: {
+        delay: 5000, //スライド切り替え速度
+        disableOnInteraction: false,
+      },
+      loop: true,
     });
+  }
 
   // MVとヘッダーの下ラインが重なった時に、ヘッダーに背景色をつける
   let header = $(".header");
@@ -48,19 +77,6 @@ jQuery(function ($) {
       $(".header").removeClass("is-active").css("display", ""); // is-active を削除
     }
   });
-
-  //メインビューのスライダー
-  // let mvSwiper = new Swiper(".js-mvSwiper", {
-  //   autoplay: {
-  //     delay: 3000,
-  //     disableOnInteraction: false, // ユーザーの操作後も自動スライドが止まらないようにする
-  //   },
-  //   loop: false,
-  // });
-
-  //swiperを使うときは、以下クラス名の変更要
-  //<div class="mv__image swiper js-mvSwiper">
-  //<div class="swiper-slide mv__slide">
 
   // キャンペーンカードのスライダー
   // inner幅の基準値を設定

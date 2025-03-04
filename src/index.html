@@ -196,13 +196,37 @@
       </section>
 
       <section class="mv js-loadingTarget">
-        <div class="mv__image">
-          <!-- <div class="swiper-wrapper"> -->
-            <div class="mv__slide"></div>
-            <div class="mv__slide"></div>
-            <div class="mv__slide"></div>
-            <div class="mv__slide"></div>
-          <!-- </div> -->
+        <div class="mv__slider swiper js-mvSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide mv__slide">
+              <picture>
+                <source srcset="./assets/images/common/mv-sp_1.jpg" media="(max-width: 767px)">
+                <source srcset="./assets/images/common/mv-pc_1.jpg" media="(min-width: 768px)">
+                <img src="./assets/images/common/mv-sp_1.jpg" alt="">
+              </picture>
+            </div>
+            <div class="swiper-slide mv__slide">
+              <picture>
+                <source srcset="./assets/images/common/mv-sp_2.jpg" media="(max-width: 767px)">
+                <source srcset="./assets/images/common/mv-pc_2.jpg" media="(min-width: 768px)">
+                <img src="./assets/images/common/mv-sp_2.jpg" alt="">
+              </picture>
+            </div>
+            <div class="swiper-slide mv__slide">
+              <picture>
+                <source srcset="./assets/images/common/mv-sp_3.jpg" media="(max-width: 767px)">
+                <source srcset="./assets/images/common/mv-pc_3.jpg" media="(min-width: 768px)">
+                <img src="./assets/images/common/mv-sp_3.jpg" alt="">
+              </picture>
+            </div>
+            <div class="swiper-slide mv__slide">
+              <picture>
+                <source srcset="./assets/images/common/mv-sp_4.jpg" media="(max-width: 767px)">
+                <source srcset="./assets/images/common/mv-pc_4.jpg" media="(min-width: 768px)">
+                <img src="./assets/images/common/mv-sp_4.jpg" alt="">
+              </picture>
+            </div>
+          </div>
         </div>
         <div class="mv__header">
           <h2 class="mv__title">DIVING</h2>

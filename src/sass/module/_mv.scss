@@ -7,78 +7,27 @@
   }
 }
 
-.mv__image {
-  position: relative;
+.mv__slider {
   width: 100%;
   height: inherit;
 }
 
 .mv__slide {
-  position: absolute;
-  top: 0;
-  left: 0;
+  width: 100%;
+  aspect-ratio: 375 / 667;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.mv__slide img {
   width: 100%;
   height: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  aspect-ratio: 375 / 667;
-  opacity: 0;
+  object-fit: cover;
 }
 
-.mv__slide:nth-child(1) {
-  background-image: url(../images/common/mv-sp_1.jpg);
-  animation: mvSwiper 24s infinite;
-  @include mq(md) {
-    background-image: url(../images/common/mv-pc_1.jpg);
-  }
-}
-
-.mv__slide:nth-child(2) {
-  background-image: url(../images/common/mv-sp_2.jpg);
-  animation: mvSwiper 24s infinite 6s;
-  @include mq(md) {
-    background-image: url(../images/common/mv-pc_2.jpg);
-  }
-}
-
-.mv__slide:nth-child(3) {
-  background-image: url(../images/common/mv-sp_3.jpg);
-  animation: mvSwiper 24s infinite 12s;
-  @include mq(md) {
-    background-image: url(../images/common/mv-pc_3.jpg);
-  }
-}
-
-.mv__slide:nth-child(4) {
-  background-image: url(../images/common/mv-sp_4.jpg);
-  animation: mvSwiper 24s infinite 18s;
-  @include mq(md) {
-    background-image: url(../images/common/mv-pc_4.jpg);
-  }
-}
-
-@keyframes mvSwiper {
-  0% {
-    opacity: 0;
-    z-index: 9;
-  }
-  12.5% {
-    opacity: 1;
-    z-index: 10;
-  }
-  25% {
-    opacity: 1;
-    z-index: 10;
-  }
-  37.5% {
-    opacity: 0;
-    z-index: 9;
-  }
-  100% {
-    opacity: 0;
-    z-index: 9;
-  }
+.mv__slide.swiper-slide-active {
+  opacity: 1;
 }
 
 .mv__header {
