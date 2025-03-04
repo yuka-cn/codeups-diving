@@ -20,17 +20,6 @@ jQuery(function ($) {
   }
 
   //メインビューのスライダー
-  // let mvSwiper = new Swiper(".js-mvSwiper", {
-  //   effect: "fade",
-  //   fadeEffect: { crossFade: true },
-  //   speed: 3000, //フェード切り替え速度
-  //   autoplay: {
-  //     delay: 5000, //スライド切り替え速度
-  //     disableOnInteraction: false,
-  //   },
-  //   loop: true,
-  // });
-
   function mvSwiper() {
     new Swiper(".js-mvSwiper", {
       effect: "fade",
