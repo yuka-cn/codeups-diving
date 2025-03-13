@@ -2,9 +2,6 @@
 
 .company {
   position: relative;
-  @include mq(md){
-    display: none;
-  }
 }
 
 .company__name {
@@ -76,11 +73,15 @@
 .company__map {
   width: calc(295 / 375 * 100vw);
   height: calc(160 / 375 * 100vw);
-  background: #d9d9d9;
   @include mq(md) {
     max-width: rem(273);
     width: calc(273 / 1440 * 100vw);
     max-height: rem(148);
     height: calc(148 / 1440 * 100vw);
   }
+}
+
+.company__map iframe {
+  width: 100%;
+  height: 100%;
 }

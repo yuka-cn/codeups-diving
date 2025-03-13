@@ -10,8 +10,10 @@ jQuery(function ($) {
     document
       .querySelector(".loading")
       .addEventListener("animationend", function () {
-        document.body.classList.add("is-visible");
         setTimeout(mvSwiper, 3000);
+        setTimeout(function(){
+          document.body.classList.add("is-visible");
+        },5500);
         setTimeout(function () {
           document.querySelector(".mv__header").style.opacity = "1";
           document.querySelector(".loading").style.display = "none";
