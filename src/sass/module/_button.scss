@@ -8,7 +8,8 @@
   justify-content: center;
   gap: rem(8);
   background: $ac-color;
-  transition: color 0.8s cubic-bezier(0.45, 0, 0.55, 1);
+  border-left: 1px solid $ac-color;
+  // transition: color 0.3s cubic-bezier(0.45, 0, 0.55, 1);
   box-sizing: border-box;
 }
 
@@ -20,10 +21,11 @@
   width: 100%;
   height: 100%;
   border: 1px solid $ac-color;
+  border-left: none;
   background: $white;
   transform: scale(0, 1);
   transform-origin: left;
-  transition: 0.8s cubic-bezier(0.45, 0, 0.55, 1);
+  transition: 0.3s cubic-bezier(0.45, 0, 0.55, 1);
 }
 
 .button:hover::before {

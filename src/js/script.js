@@ -11,9 +11,9 @@ jQuery(function ($) {
       .querySelector(".loading")
       .addEventListener("animationend", function () {
         setTimeout(mvSwiper, 3000);
-        setTimeout(function(){
+        setTimeout(function () {
           document.body.classList.add("is-visible");
-        },5500);
+        }, 5500);
         setTimeout(function () {
           document.querySelector(".mv__header").style.opacity = "1";
           document.querySelector(".loading").style.display = "none";
@@ -49,16 +49,15 @@ jQuery(function ($) {
   });
 
   //ドロワーメニュー
-  $(".js-hamburger").click(function () {
-    if ($(".js-hamburger").hasClass("is-active")) {
-      $(".js-hamburger").removeClass("is-active");
-      $(".header").removeClass("is-active");
-      $(".js-sp-nav").fadeOut(300);
-    } else {
-      $(".js-hamburger").addClass("is-active");
-      $(".header").addClass("is-active");
-      $(".js-sp-nav").fadeIn(300);
-    }
+  $(function () {
+    $(".js-hamburger").click(function () {
+      $(".js-hamburger, .header, .js-sp-nav").toggleClass("is-active");
+      if($(".js-hamburger").hasClass("is-active")){
+        $("body").css("overflow","hidden"); //背景がスクロールされないようにする
+      } else{
+        $("body").css("overflow","auto");
+      }
+    });
   });
 
   //pc画面幅ではドロワーメニューを非表示にする
