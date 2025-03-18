@@ -102,10 +102,6 @@
   position: relative;
   padding-bottom: rem(4);
   font-size: rem(20);
-  // text-decoration: line-through;
-  // text-decoration-thickness: rem(3);
-  // text-decoration-color: #c94800;
-  // text-underline-offset: rem(4);
   @include mq(md) {
     font-size: rem(24);
     padding-bottom: rem(7);

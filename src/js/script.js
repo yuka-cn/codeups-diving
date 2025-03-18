@@ -10,14 +10,15 @@ jQuery(function ($) {
     document
       .querySelector(".loading")
       .addEventListener("animationend", function () {
-        setTimeout(mvSwiper, 3000);
+        document.querySelector(".mv__header").style.opacity = "1";
         setTimeout(function () {
+          document.querySelector(".loading").style.opacity = "0";
           document.body.classList.add("is-visible");
-        }, 5500);
+          mvSwiper();
+        }, 1000);
         setTimeout(function () {
-          document.querySelector(".mv__header").style.opacity = "1";
           document.querySelector(".loading").style.display = "none";
-        }, 6000);
+        }, 2000);
       });
   }
 
@@ -52,10 +53,10 @@ jQuery(function ($) {
   $(function () {
     $(".js-hamburger").click(function () {
       $(".js-hamburger, .header, .js-sp-nav").toggleClass("is-active");
-      if($(".js-hamburger").hasClass("is-active")){
-        $("body").css("overflow","hidden"); //背景がスクロールされないようにする
-      } else{
-        $("body").css("overflow","auto");
+      if ($(".js-hamburger").hasClass("is-active")) {
+        $("body").css("overflow", "hidden"); //背景がスクロールされないようにする
+      } else {
+        $("body").css("overflow", "auto");
       }
     });
   });
@@ -101,9 +102,7 @@ jQuery(function ($) {
 
     // Swiperを再初期化
     campaignSwiper = new Swiper(".js-campaignSwiper", {
-      delay: 2000,
-      disableOnInteraction: false,
-      loopAdditionalSlides: 1,
+
       spaceBetween: spaceBetweenValue,
       slidesPerView: "auto",
       navigation: {

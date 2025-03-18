@@ -10,15 +10,12 @@
   @include mq(md) {
     height: rem(90);
     opacity: 0;
-    animation: headerFadeIn 6s ease 8s forwards;
+    animation: headerFadeIn 1s ease 3s forwards;
   }
 }
 
 @keyframes headerFadeIn {
   0% {
-    opacity: 0;
-  }
-  50% {
     opacity: 0;
   }
   100% {
@@ -50,7 +47,8 @@
 }
 
 .header__logo {
-  transform: translate(rem(-3), rem(3));
+  // transform: translate(rem(-3), rem(3)); ピクパ優先
+  transform: translateX(rem(-3));
   max-width: rem(108);
   width: 100%;
   height: inherit;

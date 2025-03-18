@@ -9,7 +9,7 @@
     opacity: 1;
     visibility: visible;
     background: $white;
-    animation: loadingFadeOut 15s ease forwards;
+    animation: loading 3s ease forwards;
     overflow: hidden;
   }
 }
@@ -22,7 +22,7 @@
   text-align: center;
   z-index: 100;
   color: $ac-color;
-  animation: fadeInOut 6s ease-out forwards, changeColor 1s 9s forwards;
+  animation: fadeInOut 1.5s ease-out forwards, changeColor 1.5s 1.5s forwards;
 }
 
 .loading__title {
@@ -59,18 +59,18 @@
 .loading__img-left {
   object-fit: cover;
   object-position: right;
-  animation: fadeUpLeft 4s 3s forwards;
+  animation: fadeUpLeft 1s 0.5s ease forwards;
 }
 
 .loading__img-right {
   object-fit: cover;
   object-position: left;
-  animation: fadeUpRight 4s 3.5s forwards;
+  animation: fadeUpRight 1s 0.5s ease forwards;
 }
 
 @keyframes fadeInOut {
   0% {
-    opacity: 0;
+    opacity: 1;
   }
   50% {
     opacity: 1;
@@ -96,9 +96,6 @@
     opacity: 0;
     transform: translateY(50vh);
   }
-  12.5% {
-    transform: translateY(calc(50vh - 80px));
-  }
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -108,7 +105,7 @@
 @keyframes fadeUpRight {
   0% {
     opacity: 0;
-    transform: translateY(50vh);
+    transform: translateY(calc(50vh + 80px));
   }
   100% {
     opacity: 1;
@@ -116,17 +113,14 @@
   }
 }
 
-@keyframes loadingFadeOut {
+@keyframes loading {
   0% {
     opacity: 0;
   }
   5% {
     opacity: 1;
   }
-  95% {
-    opacity: 1;
-  }
   100% {
-    opacity: 0;
+    opacity: 1;
   }
 }
