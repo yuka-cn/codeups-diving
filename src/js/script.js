@@ -11,10 +11,10 @@ jQuery(function ($) {
       .querySelector(".loading")
       .addEventListener("animationend", function () {
         document.querySelector(".mv__header").style.opacity = "1";
+        setTimeout(mvSwiper,1000);
         setTimeout(function () {
           document.querySelector(".loading").style.opacity = "0";
           document.body.classList.add("is-visible");
-          mvSwiper();
         }, 1000);
         setTimeout(function () {
           document.querySelector(".loading").style.display = "none";
