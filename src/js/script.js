@@ -78,11 +78,11 @@ jQuery(function ($) {
     let windowWidth = window.innerWidth;
 
     if (windowWidth <= 375) {
-      return windowWidth * (6.4 / 100); // 375px以下は 6.4vw ←(24px÷375px)×100
+      return windowWidth * (6.4 / 100); // 375px以下は 6.4vw ←(24px/375px)×100
     } else if (windowWidth > 375 && windowWidth < 768) {
-      return 24; // 375px〜767px は固定 24px
+      return 24; // 376px〜767px は固定 24px
     } else if (windowWidth >= 768 && windowWidth < INNER_WIDTH) {
-      return windowWidth * (3.7 / 100); // 768px〜inner幅未満は 3.7vw ←(40px÷1080px)×100
+      return windowWidth * (3.7 / 100); // 768px〜inner幅未満は 3.7vw ←(40px/1080px)×100
     } else {
       return 40; // inner幅以上は固定 40px
     }
@@ -105,15 +105,17 @@ jQuery(function ($) {
 
       spaceBetween: spaceBetweenValue,
       slidesPerView: "auto",
+      loop: true,
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
-      breakpoints: {
-        768: { slidesPerView: 3 },
-      },
+      // breakpoints: {
+      //   768: { slidesPerView: 3 ,},
+      // },
     });
   }
+
   // 初回実行
   initSwiper();
 

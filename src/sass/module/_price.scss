@@ -137,7 +137,6 @@
 .price__button {
   margin-top: rem(44);
   text-align: center;
-  transform: translateX(rem(-2));
   @include mq(md) {
     margin-top: rem(80);
   }

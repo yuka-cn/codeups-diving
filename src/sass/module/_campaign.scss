@@ -2,10 +2,11 @@
 
 .campaign {
   overflow: hidden;
-  @include mq(md){
+  @include mq(md) {
     display: none;
   }
 }
+
 
 .campaign__inner {
   position: relative;
@@ -31,8 +32,9 @@
   }
 }
 
-.campaign__card.swiper-slide{
+.campaign__card.swiper-slide {
   height: auto;
+  flex-shrink: 0;
 }
 
 .campaign__button-next.swiper-button-next,
@@ -71,7 +73,6 @@
 .campaign__button {
   text-align: center;
   margin-top: rem(40);
-  transform: translateX(rem(-2));
   @include mq(md) {
     margin-top: rem(80);
   }

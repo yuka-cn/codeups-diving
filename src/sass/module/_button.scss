@@ -42,7 +42,7 @@
   transform: translate(4px, 4px);
   border: 1px solid $ac-color;
   background: transparent;
-  z-index: -1;
+  z-index: 0;
 }
 
 .button__link {
