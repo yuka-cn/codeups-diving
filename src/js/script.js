@@ -106,6 +106,7 @@ jQuery(function ($) {
       spaceBetween: spaceBetweenValue,
       slidesPerView: "auto",
       loop: true,
+      loopedSlides: 2,
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -113,7 +114,9 @@ jQuery(function ($) {
       // breakpoints: {
       //   768: { slidesPerView: 3 ,},
       // },
+
     });
+
   }
 
   // 初回実行

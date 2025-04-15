@@ -7,7 +7,6 @@
   }
 }
 
-
 .campaign__inner {
   position: relative;
 }
@@ -24,17 +23,23 @@
   }
 }
 
-.campaign__card {
+.campaign__container{
+  padding-left: rem(100);
+}
+
+// .campaign__flex.swiper-wrapper {
+//   transform: translate3d(0px, 0px, 0px);
+// }
+
+
+.campaign__slide.swiper-slide {
   max-width: rem(280);
+  height: auto;
+  flex-shrink: 0;
   width: 100%;
   @include mq(md) {
     max-width: calc(($inner - rem(40) * 2) / 3);
   }
-}
-
-.campaign__card.swiper-slide {
-  height: auto;
-  flex-shrink: 0;
 }
 
 .campaign__button-next.swiper-button-next,

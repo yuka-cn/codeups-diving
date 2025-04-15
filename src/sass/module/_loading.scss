@@ -31,7 +31,9 @@
   font-weight: $regular;
   line-height: 1.2;
   letter-spacing: 0.53em;
-  transform: translate(rem(21), rem(2));
+  text-indent: 0.53em;
+  // transform: translate(rem(21), rem(2));
+  transform: translateY(rem(-2));
 }
 
 .loading__subtitle {
