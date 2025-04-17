@@ -15,16 +15,12 @@
   text-align: center;
 }
 
-.campaign__cards.swiper {
+.campaign__body{
   margin-top: rem(28);
-  // overflow: visible;
+  margin-right: calc(50% - 50vw);
   @include mq(md) {
     margin-top: rem(40);
   }
-}
-
-.campaign__body{
-  margin-right: calc(50% - 50vw);
 }
 
 .campaign__slide.swiper-slide {

@@ -87,7 +87,7 @@ jQuery(function ($) {
       return 40; // inner幅以上は固定 40px
     }
   }
-
+  
   // Swiperインスタンスを管理する変数
   let campaignSwiper;
 
@@ -106,7 +106,7 @@ jQuery(function ($) {
       spaceBetween: spaceBetweenValue,
       slidesPerView: "auto",
       loop: true,
-      loopedSlides: 8,
+      loopedSlides: 4,
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
