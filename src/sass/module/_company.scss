@@ -1,10 +1,14 @@
 @use "global" as *;
 
-.company {
-  position: relative;
+.company__name {
+  padding-bottom: rem(6);
+  border-bottom: 1px solid $ac-color;
+  @include mq(md) {
+    padding-bottom: rem(8);
+  }
 }
 
-.company__name {
+.company__name img {
   margin: auto;
   max-width: rem(174);
   width: 100%;
@@ -14,29 +18,14 @@
   }
 }
 
-.company::after {
-  // 両端が丸い下線
-  content: "";
-  position: absolute;
-  left: 0;
-  top: rem(71);
-  width: 100%;
-  height: 1px;
-  background: $ac-color;
-  border-radius: 1px;
-  @include mq(md) {
-    top: rem(83);
-  }
-}
-
 .company__flex {
-  margin-top: rem(22);
+  margin-top: rem(16);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: rem(16);
   @include mq(md) {
-    margin-top: rem(33);
+    margin-top: rem(24);
     flex-direction: row;
     align-items: start;
     justify-content: space-between;
@@ -62,6 +51,7 @@
   @include mq(md) {
     max-width: rem(273);
     width: calc(273 / 1440 * 100vw);
+    // width: calc(58% + (4 * ((100vw - 768px) / 672)));
     max-height: rem(148);
     height: calc(148 / 1440 * 100vw);
   }

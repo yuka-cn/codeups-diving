@@ -32,42 +32,25 @@
   gap: rem(41);
   align-items: center;
   @include mq(md) {
-    position: relative;
     padding: rem(80) rem(112) rem(80) rem(50);
     flex-direction: row;
-    justify-content: space-between;
+    gap: 0;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-  }
-}
-
-.contact__box::before {
-  // 両端が丸い真ん中の線
-  @include mq(md) {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 53%;
-    transform: translate(-50%, -50%);
-    width: 1px;
-    height: calc(100% - rem(160));
-    background: $ac-color;
-    border-radius: 1px;
-  }
-  @media (max-width: 1400px) {
-    // 画面幅が狭くなると線の位置が右に寄り過ぎるのを調整
-    left: 50%;
   }
 }
 
 .contact__company-overview {
   @include mq(md) {
-    // width: 47.9%;
+    padding-right: rem(82);
+    border-right: 1px solid $ac-color;
+    width: 57%;
   }
 }
 
 .contact__block {
   @include mq(md) {
-    // width: 34.4%;
+    padding-left: rem(81);
+    width: 43%;
   }
 }
 
