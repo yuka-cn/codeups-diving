@@ -3,19 +3,16 @@
 .voice{
   @include mq(md){
     display: none;
+    position: relative;
   }
 }
 
-.voice__embellishment{
-  position: relative;
-}
-
-.voice__embellishment::before {
+.voice::before {
   @include mq(md) {
     content: "";
     position: absolute;
     top: rem(-115);
-    left: rem(75);
+    left: calc(50% - min(rem(620),48%));
     width: rem(301);
     height: rem(138);
     background-image: url(../images/common/embellishment_3.png);
@@ -24,11 +21,11 @@
   }
 }
 
-.voice__embellishment::after {
+.voice::after {
   @include mq(md) {
     content: "";
     position: absolute;
-    right: rem(155);
+    right: calc(50% - min(rem(540),48%));
     bottom: rem(-67);
     width: rem(71);
     height: rem(162);

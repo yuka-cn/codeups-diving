@@ -3,18 +3,15 @@
 .about{
   @include mq(md){
     display: none;
+    position: relative;
   }
 }
 
-.about__embellishment {
-  position: relative;
-}
-
-.about__embellishment::before {
+.about::before {
   @include mq(md) {
     content: "";
     position: absolute;
-    right: rem(58);
+    right: calc(50% - min(rem(637),48%));
     bottom: calc(rem(-181) / 2);
     width: rem(194);
     height: rem(181);

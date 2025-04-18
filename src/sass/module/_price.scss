@@ -5,21 +5,18 @@
   background: $bg-color;
   @include mq(md) {
     display: none;
+    position: relative;
     padding-top: rem(96);
     padding-bottom: rem(100);
   }
 }
 
-.price__embellishment {
-  position: relative;
-}
-
-.price__embellishment::before {
+.price::before {
   @include mq(md) {
     content: "";
     position: absolute;
-    left: rem(75);
-    bottom: rem(-40);
+    left: calc(50% - min(rem(620),48%));;
+    bottom: rem(59);
     width: rem(437);
     height: rem(201);
     background-image: url(../images/common/embellishment_5.png);

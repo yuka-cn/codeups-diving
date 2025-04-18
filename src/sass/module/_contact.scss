@@ -1,19 +1,16 @@
 @use "global" as *;
 
 .contact {
+  position: relative;
   @include mq(md) {
     display: none;
   }
 }
 
-.contact__embellishment {
-  position: relative;
-}
-
-.contact__embellishment::before {
+.contact::before {
   content: "";
   position: absolute;
-  top: rem(-26);
+  top: rem(-25);
   right: rem(15);
   width: rem(109);
   height: rem(50);
@@ -21,8 +18,8 @@
   background-repeat: no-repeat;
   background-size: contain;
   @include mq(md) {
-    top: rem(-40);
-    right: rem(25);
+    top: rem(-39);
+    right: calc(50% - min(rem(670),48%));
     width: rem(301);
     height: rem(138);
   }

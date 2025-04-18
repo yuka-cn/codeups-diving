@@ -3,6 +3,7 @@
 .blog {
   @include mq(md) {
     display: none;
+    position: relative;
     padding-top: rem(95);
     background: linear-gradient(to bottom, transparent 60%, $white 60%),
       url(../images/common/blog-bg-pc.jpg);
@@ -15,16 +16,12 @@
   }
 }
 
-.blog__embellishment {
-  position: relative;
-}
-
-.blog__embellishment::before {
+.blog::before {
   @include mq(md) {
     content: "";
     position: absolute;
-    top: rem(-71);
-    left: rem(75);
+    top: rem(24);
+    left: calc(50% - min(rem(620),48%));
     width: rem(437);
     height: rem(201);
     background-image: url(../images/common/embellishment_2.png);
