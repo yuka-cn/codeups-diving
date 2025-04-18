@@ -50,9 +50,10 @@
   line-height: 1.2;
   letter-spacing: 0.53em;
   text-indent: 0.53em;
-  transform: translateY(rem(2));
+  transform: translateY(rem(-2));
   @include mq(md) {
     font-size: rem(80);
+    transform: translateY(rem(2));
   }
 }
 
