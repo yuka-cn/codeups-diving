@@ -55,7 +55,7 @@
 
 .about__right-image {
   position: absolute;
-  top: rem(26);
+  top: clamp(1.625rem, -0.121rem + 7.451vi, 2.813rem); /* 画面幅375px〜630pxでtopが26px→45pxに変化 */
   right: 0;
   aspect-ratio: 281 / 186;
   max-width: calc(281 / 375 * 100vw);
