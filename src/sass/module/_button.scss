@@ -1,15 +1,22 @@
 @use "global" as *;
 
 .button {
-  margin-bottom: 4px; //// 右下の影のような四角形分
+  margin-bottom: 4px; // 右下の影のような四角形分
   position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: rem(8);
+  height: inherit;
+  padding: rem(20) rem(40);
+  font-size: rem(14);
+  font-family: $en-font-family;
+  line-height: 1;
+  color: $white;
   background: $ac-color;
   border-left: 1px solid $ac-color;
   box-sizing: border-box;
+  z-index: 1;
 }
 
 .button::before {
@@ -25,10 +32,7 @@
   transform: scale(0, 1);
   transform-origin: left;
   transition: 0.3s cubic-bezier(0.45, 0, 0.55, 1);
-}
-
-.button:hover::before {
-  transform: scale(1, 1);
+  z-index: -1;
 }
 
 .button::after {
@@ -45,30 +49,18 @@
   z-index: 0;
 }
 
-.button__link {
-  height: inherit;
-  padding: rem(20) rem(40);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: rem(14);
-  font-family: $en-font-family;
-  line-height: 1;
-  color: $white;
-  z-index: 1
-}
-
-.button__link span {
+.button span {
+  // 矢印の直線
   content: "";
   position: relative;
   width: 40px;
   height: 1px;
-  margin-left: rem(8);
   border-radius: 9999px;
   background: $white;
 }
 
-.button__link span::before {
+.button span::before {
+  // 矢印の斜線
   content: "";
   position: absolute;
   top: calc(50% - 2px);
@@ -82,12 +74,15 @@
   margin-left: rem(8);
 }
 
-.button__link:hover {
+.button:hover {
   color: $ac-color;
 }
 
-.button__link:hover span,
-.button__link:hover span::before {
-  background: $ac-color;
+.button:hover::before {
+  transform: scale(1, 1);
 }
 
+.button:hover span,
+.button:hover span::before {
+  background: $ac-color;
+}

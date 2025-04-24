@@ -1,0 +1,11 @@
+@use "global" as *;
+
+.cards-2 {
+  padding: 0 rem(6);
+  display: grid;
+  gap: rem(40);
+  @include mq(md) {
+    padding: 0;
+    grid-template-columns: repeat(3,1fr);
+  }
+}
