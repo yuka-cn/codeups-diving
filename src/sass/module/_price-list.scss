@@ -1,13 +1,13 @@
 @use "global" as *;
 
-.list-1__title {
+.price-list__title {
   position: relative;
   padding-bottom: rem(5);
   font-size: rem(16);
   font-weight: $bold;
 }
 
-.list-1__title::after {
+.price-list__title::after {
   // 両端が丸い下線
   content: "";
   position: absolute;
@@ -19,7 +19,7 @@
   border-radius: 1px;
 }
 
-.list-1__item {
+.price-list__item {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -31,7 +31,7 @@
   }
 }
 
-.list-1__item dt {
+.price-list__item dt {
   margin-top: rem(10);
   width: 81%;
   @include mq(md){
@@ -39,7 +39,7 @@
   }
 }
 
-.list-1__item dd {
+.price-list__item dd {
   margin-top: rem(10);
   width: 19%;
   text-align: right;

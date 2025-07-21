@@ -1,39 +1,39 @@
 @use "global" as *;
 
-.card-2 {
+.blog-card {
   position: relative;
   padding: rem(16) rem(16) rem(24);
   background: $white;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
 }
 
-.card-2__image {
+.blog-card__image {
   aspect-ratio: 301 / 201;
 }
 
-.card-2__image img {
+.blog-card__image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.card-2__body {
+.blog-card__body {
   margin-top: rem(17);
 }
 
-.card-2__date {
+.blog-card__date {
   font-size: rem(12);
   font-family: $en-font-family;
 }
 
-.card-2__title {
+.blog-card__title {
   position: relative;
   padding-bottom: rem(4);
   font-size: rem(16);
   font-weight: $medium;
 }
 
-.card-2__title::after {
+.blog-card__title::after {
   // 両端が丸い下線
   content: "";
   position: absolute;
@@ -45,7 +45,7 @@
   border-radius: 1px;
 }
 
-.card-2__text {
+.blog-card__text {
   margin-top: rem(16);
   font-size: rem(16);
   @include mq(md) {
@@ -53,7 +53,7 @@
   }
 }
 
-.card-2__mask {
+.blog-card__mask {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -63,6 +63,6 @@
   background: rgba(255, 255, 255,0.4);
 }
 
-.card-2:hover .card-2__mask {
+.blog-card:hover .blog-card__mask {
   opacity: 0.7;
 }

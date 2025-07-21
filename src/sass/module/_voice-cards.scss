@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.cards-3 {
+.voice-cards {
   display: grid;
   gap: rem(40);
   @include mq(md){

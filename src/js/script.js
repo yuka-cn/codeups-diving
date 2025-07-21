@@ -126,10 +126,10 @@ jQuery(function ($) {
 
   // 画像アニメーション
   // 要素の取得とスピードの設定
-  let imageAnimation = $(".information__image, .card-3__image, .price__image"),
+  let imageAnimation = $(".information__image, .voice-card__image, .price__image"),
     speed = 700;
 
-  // ..information__image, .card-3__image, .price__image の付いた全ての要素に対して処理を行う
+  // ..information__image, .voice-card__image, .price__image の付いた全ての要素に対して処理を行う
   imageAnimation.each(function () {
     let $this = $(this);
 
