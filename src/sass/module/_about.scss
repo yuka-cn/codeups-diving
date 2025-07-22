@@ -2,7 +2,6 @@
 
 .about{
   @include mq(md){
-    display: none;
     position: relative;
   }
 }

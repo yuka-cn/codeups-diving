@@ -5,7 +5,6 @@
   color: $white;
   background: $ac-color;
   @include mq(md) {
-    display: none;
     padding: rem(80) 0;
   }
 }

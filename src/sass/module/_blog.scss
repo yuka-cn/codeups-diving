@@ -2,7 +2,6 @@
 
 .blog {
   @include mq(md) {
-    display: none;
     position: relative;
     padding-top: rem(95);
     background: linear-gradient(to bottom, transparent 60%, $white 60%),

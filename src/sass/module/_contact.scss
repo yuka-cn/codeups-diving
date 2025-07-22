@@ -2,9 +2,6 @@
 
 .contact {
   position: relative;
-  @include mq(md) {
-    display: none;
-  }
 }
 
 .contact::before {

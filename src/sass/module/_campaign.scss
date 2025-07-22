@@ -1,11 +1,5 @@
 @use "global" as *;
 
-.campaign {
-  @include mq(md) {
-    display: none;
-  }
-}
-
 .campaign__inner {
   position: relative;
 }

@@ -2,7 +2,6 @@
 
 .voice{
   @include mq(md){
-    display: none;
     position: relative;
   }
 }
