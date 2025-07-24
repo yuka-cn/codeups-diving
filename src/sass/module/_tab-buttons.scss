@@ -1,0 +1,10 @@
+@use "global" as *;
+
+.tab-buttons{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: rem(19);
+  @include mq("md") {
+    gap: rem(90);
+  }
+}
