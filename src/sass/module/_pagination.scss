@@ -10,6 +10,10 @@
   color: $ac-color;
 }
 
+.pagination--simple{
+  gap: rem(82);
+}
+
 .pagination a{
   display: inline-block;
   text-align: center;
@@ -18,10 +22,7 @@
   width: rem(38);
   height: rem(38);
   border: 1px solid $ac-color;
-}
-
-.pagination a:hover{
-  color: rgba($ac-color, 0.6);
+  transition: all 0.3s ease;
 }
 
 .pagination__prev,
@@ -52,11 +53,29 @@
   transform: translate(-70%,-50%) rotate(45deg);
 }
 
+.pagination__prev:hover,
+.pagination__next:hover{
+  background: $ac-color;
+}
+
+.pagination__prev:hover::before,
+.pagination__next:hover::before {
+  border-color: $white;
+}
+
 .pagination__pages{
   display: flex;
   gap: rem(12);
 }
 
+.pagination a.pagination__page--pc{
+  display: none;
+  @include mq("md"){
+    display: inline-block;
+  }
+}
+
+.pagination a:hover,
 .pagination__page.is-current{
   color: $white;
   background: $ac-color;
