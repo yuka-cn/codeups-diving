@@ -1,0 +1,50 @@
+@use "global" as *;
+
+.tab-panel{
+  padding: rem(24);
+  display: grid;
+  gap: rem(8);
+  grid-template-columns: repeat(1, 1fr);
+  align-items: center;
+  border: 2px solid $ac-color;
+  @include mq("md") {
+   grid-template-columns: repeat(2, 1fr);
+   gap: rem(48);
+  }
+}
+
+.tab-panel__title {
+  position: relative;
+  padding-bottom: rem(8);
+  font-size: rem(24);
+  font-weight: $bold;
+}
+
+.tab-panel__title::after {
+  // 両端が丸い下線
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: $ac-color;
+  border-radius: 1px;
+}
+
+.tab-panel__text {
+  margin-top: rem(8);
+}
+
+.tab-panel__image {
+  aspect-ratio: 297 / 189;
+  @include mq("md"){
+    aspect-ratio: 492 / 313;
+  }
+}
+
+.tab-panel__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

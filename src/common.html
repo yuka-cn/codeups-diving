@@ -47,20 +47,57 @@
 
       <!-- informationカテゴリーボタン -->
       <div class="tab-buttons">
-        <button class="tab-buttons__item tab-button is-active">
+        <button class="tab-buttons__item tab-button is-active" data-target="#license">
           <span class="tab-button__icon"></span>
           <span class="tab-button__text">ライセンス<br class="tab-button__br">講習</span>
         </button>
-        <button class="tab-buttons__item tab-button">
+        <button class="tab-buttons__item tab-button" data-target="#fun-diving">
           <span class="tab-button__icon"></span>
           <span class="tab-button__text">ファン<br class="tab-button__br">ダイビング</span>
         </button>
-        <button class="tab-buttons__item tab-button">
+        <button class="tab-buttons__item tab-button" data-target="#trial-diving">
           <span class="tab-button__icon"></span>
           <span class="tab-button__text">体験<br class="tab-button__br">ダイビング</span>
         </button>
       </div>
 
+      <!-- informationパーツ -->
+      <div class="tab-panels">
+        <div class="tab-panels__item tab-panel" id="license">
+          <div class="tab-panel__body">
+            <h2 class="tab-panel__title">ライセンス講習</h2>
+            <p class="tab-panel__text">
+              泳げない人も、ちょっと水が苦手な人も、ダイビングを「安全に」楽しんでいただけるよう、スタッフがサポートいたします！スキューバダイビングを楽しむためには最低限の知識とスキルが要求されます。知識やスキルと言ってもそんなに難しい事ではなく、安全に楽しむ事を目的としたものです。プロダイバーの指導のもと知識とスキルを習得しCカードを取得して、ダイバーになろう！
+            </p>
+          </div>
+          <div class="tab-panel__image">
+            <img src="./assets/images/pages/information_1.jpg" alt="ライセンス講習イメージ画像">
+          </div>
+        </div>
+        <div class="tab-panels__item tab-panel" id="fun-diving">
+          <div class="tab-panel__body">
+            <h2 class="tab-panel__title">ファンダイビング</h2>
+            <p class="tab-panel__text">
+              ブランクダイバー、ライセンスを取り立ての方も安心！沖縄本島を代表する「青の洞窟」（真栄田岬）やケラマ諸島などメジャーなポイントはモチロンのこと、最北端「辺戸岬」や最南端の「大渡海岸」等もご用意
+            </p>
+          </div>
+          <div class="tab-panel__image">
+            <img src="./assets/images/pages/information_2.jpg" alt="ファンダイビングイメージ画像">
+          </div>
+        </div>
+        <div class="tab-panels__item tab-panel" id="trial-diving">
+          <div class="tab-panel__body">
+            <h2 class="tab-panel__title">体験ダイビング</h2>
+            <p class="tab-panel__text">
+              ブランクダイバー、ライセンスを取り立ての方も安心！沖縄本島を代表する「青の洞窟」（真栄田岬）やケラマ諸島などメジャーなポイントはモチロンのこと、最北端「辺戸岬」や最南端の「大渡海岸」等もご用意！
+            </p>
+          </div>
+          <div class="tab-panel__image">
+            <img src="./assets/images/pages/information_3.jpg" alt="体験ダイビングイメージ画像">
+          </div>
+        </div>
+      </div>
+      
       <!-- ページネーション -->
       <nav class="pagination">
         <a href="#" class="pagination__prev">前へ</a>
@@ -109,9 +146,10 @@
             </div>
           </div>
         </div>
-        
-        
       </div>
+
+
+
     </div>
   </body>
 </html>
