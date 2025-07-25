@@ -1,8 +1,7 @@
 @use "global" as *;
 
 .tab-button{
-  position: relative;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   gap: rem(8);

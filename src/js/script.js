@@ -3,22 +3,25 @@ jQuery(function ($) {
 
   // ローディングアニメーション終了後に全セクションを表示する
   if (window.matchMedia("(max-width: 767px)").matches) {
-    window.addEventListener("load", function () {
-      mvSwiper();
-    });
+  window.addEventListener("load", function () {
+    mvSwiper();
+  });
   } else {
-    document.body.style.overflow = "hidden";
-    document.querySelector(".loading").addEventListener("animationend", function () {
+    const loadingEl = document.querySelector(".loading");
+    if (loadingEl) {
+      document.body.style.overflow = "hidden";
+      loadingEl.addEventListener("animationend", function () {
         document.querySelector(".mv__header").style.opacity = "1";
-        setTimeout(mvSwiper,1000);
+        setTimeout(mvSwiper, 1000);
         setTimeout(function () {
-          document.querySelector(".loading").style.opacity = "0";
+          loadingEl.style.opacity = "0";
         }, 1000);
         setTimeout(function () {
-          document.querySelector(".loading").style.display = "none";
+          loadingEl.style.display = "none";
           document.body.style.overflow = "";
         }, 2000);
       });
+    }
   }
 
   //メインビューのスライダー

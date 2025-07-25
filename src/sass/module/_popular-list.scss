@@ -1,0 +1,35 @@
+@use "global" as *;
+
+.popular-list {
+  display: grid;
+  gap: rem(24);
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.popular-list__item {
+  padding: rem(16);
+  display: grid;
+  gap: rem(16);
+  grid-template-columns: 121fr 125fr;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+}
+
+.popular-list__image {
+  aspect-ratio: 121 / 90;
+}
+
+.popular-list__image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.popular-list__date {
+  font-size: rem(12);
+  font-family: $en-font-family;
+}
+
+.popular-list__title {
+  margin-top: rem(4);
+}
+

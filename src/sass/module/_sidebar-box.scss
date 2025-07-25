@@ -1,0 +1,31 @@
+@use "global" as *;
+
+.sidebar-box__heading{
+  padding-left: rem(16);
+  display: flex;
+  align-items: center;
+  gap: rem(8);
+  border-left: 8px solid $ac-color;
+}
+
+.sidebar-box__icon{
+  display: block;
+  flex-shrink: 0;
+  width: rem(50);
+  height: rem(50);
+  align-self: center;
+  background: url(../images/pages/blog_7.png) center center /contain no-repeat;
+}
+
+.sidebar-box__title{
+  font-size: rem(24);
+}
+
+.sidebar-box__body{
+  margin-top: rem(24);
+}
+
+.sidebar-box__button{
+  margin-top: rem(40);
+  text-align: center;
+}
