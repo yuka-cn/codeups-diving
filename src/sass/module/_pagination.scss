@@ -1,0 +1,67 @@
+@use "global" as *;
+
+.pagination{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: rem(40);
+  font-family: "Lato", serif;
+  font-weight: $bold;
+  color: $ac-color;
+}
+
+.pagination a{
+  display: inline-block;
+  text-align: center;
+  line-height: 1;
+  padding: rem(11) rem(14);
+  width: rem(38);
+  height: rem(38);
+  border: 1px solid $ac-color;
+}
+
+.pagination a:hover{
+  color: rgba($ac-color, 0.6);
+}
+
+.pagination__prev,
+.pagination__next{
+  position: relative;
+  font-size: rem(0);
+}
+
+.pagination__prev::before,
+.pagination__next::before{
+  content: "";
+  position: absolute;
+  width: rem(11);
+  height: rem(11);
+  top: 50%;
+  left: 50%;
+}
+
+.pagination__prev::before{
+  border-left: 1px solid $ac-color;
+  border-bottom: 1px solid $ac-color;
+  transform: translate(-30%,-50%) rotate(45deg);
+}
+
+.pagination__next::before{
+  border-right: 1px solid $ac-color;
+  border-top: 1px solid $ac-color;
+  transform: translate(-70%,-50%) rotate(45deg);
+}
+
+.pagination__pages{
+  display: flex;
+  gap: rem(12);
+}
+
+.pagination__page.is-current{
+  color: $white;
+  background: $ac-color;
+}
+
+.pagination__page.is-current:hover{
+  color: $white;
+}
