@@ -36,6 +36,13 @@
   }
 }
 
+.tab-button__text br{
+  display: inline;
+  @include mq("md"){
+    display: none;
+  }
+}
+
 .tab-button:nth-child(1) .tab-button__icon{
   background: url(../images/pages/information_4-green.png) center center /contain no-repeat;
 }
@@ -71,11 +78,4 @@
 
 .tab-button.is-active:hover{
   color: $white;
-}
-
-.tab-button__br{
-  display: inline;
-  @include mq("md"){
-    display: none;
-  }
 }
