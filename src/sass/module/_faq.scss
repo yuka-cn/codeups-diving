@@ -1,0 +1,74 @@
+@use "global" as *;
+
+.faq__item:not(:first-child){
+  margin-top: rem(40);
+}
+
+.faq__item summary {
+  position: relative;
+  cursor: pointer;
+  list-style: none;
+  padding: rem(18) rem(16);
+  color: $white;
+  background: $ac-color;
+  @include mq("md"){
+    font-size: rem(20);
+    padding: rem(24) rem(40);
+  }
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq__item summary::before,
+.faq__item summary::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: $white;
+}
+
+.faq__item summary::before{
+  right: rem(16);
+  width: rem(28);
+  height: rem(1);
+  @include mq("md"){
+    right: rem(40);
+    width: rem(32);
+  }
+}
+
+.faq__item summary::after {
+  right: rem(30);
+  width: rem(1);
+  height: rem(28);
+  transform-origin: center center;
+  transition: 0.3s ease;
+  @include mq("md"){
+    right: rem(56);
+    height: rem(32);
+  }
+}
+
+.faq__item[open] summary::after {
+  transform: translateY(-50%) rotate(-90deg);
+}
+
+.faq__item p{
+  padding: rem(24) rem(16);
+  border: 1px solid $ac-color;
+  opacity: 0;
+  transform: translateY(-0.5em);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  @include mq("md"){
+    margin-top: rem(16);
+    padding: rem(40);
+  }
+}
+
+.faq__item[open] p {
+  opacity: 1;
+  transform: translateY(0);
+}
