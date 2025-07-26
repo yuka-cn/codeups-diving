@@ -39,23 +39,23 @@
     <div class="inner">
       <!-- カテゴリーボタン -->
       <div class="category-buttons">
-        <button class="category-buttons__item category-button is-active">ALL</button>
-        <button class="category-buttons__item category-button">ライセンス講習</button>
-        <button class="category-buttons__item category-button">ファンダイビング</button>
-        <button class="category-buttons__item category-button">体験ダイビング</button>
+        <button class="category-buttons__item category-button is-active" type="button">ALL</button>
+        <button class="category-buttons__item category-button" type="button">ライセンス講習</button>
+        <button class="category-buttons__item category-button" type="button">ファンダイビング</button>
+        <button class="category-buttons__item category-button" type="button">体験ダイビング</button>
       </div>
 
       <!-- informationカテゴリーボタン -->
       <div class="tab-buttons">
-        <button class="tab-buttons__item tab-button is-active" data-target="#license">
+        <button class="tab-buttons__item tab-button is-active" type="button" data-target="#license">
           <span class="tab-button__icon"></span>
           <span class="tab-button__text">ライセンス<br class="tab-button__br">講習</span>
         </button>
-        <button class="tab-buttons__item tab-button" data-target="#fun-diving">
+        <button class="tab-buttons__item tab-button" type="button" data-target="#fun-diving">
           <span class="tab-button__icon"></span>
           <span class="tab-button__text">ファン<br class="tab-button__br">ダイビング</span>
         </button>
-        <button class="tab-buttons__item tab-button" data-target="#trial-diving">
+        <button class="tab-buttons__item tab-button" type="button" data-target="#trial-diving">
           <span class="tab-button__icon"></span>
           <span class="tab-button__text">体験<br class="tab-button__br">ダイビング</span>
         </button>
@@ -245,7 +245,33 @@
               <span class="sidebar-box__title">アーカイブ</span>
             </h2>
             <div class="sidebar-box__body">
-              
+              <ul class="sidebar-box__archive-list archive-list">
+                <li class="archive-list__year is-open">
+                  <button class="archive-list__year-button" type="button">2023</button>
+                  <ul class="archive-list__months">
+                    <li class="archive-list__month"><a href="#">3月</a></li>
+                    <li class="archive-list__month"><a href="#">2月</a></li>
+                    <li class="archive-list__month"><a href="#">1月</a></li>
+                  </ul>
+                </li>
+                <li class="archive-list__year">
+                  <button class="archive-list__year-button" type="button">2022</button>
+                  <ul class="archive-list__months">
+                    <li class="archive-list__month"><a href="#">12月</a></li>
+                    <li class="archive-list__month"><a href="#">11月</a></li>
+                    <li class="archive-list__month"><a href="#">10月</a></li>
+                    <li class="archive-list__month"><a href="#">9月</a></li>
+                    <li class="archive-list__month"><a href="#">8月</a></li>
+                    <li class="archive-list__month"><a href="#">7月</a></li>
+                    <li class="archive-list__month"><a href="#">6月</a></li>
+                    <li class="archive-list__month"><a href="#">5月</a></li>
+                    <li class="archive-list__month"><a href="#">4月</a></li>
+                    <li class="archive-list__month"><a href="#">3月</a></li>
+                    <li class="archive-list__month"><a href="#">2月</a></li>
+                    <li class="archive-list__month"><a href="#">1月</a></li>
+                  </ul>
+                </li>
+              </ul>
             </div>
           </section>
         </aside>
