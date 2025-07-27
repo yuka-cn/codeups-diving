@@ -36,7 +36,152 @@
     <script defer src="./assets/js/script.js"></script>
   </head>
   <body>
+    <header class="header header-layout">
+      <div class="header__inner">
+        <h1 class="header__logo">
+          <a href="#" class="header__logolink">
+            <img src="./assets/images/common/codeups.svg" alt="CodeUps">
+          </a>
+        </h1>
+        <!-- ハンバーガー -->
+        <div class="header__drawer hamburger js-hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <!-- sp-nav -->
+        <nav class="header__sp-nav sp-nav js-sp-nav">
+          <div class="sp-nav__flex">
+            <div class="sp-nav__left">
+              <ul class="sp-nav__items">
+                <li class="sp-nav__item"><a href="#">キャンペーン</a></li>
+                <li class="sp-nav__item"><a href="#">ライセンス取得</a></li>
+                <li class="sp-nav__item"><a href="#">貸切体験ダイビング</a></li>
+                <li class="sp-nav__item"><a href="#">ナイトダイビング</a></li>
+              </ul>
+              <ul class="sp-nav__items">
+                <li class="sp-nav__item"><a href="#">私たちについて</a></li>
+              </ul>
+              <ul class="sp-nav__items">
+                <li class="sp-nav__item"><a href="#">ダイビング情報</a></li>
+                <li class="sp-nav__item"><a href="#">ライセンス講習</a></li>
+                <li class="sp-nav__item"><a href="#">体験ダイビング</a></li>
+                <li class="sp-nav__item"><a href="#">ファンダイビング</a></li>
+              </ul>
+              <ul class="sp-nav__items">
+                <li class="sp-nav__item"><a href="#">ブログ</a></li>
+              </ul>
+            </div>
+            <div class="sp-nav__right">
+              <ul class="sp-nav__items">
+                <li class="sp-nav__item"><a href="#">お客様の声</a></li>
+              </ul>
+              <ul class="sp-nav__items">
+                <li class="sp-nav__item"><a href="#">料金一覧</a></li>
+                <li class="sp-nav__item"><a href="#">ライセンス講習</a></li>
+                <li class="sp-nav__item"><a href="#">体験ダイビング</a></li>
+                <li class="sp-nav__item"><a href="#">ファンダイビング</a></li>
+              </ul>
+              <ul class="sp-nav__items">
+                <li class="sp-nav__item"><a href="#">よくある質問</a></li>
+              </ul>
+              <ul class="sp-nav__items">
+                <li class="sp-nav__item sp-nav__item--multiline">
+                  <a href="#">プライバシー<br>ポリシー</a>
+                </li>
+              </ul>
+              <ul class="sp-nav__items">
+                <li class="sp-nav__item">
+                  <a href="#">利用規約</a>
+                </li>
+              </ul>
+              <ul class="sp-nav__items">
+                <li class="sp-nav__item">
+                  <a href="#">お問い合わせ</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!-- pc-nav -->
+        <nav class="header__pc-nav pc-nav js-pc-nav">
+          <ul class="pc-nav__items">
+            <li class="pc-nav__item">
+              <a href="#" class="pc-nav__itemlink">
+                <p class="pc-nav__en">Campaign</p>
+                <p class="pc-nav__ja">キャンペーン</p>
+              </a>
+            </li>
+            <li class="pc-nav__item">
+              <a href="#" class="pc-nav__itemlink">
+                <p class="pc-nav__en">About us</p>
+                <p class="pc-nav__ja">私たちについて</p>
+              </a>
+            </li>
+            <li class="pc-nav__item">
+              <a href="#" class="pc-nav__itemlink">
+                <p class="pc-nav__en">Information</p>
+                <p class="pc-nav__ja">ダイビング情報</p>
+              </a>
+            </li>
+            <li class="pc-nav__item">
+              <a href="#" class="pc-nav__itemlink">
+                <p class="pc-nav__en">Blog</p>
+                <p class="pc-nav__ja">ブログ</p>
+              </a>
+            </li>
+            <li class="pc-nav__item">
+              <a href="#" class="pc-nav__itemlink">
+                <p class="pc-nav__en">Voice</p>
+                <p class="pc-nav__ja">お客様の声</p>
+              </a>
+            </li>
+            <li class="pc-nav__item">
+              <a href="#" class="pc-nav__itemlink">
+                <p class="pc-nav__en">Price</p>
+                <p class="pc-nav__ja">料金一覧</p>
+              </a>
+            </li>
+            <li class="pc-nav__item">
+              <a href="#" class="pc-nav__itemlink">
+                <p class="pc-nav__en">FAQ</p>
+                <p class="pc-nav__ja">よくある質問</p>
+              </a>
+            </li>
+            <li class="pc-nav__item">
+              <a href="#" class="pc-nav__itemlink">
+                <p class="pc-nav__en">Contact</p>
+                <p class="pc-nav__ja">お問い合わせ</p>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    
+    <!-- ページタイトル -->
+    <div class="page-header">
+      <h1 class="page-header__title">Blog</h1>
+      <div class="page-header__image">
+        <picture>
+          <source srcset="./assets/images/pages/blog-fv-sp.jpg" media="(max-width: 767px)">
+          <source srcset="./assets/images/pages/blog-fv-pc.jpg" media="(min-width: 768px)">
+          <img src="./assets/images/pages/blog-fv-sp.jpg" alt="">
+        </picture>
+      </div>
+    </div>
+    
+    
     <div class="inner">
+      <!-- パンくずリスト -->
+      <nav class="breadcrumb" aria-label="パンくずリスト">
+        <ol class="breadcrumb__list">
+          <li class="breadcrumb__item"><a href="/">TOP</a></li>
+          <li class="breadcrumb__item"><a href="/home.html/">ブログ一覧</a></li>
+          <li class="breadcrumb__item" aria-current="page">ブログ詳細</li>
+        </ol>
+      </nav>
+
       <!-- カテゴリーボタン -->
       <div class="category-buttons">
         <button class="category-buttons__item category-button is-active" type="button">ALL</button>

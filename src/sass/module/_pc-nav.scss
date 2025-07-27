@@ -13,13 +13,13 @@
 
 .pc-nav__itemlink{
   position: relative;
-height: inherit;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-gap: rem(4);
-color: $white;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: rem(4);
+  color: $white;
 }
 
 .pc-nav__itemlink::after{

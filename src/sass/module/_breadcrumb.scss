@@ -1,0 +1,26 @@
+@use "global" as *;
+
+.breadcrumb {
+  font-size: rem(14);
+}
+
+.breadcrumb__list {
+  display: flex;
+}
+
+.breadcrumb__item:not(:first-child){
+  position: relative;
+  padding-left: rem(20);
+}
+
+.breadcrumb__item:not(:first-child)::before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: rem(7);
+  width: 5.66px;
+  height: 5.66px;
+  border-right: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  transform: translateY(-50%) rotate(-45deg);
+}
