@@ -1,0 +1,51 @@
+@use "global" as *;
+
+.legal__inner {
+  counter-reset: clause; // カウントの初期化
+}
+
+.legal__title {
+  font-size: rem(24);
+  font-weight: $medium;
+  @include mq("md"){
+   font-size: rem(32);
+  }
+}
+
+.legal__lead {
+  margin-top: rem(46);
+  @include mq("md"){
+    margin-top: rem(48);
+  }
+}
+
+.legal__clause {
+  padding-left: rem(17);
+  text-indent: rem(-17);
+}
+
+.legal__clause:first-child,
+.legal__text:not(:first-child){
+  margin-top: rem(46);
+  @include mq("md"){
+    margin-top: rem(48);
+  }
+}
+
+.legal__clause span::before {
+  counter-increment: clause;
+  content: counter(clause) ". "; // 「1. 」のような表示
+}
+
+.legal__list {
+
+}
+
+.legal__list-item {
+
+}
+
+.legal__footer {
+
+}
+

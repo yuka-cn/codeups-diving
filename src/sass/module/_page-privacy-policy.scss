@@ -1,0 +1,16 @@
+@use "global" as *;
+
+.page-privacy-policy__main {
+  margin-top: rem(52);
+  @include mq("md"){
+    margin-top: rem(150);
+  }
+}
+
+.page-privacy-policy__legal {
+  @include mq("md"){
+    margin: 0 auto;
+    max-width: rem(850);
+  }
+}
+
