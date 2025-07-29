@@ -1,27 +1,5 @@
 @use "global" as *;
 
-.legal{
-  position: relative;
-}
-
-.legal::before {
-  content: "";
-  position: absolute;
-  top: rem(-15);
-  left: rem(15);
-  width: rem(120);
-  height: rem(55);
-  background-image: url(../images/common/embellishment_3.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  @include mq(md) {
-    top: rem(-65);
-    left: calc(50% - min(rem(620),60%));
-    width: rem(301);
-    height: rem(138);
-  }
-}
-
 .legal__title {
   font-size: rem(24);
   font-weight: $medium;
