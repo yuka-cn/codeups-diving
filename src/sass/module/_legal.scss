@@ -1,7 +1,25 @@
 @use "global" as *;
 
-.legal__inner {
-  counter-reset: clause; // カウントの初期化
+.legal{
+  position: relative;
+}
+
+.legal::before {
+  content: "";
+  position: absolute;
+  top: rem(-15);
+  left: rem(15);
+  width: rem(120);
+  height: rem(55);
+  background-image: url(../images/common/embellishment_3.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  @include mq(md) {
+    top: rem(-65);
+    left: calc(50% - min(rem(620),60%));
+    width: rem(301);
+    height: rem(138);
+  }
 }
 
 .legal__title {
@@ -12,40 +30,19 @@
   }
 }
 
-.legal__lead {
-  margin-top: rem(46);
+.legal__lead,
+.legal__body,
+.legal__text,
+.legal__footer{
+  margin-top: rem(44);
+  line-height: 2;
   @include mq("md"){
-    margin-top: rem(48);
+    margin-top: rem(46);
   }
 }
 
-.legal__clause {
-  padding-left: rem(17);
-  text-indent: rem(-17);
+.legal__text.legal__text--numbered {
+  margin-top: 0;
+  padding-left: 1em;
+  text-indent: -1em;
 }
-
-.legal__clause:first-child,
-.legal__text:not(:first-child){
-  margin-top: rem(46);
-  @include mq("md"){
-    margin-top: rem(48);
-  }
-}
-
-.legal__clause span::before {
-  counter-increment: clause;
-  content: counter(clause) ". "; // 「1. 」のような表示
-}
-
-.legal__list {
-
-}
-
-.legal__list-item {
-
-}
-
-.legal__footer {
-
-}
-
