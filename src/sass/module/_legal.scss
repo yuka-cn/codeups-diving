@@ -24,3 +24,15 @@
   padding-left: 1em;
   text-indent: -1em;
 }
+
+.legal__text.legal__text--tight{
+  margin-top: 0;
+}
+
+.legal__text--numbered.legal__text--spaced{
+  margin-top: rem(44);
+  line-height: 2;
+  @include mq("md"){
+    margin-top: rem(46);
+  }
+}
