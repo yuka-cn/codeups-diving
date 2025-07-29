@@ -86,3 +86,38 @@
 .button:hover span::before {
   background: $ac-color;
 }
+
+.button.button--404{
+  color: $ac-color;
+  background: $white;
+  border-left: 1px solid $white;
+}
+
+.button.button--404::before {
+  border: 1px solid $white;
+  background: $ac-color;
+  border-left: none;
+}
+
+.button.button--404::after {
+  border: 1px solid $white;
+}
+
+.button.button--404 span {
+  background: $ac-color;
+}
+
+.button.button--404 span::before {
+  background: $ac-color;
+}
+
+.button.button--404:hover {
+  color: $white;
+}
+
+.button.button--404:hover span,
+.button.button--404:hover span::before {
+  background: $white;
+}
+
+

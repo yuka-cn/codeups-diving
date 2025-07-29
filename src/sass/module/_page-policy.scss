@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.page-privacy-policy__main {
+.page-policy__main {
   position: relative;
   margin-top: rem(52);
   @include mq("md"){
@@ -8,7 +8,7 @@
   }
 }
 
-.page-privacy-policy__main::before {
+.page-policy__main::before {
   content: "";
   position: absolute;
   top: rem(-15);
@@ -26,7 +26,7 @@
   }
 }
 
-.page-privacy-policy__legal {
+.page-policy__legal {
   @include mq("md"){
     margin: 0 auto;
     max-width: rem(850);

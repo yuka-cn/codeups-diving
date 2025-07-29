@@ -1,0 +1,74 @@
+@use "global" as *;
+
+.not-found {
+  position: relative;
+  padding-top: rem(80);
+  padding-bottom: rem(40);
+  color: $white;
+  background-color: $ac-color;
+  @include mq("md"){
+    padding-top: rem(90);
+    padding-bottom: rem(148);
+  }
+}
+
+.not-found::before{
+  content: "";
+  position: absolute;
+  top: rem(80);
+  left: 50%;
+  transform: translateX(-50%);
+  width: rem(345);
+  height: rem(345);
+  background-image: url("../images/pages/404_bg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 0;
+  @include mq("md"){
+    top: rem(90);
+    left: calc(50% - min(rem(540),37.5%));
+    transform: translateX(0);
+    width: rem(698);
+    height: rem(698);
+  }
+}
+
+.not-found__breadcrumb {
+  margin-top: rem(8);
+}
+
+.not-found__main{
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+.not-found__code {
+  margin-top: rem(60);
+  font-size: rem(80);
+  font-family: "Lato", serif;
+  line-height: 1;
+  letter-spacing: 0.5em;
+  text-indent: 0.5em;
+  @include mq("md"){
+    margin-top: rem(119);
+    font-size: rem(160);
+  }
+}
+
+.not-found__text {
+  margin-top: rem(4);
+  font-size: rem(16);
+  font-weight: $regular;
+  @include mq("md"){
+    margin-top: rem(24);
+  }
+}
+
+.not-found__button {
+  margin-top: rem(40);
+  @include mq("md"){
+    margin-top: rem(80);
+  }
+}
+
