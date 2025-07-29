@@ -9,6 +9,11 @@
   transition: 0.3s;
   @include mq(md) {
     height: rem(90);
+  }
+}
+
+.header--top{
+  @include mq(md) {
     opacity: 0;
     animation: headerFadeIn 1s ease 3s forwards;
   }
