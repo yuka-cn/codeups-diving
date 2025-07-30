@@ -8,6 +8,8 @@
   font-size: rem(40);
   font-family: "Lato", serif;
   font-weight: $regular;
+  white-space: nowrap;
+  max-width: 100%;
   color: $white;
   z-index: 100;
   @include mq("md"){
