@@ -1,8 +1,10 @@
 @use "global" as *;
 
 .legal__title {
+  position: relative;
   font-size: rem(24);
   font-weight: $medium;
+  z-index: 1;
   @include mq("md"){
    font-size: rem(32);
   }

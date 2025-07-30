@@ -5,8 +5,6 @@
   grid-template-columns: 1fr;
   @include mq("md") {
    grid-template-columns: rem(200) auto;
-   max-width: rem(700);
-   margin: 0 auto;
   }
 }
 
@@ -46,7 +44,7 @@
   min-height: rem(64);
   display: grid;
   align-items: center;
-  grid-template-columns: rem(240) auto;
+  grid-template-columns: 240fr 106fr;
   @include mq("md"){
     padding: rem(18) 0;
     min-height: rem(60);
@@ -63,7 +61,7 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  left: rem(240);
+  left: 69.5%;
   width: 1px;
   background-color: $ac-color;
   @include mq("md"){

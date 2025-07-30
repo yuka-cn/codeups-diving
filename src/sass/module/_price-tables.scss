@@ -1,5 +1,12 @@
 @use "global" as *;
 
+.price-tables__item {
+  @include mq("md"){
+    max-width: rem(700);
+    margin: 0 auto;
+  }
+}
+
 .price-tables__item:not(:first-child) {
   margin-top: rem(40);
   @include mq("md"){

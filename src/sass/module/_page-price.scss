@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.page-policy__main {
+.page-price__main {
   position: relative;
   margin-top: rem(52);
   @include mq("md"){
@@ -8,10 +8,10 @@
   }
 }
 
-.page-policy__main::before {
+.page-price__main::before {
   content: "";
   position: absolute;
-  top: rem(-19.5);
+  top: rem(-24);
   left: rem(15);
   width: rem(120);
   height: rem(55);
@@ -20,17 +20,11 @@
   background-size: contain;
   z-index: 0;
   @include mq(md) {
-    top: rem(-64);
+    top: rem(-70);
     left: calc(50% - min(rem(620),48%));
     width: rem(301);
     height: rem(138);
   }
 }
 
-.page-policy__legal {
-  @include mq("md"){
-    margin: 0 auto;
-    max-width: rem(850);
-  }
-}
 
