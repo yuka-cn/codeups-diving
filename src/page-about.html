@@ -183,9 +183,9 @@
         </div>
         
         <div class="page-about__main">
-          <div class="page-about__inner inner">
-            <!-- SPレイアウト -->
-            <section class="page-about__lead-sp about-lead">
+          <!-- SPレイアウト -->
+          <section class="page-about__lead-sp about-lead">
+            <div class="about-lead__inner inner">
               <div class="about-lead__image">
                 <img src="./assets/images/common/about_2.jpg" alt="">
               </div>
@@ -195,10 +195,11 @@
                 <br>
                 ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
               </p>
-            </section>
-
-            <!-- PCレイアウト -->
-            <section class="page-about__lead-pc about about--page-about">
+            </div>
+          </section>
+          <!-- PCレイアウト -->
+          <section class="page-about__lead-pc about about--page-about">
+            <div class="about__inner inner">
               <div class="about__images">
                 <div class="about__left-image">
                   <img src="./assets/images/common/about_1.jpg" alt="">
@@ -217,10 +218,40 @@
                   </p>
                 </div>
               </div>
-            </section>
-
-            <div class="page-about__gallery">
-
+            </div>
+          </section>
+          <div class="page-about__gallery gallery">
+            <div class="gallery__inner inner">
+              <div class="gallery__header section-header">
+                <p class="section-header__entitle">Gallery</p>
+                <h2 class="section-header__jatitle">フォト</h2>
+              </div>
+              <div class="gallery__column">
+                <div class="gallery__item gallery__item--single">
+                  <img src="./assets/images/pages/gallery_1.jpg" alt="サンゴの周りに集まる魚たち">
+                </div>
+                <div class="gallery__stack">
+                  <div class="gallery__item gallery__item--stacked">
+                    <img src="./assets/images/pages/gallery_2.jpg" alt="青く透き通った海">
+                  </div>
+                  <div class="gallery__item gallery__item--stacked">
+                    <img src="./assets/images/pages/gallery_3.jpg" alt="海の中を泳ぐ魚">
+                  </div>
+                </div>
+              </div>
+              <div class="gallery__column gallery__column--reverse">
+                <div class="gallery__stack">
+                  <div class="gallery__item gallery__item--stacked">
+                    <img src="./assets/images/pages/gallery_4.jpg" alt="海の中を泳ぐ魚">
+                  </div>
+                  <div class="gallery__item gallery__item--stacked">
+                    <img src="./assets/images/pages/gallery_5.jpg" alt="青く透き通った海と魚の群れ">
+                  </div>
+                </div>
+                <div class="gallery__item gallery__item--single">
+                  <img src="./assets/images/pages/gallery_6.jpg" alt="サンゴの周りに集まる魚たち">
+                </div>
+              </div>
             </div>
           </div>
           
@@ -263,18 +294,27 @@
 
         </div>
       </section>
-
-      <!-- topへ戻るボタン -->
-      <div class="to-top">
-        <a href="#top">
-          <picture>
-            <source media="(max-width: 767px)" srcset="./assets/images/common/to-top-sp.png">
-            <source media="(min-width: 768px)" srcset="./assets/images/common/to-top-pc.png">
-            <img src="./assets/images/common/to-top-sp.png" alt="topへ戻る">
-          </picture>
-        </a>
-      </div>
     </main>
+
+    <!-- モーダル -->
+    <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+      <div class="modal__overlay"></div>
+      <div class="modal__background">
+        <div class="modal__background-inner inner"></div>
+      </div>
+      <div class="modal__content"></div>
+    </div>
+
+    <!-- topへ戻るボタン -->
+    <div class="to-top">
+      <a href="#top">
+        <picture>
+          <source media="(max-width: 767px)" srcset="./assets/images/common/to-top-sp.png">
+          <source media="(min-width: 768px)" srcset="./assets/images/common/to-top-pc.png">
+          <img src="./assets/images/common/to-top-sp.png" alt="topへ戻る">
+        </picture>
+      </a>
+    </div>
 
     <!-- フッター -->
     <footer class="footer footer-layout">

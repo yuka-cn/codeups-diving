@@ -1,5 +1,33 @@
 @use "global" as *;
 
-.price-lists__item:not(:first-child) {
-  margin-top: rem(42);
+.about-lead__inner {
+  position: relative;
 }
+
+.about-lead__image {
+  position: relative;
+  aspect-ratio: 345 / 228;
+  z-index: -1;
+}
+
+.about-lead__image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-lead__title {
+  position: absolute;
+  top: calc(24 / 375 * 100vw);
+  left: calc(24 / 375 * 100vw);
+  font-size: rem(40);
+  font-family: $en-font-family;
+  font-weight: $regular;
+  line-height: 1;
+  color: $white;
+}
+
+.about-lead__text {
+  margin-top: rem(40);
+}
+

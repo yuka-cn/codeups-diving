@@ -39,3 +39,22 @@
     display: block;
   }
 }
+
+.page-about__gallery{
+  margin-top: rem(40);
+  @include mq("md"){
+    margin-top: rem(120);
+  }
+}
+
+.page-about.modal-open{
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
+.page-about.modal-open .page-about__gallery .gallery__inner .gallery__column{
+  @include mq("md"){
+    margin-top: 0;
+  }
+}
