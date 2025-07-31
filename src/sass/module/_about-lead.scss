@@ -1,0 +1,5 @@
+@use "global" as *;
+
+.price-lists__item:not(:first-child) {
+  margin-top: rem(42);
+}

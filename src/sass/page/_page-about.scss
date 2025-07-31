@@ -1,0 +1,41 @@
+@use "global" as *;
+
+.page-about__main {
+  position: relative;
+  margin-top: rem(52);
+  @include mq("md"){
+    margin-top: rem(150);
+  }
+}
+
+.page-about__main::before {
+  content: "";
+  position: absolute;
+  top: rem(-24);
+  left: rem(15);
+  width: rem(120);
+  height: rem(55);
+  background-image: url(../images/common/embellishment_3.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 0;
+  @include mq(md) {
+    top: rem(-70);
+    left: calc(50% - min(rem(620),48%));
+    width: rem(301);
+    height: rem(138);
+  }
+}
+
+.page-about__lead-sp{
+  @include mq("md"){
+    display: none;
+  }
+}
+
+.page-about__lead-pc{
+  display: none;
+  @include mq("md"){
+    display: block;
+  }
+}

@@ -138,51 +138,11 @@
   }
 }
 
-.about--page-about .about__images {
-  position: relative;
-  margin-top: 0;
-  padding-bottom: 0;
-  @include mq(md) {
-    margin-top: rem(40);
-    padding-bottom: rem(55);
-  }
-}
-
-.about--page-about .about__right-image{
-  max-width: 100%;
-  top: 0;
-  @media (min-width: 630px) {
-    width: 100%;
-  }
-  @include mq(md) {
-    position: absolute;
-    top: rem(80);
-    max-width: rem(880);
-  }
-}
-
-.about--page-about .about__left-image{
-  display: none;
-  @include mq("md"){
-    display: block;
-  }
-}
-
 .about--page-about .about__body {
-  margin-top: 0;
-  gap: rem(164);
   @include mq(md) {
     align-items: center;
-    gap: rem(40);
     top: rem(200);
   }
 }
 
-.about--page-about .about__title {
-  margin-top: rem(24);
-  padding-left: rem(24);
-  color: $white;
-  @include mq(md) {
-    padding-left:0;
-  }
-}
+
