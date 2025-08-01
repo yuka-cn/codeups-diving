@@ -5,9 +5,10 @@
   inset: 0;
   z-index: 9999;
   display: none;
-  &[aria-hidden="false"] {
-    display: block;
-  }
+}
+
+.modal[aria-hidden="false"] {
+  display: block;
 }
 
 .modal__overlay {
@@ -32,8 +33,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 90vw;
-  max-height: 90vh;
   z-index: 3;
   display: flex;
   justify-content: center;
@@ -41,11 +40,10 @@
 }
 
 .modal__content img {
-  max-width: 100%;
-  max-height: 100%;
+  max-width: rem(920);
+  max-height: 90vh;
   width: auto;
   height: auto;
   object-fit: contain;
   border-radius: 4px;
-  display: block;
 }
