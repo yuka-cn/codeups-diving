@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.page-information__main {
+.page-campaign__main {
   position: relative;
   margin-top: rem(52);
   @include mq("md"){
@@ -8,7 +8,7 @@
   }
 }
 
-.page-information__main::before {
+.page-campaign__main::before {
   content: "";
   position: absolute;
   top: rem(-24);
@@ -27,9 +27,13 @@
   }
 }
 
-.page-information__body{
-  padding-top: rem(69);
+.page-campaign__cards{
+  margin-top: rem(40);
   @include mq("md"){
-    padding-top: 0;
+   margin-top: rem(34);
   }
+}
+
+.page-campaign__pagination{
+  margin-top: rem(80);
 }
