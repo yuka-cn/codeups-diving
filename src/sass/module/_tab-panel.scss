@@ -2,15 +2,20 @@
 
 .tab-panel{
   padding: rem(24);
-  display: grid;
+  display: none;
   gap: rem(8);
   grid-template-columns: repeat(1, 1fr);
   align-items: center;
-  border: 2px solid $ac-color;
+  border: 1px solid $ac-color;
   @include mq("md") {
-   grid-template-columns: repeat(2, 1fr);
-   gap: rem(48);
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(48);
+    border: 2px solid $ac-color;
   }
+}
+
+.tab-panel.is-active{
+  display: grid;
 }
 
 .tab-panel__title {

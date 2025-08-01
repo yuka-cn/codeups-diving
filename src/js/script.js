@@ -188,47 +188,72 @@ jQuery(function ($) {
 
   // aboutページのモーダル
   const modal = document.getElementById('modal');
-  const overlay = modal.querySelector('.modal__overlay');
-  const backgroundInner = modal.querySelector('.modal__background .inner');
-  const content = modal.querySelector('.modal__content');
+  if (modal) {
+    const overlay = modal.querySelector('.modal__overlay');
+    const backgroundInner = modal.querySelector('.modal__background .inner');
+    const content = modal.querySelector('.modal__content');
 
-  // クリック時の処理
-  if (window.innerWidth >= 768) {
-  document.querySelectorAll('.gallery__item img').forEach(img => {
-    img.addEventListener('click', () => {
-      const column = img.closest('.gallery__column');
-      if (!column) return;
+    // クリック時の処理
+    if (window.innerWidth >= 768) {
+    document.querySelectorAll('.gallery__item img').forEach(img => {
+      img.addEventListener('click', () => {
+        const column = img.closest('.gallery__column');
+        if (!column) return;
 
-      // モーダル内に画像を複製
-      const clickedImg = img.cloneNode(true);
+        // モーダル内に画像を複製
+        const clickedImg = img.cloneNode(true);
+        content.innerHTML = '';
+        content.appendChild(clickedImg);
+
+        // 背景として.gallery__columnを複製
+        backgroundInner.innerHTML = '';
+        backgroundInner.appendChild(column.cloneNode(true));
+
+        // モーダル表示 + スクロール禁止
+        document.body.style.overflow = 'hidden';
+        modal.setAttribute('aria-hidden', 'false');
+      });
+    });
+
+    // 閉じる処理
+    function closeModal() {
+      modal.setAttribute('aria-hidden', 'true');
       content.innerHTML = '';
-      content.appendChild(clickedImg);
-
-      // 背景として.gallery__columnを複製
       backgroundInner.innerHTML = '';
-      backgroundInner.appendChild(column.cloneNode(true));
+      document.body.style.overflow = '';
+    }
 
-      // モーダル表示 + スクロール禁止
-      document.body.style.overflow = 'hidden';
-      modal.setAttribute('aria-hidden', 'false');
+    overlay.addEventListener('click', closeModal);
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.getAttribute('aria-hidden') === 'false') {
+        closeModal();
+        }
+      });
+    }
+  }
+
+  // informationのタブ
+  const tabButtons = document.querySelectorAll(".tab-button");
+  const tabPanels = document.querySelectorAll(".tab-panel");
+  
+  tabButtons.forEach(button => {
+    button.addEventListener("click", function () {
+      const targetId = this.getAttribute("data-target");
+      const targetPanel = document.querySelector(targetId);
+
+      // ボタンのactive切り替え
+      tabButtons.forEach(btn => btn.classList.remove("is-active"));
+      this.classList.add("is-active");
+
+      // パネルの表示切り替え
+      tabPanels.forEach(panel => panel.classList.remove("is-active"));
+      if (targetPanel) {
+        targetPanel.classList.add("is-active");
+      }
     });
   });
 
-  // 閉じる処理
-  function closeModal() {
-    modal.setAttribute('aria-hidden', 'true');
-    content.innerHTML = '';
-    backgroundInner.innerHTML = '';
-    document.body.style.overflow = '';
-  }
 
-  overlay.addEventListener('click', closeModal);
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal.getAttribute('aria-hidden') === 'false') {
-      closeModal();
-    }
-  });
-  }
 
 });
