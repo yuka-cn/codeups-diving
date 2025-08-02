@@ -187,15 +187,15 @@
             <div class="page-campaign__body">
               <!-- カテゴリーボタン -->
               <div class="page-campaign__category-buttons category-buttons">
-                <button class="category-buttons__item category-button is-active" type="button">ALL</button>
-                <button class="category-buttons__item category-button" type="button">ライセンス講習</button>
-                <button class="category-buttons__item category-button" type="button">ファンダイビング</button>
-                <button class="category-buttons__item category-button" type="button">体験ダイビング</button>
+                <button class="category-buttons__item category-button is-active" type="button" data-target="all">ALL</button>
+                <button class="category-buttons__item category-button" type="button" data-target="license">ライセンス講習</button>
+                <button class="category-buttons__item category-button" type="button" data-target="fun-diving">ファンダイビング</button>
+                <button class="category-buttons__item category-button" type="button" data-target="trial-diving">体験ダイビング</button>
               </div>
 
               <!-- キャンペーンカード -->
               <div class="page-campaign__cards campaign-cards">
-                <div class="campaign-cards__item campaign-card campaign-card--campaign-page">
+                <div class="campaign-cards__item campaign-card campaign-card--campaign-page" data-category="license">
                   <div class="campaign-card__image">
                     <img src="./assets/images/common/campaign_1.jpg" alt="キャンペーン画像1">
                   </div>
@@ -222,7 +222,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="campaign-cards__item campaign-card campaign-card--campaign-page">
+                <div class="campaign-cards__item campaign-card campaign-card--campaign-page" data-category="trial-diving">
                   <div class="campaign-card__image">
                     <img src="./assets/images/common/campaign_2.jpg" alt="キャンペーン画像2">
                   </div>
@@ -249,7 +249,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="campaign-cards__item campaign-card campaign-card--campaign-page">
+                <div class="campaign-cards__item campaign-card campaign-card--campaign-page" data-category="trial-diving">
                   <div class="campaign-card__image">
                     <img src="./assets/images/common/campaign_3.jpg" alt="キャンペーン画像3">
                   </div>
@@ -276,7 +276,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="campaign-cards__item campaign-card campaign-card--campaign-page">
+                <div class="campaign-cards__item campaign-card campaign-card--campaign-page" data-category="fun-diving">
                   <div class="campaign-card__image">
                     <img src="./assets/images/common/campaign_4.jpg" alt="キャンペーン画像4">
                   </div>

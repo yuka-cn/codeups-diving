@@ -8,8 +8,10 @@
   font-size: rem(14);
   line-height: calc(22 / 14);
   color: $ac-color;
+  background: $white;
   border: 1px solid $ac-color;
   transition: all 0.3s ease;
+  z-index: 1;
 }
 
 .category-button.is-active{

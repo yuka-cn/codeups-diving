@@ -1,7 +1,7 @@
 jQuery(function ($) {
   // この中であればWordpressでも「$」が使用可能になる
 
-  // ローディングアニメーション終了後に全セクションを表示する
+// ローディングアニメーション終了後に全セクションを表示する
   if (window.matchMedia("(max-width: 767px)").matches) {
   window.addEventListener("load", function () {
     mvSwiper();
@@ -24,7 +24,7 @@ jQuery(function ($) {
     }
   }
 
-  //メインビューのスライダー
+//メインビューのスライダー
   function mvSwiper() {
     new Swiper(".js-mvSwiper", {
       effect: "fade",
@@ -38,7 +38,7 @@ jQuery(function ($) {
     });
   }
 
-  // MVとヘッダーの下ラインが重なった時に、ヘッダーに背景色をつける
+// MVとヘッダーの下ラインが重なった時に、ヘッダーに背景色をつける
   let header = $(".header");
   let headerHeight = $(".header").height();
   let height = $(".mv").height();
@@ -51,7 +51,7 @@ jQuery(function ($) {
     }
   });
 
-  //ドロワーメニュー
+//ドロワーメニュー
   $(function () {
     $(".js-hamburger").click(function () {
       $(".js-hamburger, .header, .js-sp-nav").toggleClass("is-active");
@@ -71,7 +71,7 @@ jQuery(function ($) {
     }
   });
 
-  // キャンペーンカードのスライダー
+// キャンペーンカードのスライダー
   // inner幅の基準値を設定
   const INNER_WIDTH = 1080;
 
@@ -113,9 +113,6 @@ jQuery(function ($) {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
-      // breakpoints: {
-      //   768: { slidesPerView:3},
-      // },
     });
 
   }
@@ -126,7 +123,7 @@ jQuery(function ($) {
   // リサイズ時にSwiperを再初期化
   window.addEventListener("resize", initSwiper);
 
-  // 画像アニメーション
+// 画像アニメーション
   // 要素の取得とスピードの設定
   let imageAnimation = $(".information__image, .voice-card__image, .price__image"),
     speed = 700;
@@ -159,7 +156,7 @@ jQuery(function ($) {
     });
   });
 
-  // topへ戻るボタン
+// topへ戻るボタン
   let topBtn = $(".c-to-top");
   topBtn.hide();
 
@@ -186,45 +183,42 @@ jQuery(function ($) {
     return false;
   });
 
-  // aboutページのモーダル
+
+
+// aboutページのモーダル
   const modal = document.getElementById('modal');
   if (modal) {
     const overlay = modal.querySelector('.modal__overlay');
     const backgroundInner = modal.querySelector('.modal__background .inner');
     const content = modal.querySelector('.modal__content');
 
-    // クリック時の処理
+  // クリック時の処理
     if (window.innerWidth >= 768) {
     document.querySelectorAll('.gallery__item img').forEach(img => {
       img.addEventListener('click', () => {
         const column = img.closest('.gallery__column');
         if (!column) return;
-
         // モーダル内に画像を複製
         const clickedImg = img.cloneNode(true);
         content.innerHTML = '';
         content.appendChild(clickedImg);
-
         // 背景として.gallery__columnを複製
         backgroundInner.innerHTML = '';
         backgroundInner.appendChild(column.cloneNode(true));
-
         // モーダル表示 + スクロール禁止
         document.body.style.overflow = 'hidden';
         modal.setAttribute('aria-hidden', 'false');
       });
     });
 
-    // 閉じる処理
+  // 閉じる処理
     function closeModal() {
       modal.setAttribute('aria-hidden', 'true');
       content.innerHTML = '';
       backgroundInner.innerHTML = '';
       document.body.style.overflow = '';
     }
-
     overlay.addEventListener('click', closeModal);
-
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && modal.getAttribute('aria-hidden') === 'false') {
         closeModal();
@@ -233,7 +227,40 @@ jQuery(function ($) {
     }
   }
 
-  // informationのタブ
+//カテゴリーボタン
+  const buttons = document.querySelectorAll('.category-button');
+  const cards = document.querySelectorAll('.campaign-card');
+
+  // カード表示切り替え用の関数
+  function showCards(targetId) {
+    cards.forEach(card => {
+      const category = card.getAttribute("data-category");
+      if (targetId === "all" || category === targetId) {
+        card.classList.add("is-active");
+      } else {
+        card.classList.remove("is-active");
+      }
+    });
+  }
+
+  // 最初は全部表示（= ALL 選択状態）
+  showCards('all');
+  
+  buttons.forEach(button => {
+    button.addEventListener("click", function () {
+    const targetId = this.getAttribute("data-target");
+
+    // ボタンの active 切り替え
+    buttons.forEach(btn => btn.classList.remove("is-active"));
+    this.classList.add("is-active");
+  
+    // カードの表示切り替え
+    showCards(targetId);
+  });
+});
+
+
+// informationのタブ
   const tabButtons = document.querySelectorAll(".tab-button");
   const tabPanels = document.querySelectorAll(".tab-panel");
   

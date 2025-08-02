@@ -166,6 +166,14 @@
   margin-top: rem(16);
 }
 
+.campaign-card--campaign-page{
+  display: none;
+}
+
+.campaign-card--campaign-page.is-active{
+  display: block;
+}
+
 .campaign-card--campaign-page .campaign-card__body{
   @include mq(md) {
     padding:rem(24) rem(24) rem(40);
