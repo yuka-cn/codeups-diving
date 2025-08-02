@@ -27,7 +27,7 @@
   }
 }
 
-.page-faq__list{
+.page-faq__body{
   @include mq("md"){
     margin: 0 auto;
     max-width: rem(700);

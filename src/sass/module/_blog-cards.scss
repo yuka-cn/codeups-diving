@@ -9,3 +9,9 @@
     grid-template-columns: repeat(3,1fr);
   }
 }
+
+.blog-cards--page-blog{
+  @include mq("md"){
+    grid-template-columns: repeat(2,1fr);
+  }
+}
