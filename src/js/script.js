@@ -229,7 +229,7 @@ jQuery(function ($) {
 
 //カテゴリーボタン
   const buttons = document.querySelectorAll('.category-button');
-  const cards = document.querySelectorAll('.campaign-card');
+  const cards = document.querySelectorAll('.campaign-card, .voice-card');
 
   // カード表示切り替え用の関数
   function showCards(targetId) {

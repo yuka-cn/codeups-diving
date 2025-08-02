@@ -166,21 +166,21 @@
   margin-top: rem(16);
 }
 
-.campaign-card--campaign-page{
+.campaign-card--page-campaign{
   display: none;
 }
 
-.campaign-card--campaign-page.is-active{
+.campaign-card--page-campaign.is-active{
   display: block;
 }
 
-.campaign-card--campaign-page .campaign-card__body{
+.campaign-card--page-campaign .campaign-card__body{
   @include mq(md) {
     padding:rem(24) rem(24) rem(40);
   }
 }
 
-.campaign-card--campaign-page .campaign-card__price{
+.campaign-card--page-campaign .campaign-card__price{
   @include mq(md) {
     justify-content: center;
   }

@@ -113,3 +113,12 @@
     margin-top: rem(40);
   }
 }
+
+.voice-card--page-voice{
+  display: none;
+}
+
+.voice-card--page-voice.is-active{
+  display: block;
+}
+
