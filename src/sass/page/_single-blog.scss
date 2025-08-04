@@ -1,0 +1,47 @@
+@use "global" as *;
+
+.single-blog__main {
+  position: relative;
+  margin-top: rem(52);
+  @include mq("md"){
+    margin-top: rem(150);
+  }
+}
+
+.single-blog__main::before {
+  content: "";
+  position: absolute;
+  top: rem(-24);
+  left: rem(15);
+  width: rem(120);
+  height: rem(55);
+  background-image: url(../images/common/embellishment_3.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 0;
+  @include mq(md) {
+    top: rem(-70);
+    left: calc(50% - min(rem(620),48%));
+    width: rem(301);
+    height: rem(138);
+  }
+}
+
+.single-blog__inner{
+  display: grid;
+  gap: rem(80);
+  grid-template-columns: repeat(1,1fr);
+  @include mq("md") {
+    align-items: start;
+    grid-template-columns: 706fr 294fr;
+  }
+}
+
+.single-blog__cards{
+  position: relative;
+  z-index: 1;
+}
+
+.single-blog__pagination{
+  margin-top: rem(80);
+}
