@@ -37,6 +37,11 @@
   }
 }
 
+.page-blog__cards{
+  position: relative;
+  z-index: 1;
+}
+
 .page-blog__pagination{
   margin-top: rem(80);
 }
