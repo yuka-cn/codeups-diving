@@ -1,0 +1,82 @@
+@use "global" as *;
+
+.blog-article {
+
+}
+
+.blog-article__header {
+
+}
+
+.blog-article__date {
+  font-size: rem(14);
+}
+
+.blog-article__title {
+  position: relative;
+  margin-top: rem(8);
+  padding-bottom: rem(10);
+  font-size: rem(24);
+  font-weight: $medium;
+  @include mq("md"){
+    padding-bottom: rem(8);
+    font-size: rem(32);
+  }
+}
+
+.blog-article__title::after {
+  // 両端が丸い下線
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: $ac-color;
+  border-radius: 1px;
+}
+
+.blog-article__figure,
+.blog-article__text,
+.blog-article__list {
+  margin-top: rem(24);
+  @include mq("md"){
+    margin-top: rem(40);
+  }
+}
+
+.blog-article__figure{
+  aspect-ratio: 345 / 231;
+  @include mq("md"){
+    aspect-ratio: 700 / 468;
+  }
+}
+
+.blog-article__figure img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.blog-article__list li {
+  position: relative;
+  padding-left: rem(27);
+}
+
+.blog-article__list li::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: rem(18);
+  height: rem(18);
+  background-image: url(../images/pages/blog_8.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.blog-article__list li:not(:first-child){
+  margin-top: rem(4);
+}

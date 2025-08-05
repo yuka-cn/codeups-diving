@@ -33,7 +33,8 @@
   grid-template-columns: repeat(1,1fr);
   @include mq("md") {
     align-items: start;
-    grid-template-columns: 706fr 294fr;
+    gap: rem(86);
+    grid-template-columns: 700fr 294fr;
   }
 }
 
@@ -43,5 +44,8 @@
 }
 
 .single-blog__pagination{
-  margin-top: rem(80);
+  margin-top: rem(40);
+  @include mq("md"){
+    margin-top: rem(80);
+  }
 }
