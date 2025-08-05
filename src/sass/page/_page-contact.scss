@@ -1,0 +1,71 @@
+@use "global" as *;
+
+.page-contact__main {
+  position: relative;
+  margin-top: rem(52);
+  @include mq("md"){
+    margin-top: rem(150);
+  }
+}
+
+.page-contact__main::before {
+  content: "";
+  position: absolute;
+  top: rem(-24);
+  left: rem(15);
+  width: rem(120);
+  height: rem(55);
+  background-image: url(../images/common/embellishment_3.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 0;
+  @include mq(md) {
+    top: rem(-70);
+    left: calc(50% - min(rem(620),48%));
+    width: rem(301);
+    height: rem(138);
+  }
+}
+
+.page-contact__inner{
+  position: relative;
+  z-index: 1;
+}
+
+.page-contact__error{
+  display: none;
+  font-size: rem(14);
+  max-width: 16em;
+  margin: 0 auto;
+  padding-left: 1em;
+  text-indent: -1em;
+  color: #C94800;
+  @include mq("md"){
+    max-width: none;
+    text-align: center;
+  }
+}
+
+.page-contact__error br,
+.page-contact__thanks br{
+  @include mq("md"){
+  display: none;
+  }
+}
+
+.page-contact__body{
+  @include mq("md"){
+    margin: 0 auto;
+    max-width: rem(700);
+  }
+}
+
+.page-contact__thanks{
+  display: none;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.page-contact__thanks p:nth-of-type(2){
+  margin-top: rem(40);
+}

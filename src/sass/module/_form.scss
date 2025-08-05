@@ -1,0 +1,56 @@
+@use "global" as *;
+
+.form {
+
+}
+
+.form__row {
+  position: relative;
+  padding-bottom: rem(24);
+  display: grid;
+  gap: rem(16);
+  grid-template-columns: repeat(1, 1fr);
+  border-bottom: 1px dotted $ac-color;
+  @include mq("md") {
+    padding-bottom: rem(40);
+    grid-template-columns: 1fr rem(480);
+  }
+}
+
+.form__row:not(:first-child) {
+  margin-top: rem(24);
+  @include mq("md"){
+    margin-top: rem(40);
+  }
+}
+
+.form__row--last{
+  border-bottom: none;
+}
+
+.form__label {
+  font-weight: $bold;
+}
+
+.form__label span{
+  margin-left: rem(8);
+  padding: rem(2) rem(16);
+  font-size: rem(12);
+  font-weight: $regular;
+  color: $white;
+  background: #C94800;
+}
+
+.form__input {
+  padding-left: rem(16);
+  height: rem(40);
+  border: 1px solid $ac-color;
+}
+
+.form-checkbox-group {
+
+}
+
+.form__button {
+  text-align: center;
+}
