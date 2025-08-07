@@ -189,21 +189,22 @@
             <div class="page-contact__error">
               ※必須項目が入力されていません。<br>入力してください。
             </div>
+
             <!-- お問い合わせフォーム -->
             <form class="page-contact__body form" action="#" method="post" id="contactForm">
               <div class="form__row">
-                <label for="name" class="form__label">お名前<span>必須</span></label>
-                <input type="text" id="name" name="name" class="form__input" required>
+                <label class="form__label" for="name">お名前<span>必須</span></label>
+                <input class="form__input" type="text" id="name" name="name" placeholder="沖縄　太郎" required>
               </div>
           
               <div class="form__row">
-                <label for="email" class="form__label">メールアドレス<span>必須</span></label>
-                <input type="email" id="email" name="email" class="form__input" required>
+                <label class="form__label" for="email">メールアドレス<span>必須</span></label>
+                <input class="form__input" type="email" id="email" name="email" placeholder="aaa000@ggmail.com" required>
               </div>
           
               <div class="form__row">
-                <label for="tel" class="form__label">電話番号<span>必須</span></label>
-                <input type="tel" id="tel" name="tel" class="form__input" required>
+                <label class="form__label" for="tel">電話番号<span>必須</span></label>
+                <input class="form__input" type="tel" id="tel" name="tel" placeholder="000-0000-0000" required>
               </div>
           
               <div class="form__row">
@@ -216,33 +217,32 @@
               </div>
           
               <div class="form__row">
-                <label for="campaign" class="form__label">キャンペーン</label>
-                <select id="campaign" name="campaign" class="form__input">
-                  <option value="">キャンペーン内容を選択</option>
-                  <option value="A">ライセンス取得</option>
-                  <option value="B">貸切体験ダイビング</option>
-                  <option value="C">ナイトダイビング</option>
-                  <option value="D">貸切ファンダイビング</option>
-                </select>
-              </div>
-          
-              <div class="form__row">
-                <label for="message" class="form__label">お問合せ内容<span>必須</span></label>
-                <textarea id="message" name="message" rows="5" class="form__input" required></textarea>
+                <label class="form__label" for="campaign">キャンペーン</label>
+                <div class="form__input-wrapper">
+                  <select class="form__input form__input--select" id="campaign" name="campaign">
+                    <option value="">キャンペーン内容を選択</option>
+                    <option value="A">ライセンス取得</option>
+                    <option value="B">貸切体験ダイビング</option>
+                    <option value="C">ナイトダイビング</option>
+                    <option value="D">貸切ファンダイビング</option>
+                  </select>
+                </div>
               </div>
           
               <div class="form__row form__row--last">
-                <div></div>
-                <label>
-                  <input type="checkbox" name="privacy" required>
-                  個人情報の取り扱いについて同意のうえ送信します。
-                </label>
+                <label class="form__label" for="message">お問合せ内容<span>必須</span></label>
+                <textarea class="form__input" id="message" name="message" rows="5" required></textarea>
+              </div>
+          
+              <div class="form__agreement">
+                <label><input type="checkbox" name="privacy" required>個人情報の取り扱いについて同意のうえ<br>送信します。</label>
               </div>
           
               <div class="form__button">
                 <button type="submit" class="button">Send<span></span></button>
               </div>
             </form>
+
             <!-- 送信完了メッセージ -->
             <div class="page-contact__thanks">
               <p>お問い合わせ内容を送信完了しました。</p>

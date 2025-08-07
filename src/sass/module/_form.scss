@@ -1,16 +1,12 @@
 @use "global" as *;
 
-.form {
-
-}
-
 .form__row {
   position: relative;
   padding-bottom: rem(24);
   display: grid;
   gap: rem(16);
   grid-template-columns: repeat(1, 1fr);
-  border-bottom: 0.0625em dotted $ac-color;
+  border-bottom: 1px dotted $ac-color;
   @include mq("md") {
     padding-bottom: rem(40);
     grid-template-columns: 1fr rem(480);
@@ -43,9 +39,39 @@
 
 .form__input {
   padding-left: rem(16);
+  width: 100%;
   height: rem(40);
-  border: 0.0625em solid $ac-color;
+  border: 1px solid $ac-color;
 }
+
+.form__input--select{
+  padding-left: rem(8);
+}
+
+.form__input::placeholder {
+  color: $bg-color;
+}
+
+.form__input-wrapper{
+  position: relative;
+}
+
+.form__input-wrapper::after{
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: rem(8);
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 10px solid $ac-color;
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.2s;
+}
+
 
 .form__input option{
   font-size: rem(12);
@@ -62,30 +88,67 @@
   gap: rem(8);
 }
 
-.form__checkbox input[type="checkbox"] {
+.form__agreement label{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: rem(8);
+  font-size: rem(14);
+  @include mq("md"){
+    gap: rem(16);
+  }
+}
+
+.form__agreement br{
+  @include mq("md"){
+    display: none;
+  }
+}
+
+.form__checkbox input[type="checkbox"],
+.form__agreement input[type="checkbox"] {
   all: unset;
   position: relative;
-  width: 0.875em;
-  height: 0.875em;
-  border: 0.0625em solid $ac-color;
+  border: 1px solid $ac-color;
   background-color: #fff;
   cursor: pointer;
 }
 
-.form__checkbox input[type="checkbox"]:checked::after {
+.form__checkbox input[type="checkbox"]{
+  width: rem(14);
+  height: rem(14);
+}
+
+.form__agreement input[type="checkbox"] {
+  width: rem(22);
+  height: rem(22);
+}
+
+.form__checkbox input[type="checkbox"]:checked::after,
+.form__agreement input[type="checkbox"]:checked::after{
   content: '';
   position: absolute;
   top: 50%;
   left: 50%;
-  width:  0.3125em;
-  height: 0.625em;
   border: solid #C94800;
-  border-width: 0 0.125em 0.125em 0;
+  border-width: 0 2px 2px 0;
   transform: translate(-50% ,-50%) rotate(45deg);
 }
 
+.form__checkbox input[type="checkbox"]:checked::after{
+  width:  rem(5);
+  height: rem(10);
+}
 
+.form__agreement input[type="checkbox"]:checked::after{
+  width:  rem(8);
+  height: rem(16);
+}
 
 .form__button {
+  margin-top: rem(24);
   text-align: center;
+  @include mq("md"){
+    margin-top: rem(40);
+  }
 }
