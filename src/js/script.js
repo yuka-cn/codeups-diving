@@ -296,21 +296,31 @@ jQuery(function ($) {
     form.querySelectorAll(".form__row--error, .form__agreement--error")
         .forEach(el => el.classList.remove("form__row--error", "form__agreement--error"));
 
+    // 必須項目のエラー要素を格納する配列
+    const errorElements = [];
+
     // 必須項目チェック
     form.querySelectorAll("[required]").forEach(input => {
       if (!checkInput(input)) {
         hasError = true;
         addErrorClass(input);
+        errorElements.push(input);
       }
     });
 
     if (hasError) {
       e.preventDefault();
+      if (errorElements.length > 0) {
+      // 最初のエラー項目にスクロール
+      errorElements[0].scrollIntoView({ behavior: 'smooth', block: 'center' });
+      errorElements[0].focus();
+      }
     } else {
     form.style.display = 'none';
     const thanks = document.querySelector('.page-contact__thanks');
     if (thanks) {
       thanks.style.display = 'block';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   }
   });

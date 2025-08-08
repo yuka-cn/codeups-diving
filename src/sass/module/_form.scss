@@ -17,10 +17,6 @@
   padding-top: 0;
 }
 
-.form__row--last{
-  border-bottom: none;
-}
-
 .form__label {
   font-weight: $bold;
 }
@@ -47,7 +43,7 @@
 
 .form__input--textarea{
   height: auto;
-  padding: 0.5em rem(16);
+  padding: rem(3) rem(16);
 }
 
 .form__input::placeholder {
@@ -90,12 +86,14 @@
 }
 
 .form__agreement label{
+  margin-top: rem(40);
   display: flex;
   align-items: flex-start;
   justify-content: center;
   gap: rem(8);
   font-size: rem(14);
   @include mq("md"){
+    margin-top: rem(80);
     gap: rem(16);
   }
 }
