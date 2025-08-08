@@ -31,7 +31,7 @@
     <!-- JavaScript -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
     <script src="assets/js/jquery.inview.min.js"></script>
     <script defer src="./assets/js/script.js"></script>
   </head>
@@ -191,7 +191,7 @@
             </div>
 
             <!-- お問い合わせフォーム -->
-            <form class="page-contact__body form" action="#" method="post" id="contactForm">
+            <form class="page-contact__body form" action="#" method="post" id="contactForm" novalidate>
               <div class="form__row">
                 <label class="form__label" for="name">お名前<span>必須</span></label>
                 <input class="form__input" type="text" id="name" name="name" placeholder="沖縄　太郎" required>
@@ -231,7 +231,7 @@
           
               <div class="form__row form__row--last">
                 <label class="form__label" for="message">お問合せ内容<span>必須</span></label>
-                <textarea class="form__input" id="message" name="message" rows="5" required></textarea>
+                <textarea class="form__input form__input--textarea" id="message" name="message" rows="5" required></textarea>
               </div>
           
               <div class="form__agreement">

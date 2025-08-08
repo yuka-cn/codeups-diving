@@ -281,6 +281,90 @@ jQuery(function ($) {
     });
   });
 
+  //contactフォーム
+  const form = document.getElementById("contactForm");
+  if (!form) return;
 
+  let errorShown = false; // エラーを表示したかどうか
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    let hasError = false;
+    errorShown = true;
+
+    // 全てのエラークラスを外す
+    form.querySelectorAll(".form__row--error, .form__agreement--error")
+        .forEach(el => el.classList.remove("form__row--error", "form__agreement--error"));
+
+    // 必須項目チェック
+    form.querySelectorAll("[required]").forEach(input => {
+      if (!checkInput(input)) {
+        hasError = true;
+        addErrorClass(input);
+      }
+    });
+
+    if (hasError) {
+      e.preventDefault();
+    } else {
+    form.style.display = 'none';
+    const thanks = document.querySelector('.page-contact__thanks');
+    if (thanks) {
+      thanks.style.display = 'block';
+    }
+  }
+  });
+
+  // 送信後に入力があったらエラー解除
+  form.querySelectorAll("[required]").forEach(input => {
+    input.addEventListener("input", () => {
+      if (errorShown && checkInput(input)) {
+        removeErrorClass(input);
+      }
+    });
+    input.addEventListener("change", () => {
+      if (errorShown && checkInput(input)) {
+        removeErrorClass(input);
+      }
+    });
+  });
+
+  // 入力値があるか判定
+  function checkInput(input) {
+    if (input.type === "checkbox" || input.type === "radio") {
+      const group = form.querySelectorAll(`[name="${input.name}"]`);
+      return Array.from(group).some(i => i.checked);
+    }
+    return input.value.trim() !== "";
+  }
+
+  //エラー時の処理
+  function addErrorClass(input) {
+    const row = input.closest(".form__row");
+    const agreement = input.closest(".form__agreement");
+    const errorMessage = document.querySelector('.page-contact__error');
+    
+    if (row) row.classList.add("form__row--error");
+    if (agreement) agreement.classList.add("form__agreement--error");
+    
+    if (errorMessage) {
+      errorMessage.style.display = 'block';
+    }
+  }
+  
+  //エラー解除時の処理
+  function removeErrorClass(input) {
+    const row = input.closest(".form__row");
+    const agreement = input.closest(".form__agreement");
+    const errorMessage = document.querySelector('.page-contact__error');
+
+    if (row) row.classList.remove("form__row--error");
+    if (agreement) agreement.classList.remove("form__agreement--error");
+
+    const hasErrors = document.querySelector('.form__row--error, .form__agreement--error');
+    if (!hasErrors && errorMessage) {
+      errorMessage.style.display = 'none';  // エラーメッセージ非表示
+    }
+  }
 
 });

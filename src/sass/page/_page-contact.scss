@@ -37,11 +37,14 @@
   font-size: rem(14);
   max-width: 16em;
   margin: 0 auto;
+  padding-bottom: rem(46);
   padding-left: 1em;
   text-indent: -1em;
   color: #C94800;
   @include mq("md"){
     max-width: none;
+    padding-bottom: rem(43);
+    padding-left: 0;
     text-align: center;
   }
 }
