@@ -1,42 +1,42 @@
 @use "global" as *;
 
-.footer-nav {
+.nav {
   display: flex;
   font-size: rem(16);
 }
 
-.footer-nav__left,
-.footer-nav__right {
+.nav__left,
+.nav__right {
   width: 50%;
   @include mq(md) {
     display: flex;
   }
 }
 
-.footer-nav__left {
+.nav__left {
   padding-left: rem(22);
 }
 
-.footer-nav__right {
+.nav__right {
   padding-left: rem(33);
   @include mq(md) {
     padding-left: rem(38);
   }
 }
 
-.footer-nav__left .footer-nav__block {
+.nav__left .nav__block {
   @include mq(md) {
     width: 55%;
   }
 }
 
-.footer-nav__right .footer-nav__block {
+.nav__right .nav__block {
   @include mq(md) {
     width: 54%;
   }
 }
 
-.footer-nav__block:nth-child(2) {
+.nav__block:nth-child(2) {
   margin-top: rem(16);
   @include mq(md) {
     margin-top: 0;
@@ -44,35 +44,35 @@
   }
 }
 
-.footer-nav__items {
+.nav__items {
   margin-top: rem(16);
   display: flex;
   flex-direction: column;
 }
 
-.footer-nav__items.u-mobile {
+.nav__items.u-mobile {
   @include mq("md") {
     display: none;
   }
 }
 
-.footer-nav__items.u-desktop {
+.nav__items.u-desktop {
   display: none;
   @include mq("md") {
     display: block;
   }
 }
 
-.footer-nav__items:first-child {
+.nav__items:first-child {
   margin-top: 0;
 }
 
-.footer-nav__item:first-child {
+.nav__item:first-child {
   position: relative;
   font-weight: $bold;
 }
 
-.footer-nav__item:first-child::before {
+.nav__item:first-child::before {
   content: "";
   display: inline-block;
   position: absolute;
@@ -86,22 +86,22 @@
   background-repeat: no-repeat;
 }
 
-.footer-nav__item a {
+.nav__item a {
   display: flex;
   align-items: center;
   padding: rem(9) 0;
 }
 
-.footer-nav__item a:hover {
+.nav__item a:hover {
   opacity: 0.7;
 }
 
-.footer-nav__item--multiline {
+.nav__item--multiline {
   position: relative;
   line-height: 1.39;
 }
 
-.footer-nav__items .footer-nav__item--multiline::before {
+.nav__items .nav__item--multiline::before {
   display: inline-block;
   position: absolute;
   top: 37%;
@@ -115,4 +115,9 @@
   @include mq(md) {
     top: 50%;
   }
+}
+
+.nav--site-map .nav__item:first-child::before,
+.nav--site-map .nav__items .nav__item--multiline::before {
+  background-image: url(../images/pages/site-map_1.png);
 }

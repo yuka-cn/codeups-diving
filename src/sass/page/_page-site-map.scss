@@ -1,0 +1,28 @@
+@use "global" as *;
+
+.page-site-map__main {
+  position: relative;
+  margin-top: rem(52);
+  @include mq("md"){
+    margin-top: rem(150);
+  }
+}
+
+.page-site-map__main::before {
+  content: "";
+  position: absolute;
+  top: rem(-19.5);
+  left: rem(15);
+  width: rem(120);
+  height: rem(55);
+  background-image: url(../images/common/embellishment_3.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 0;
+  @include mq(md) {
+    content: none;
+  }
+}
+
+
+
