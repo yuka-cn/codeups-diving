@@ -7,7 +7,7 @@
   row-gap: rem(16);
   @include mq("md") {
     grid-template-columns: repeat(4, rem(162));
-    column-gap: rem(21);
+    column-gap: rem(32);
     row-gap: 0;
   }
 }

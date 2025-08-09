@@ -145,4 +145,16 @@
   }
 }
 
+.about--page-about .about__title {
+  @include mq(md) {
+    padding-top: 0;
+  }
+}
+
+.about--page-about .about__content {
+  @include mq(md) {
+    transform: translateY(rem(-4));
+  }
+}
+
 

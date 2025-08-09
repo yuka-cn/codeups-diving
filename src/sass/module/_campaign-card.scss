@@ -174,15 +174,63 @@
   display: block;
 }
 
+.campaign-card--page-campaign .campaign-card__image::before{
+  @include mq("md"){
+    padding-top: calc(347 / 520 * 100%);
+  }
+}
+
 .campaign-card--page-campaign .campaign-card__body{
   @include mq(md) {
     padding:rem(24) rem(24) rem(40);
   }
 }
 
+.campaign-card--page-campaign .campaign-card__title{
+  @include mq(md) {
+    margin-top: 0;
+    padding-bottom: rem(7);
+    font-size: rem(24);
+    font-weight: $medium;
+  }
+}
+
+.campaign-card--page-campaign .campaign-card__note{
+  @include mq(md) {
+    margin-top: rem(24);
+  }
+}
+
 .campaign-card--page-campaign .campaign-card__price{
   @include mq(md) {
+    padding-left: 0;
     justify-content: center;
+    gap: rem(41);
+    line-height: 1.4;
+  }
+}
+
+.campaign-card--page-campaign .campaign-card__text{
+  @include mq(md) {
+    margin-top: rem(14);
+  }
+}
+
+.campaign-card--page-campaign .campaign-card__cta{
+  @include mq(md) {
+    margin-top: rem(30);
+  }
+}
+
+.campaign-card--page-campaign .campaign-card__lead{
+  @include mq(md) {
+    margin-top: rem(3);
+  }
+}
+
+.campaign-card--page-campaign .campaign-card__button{
+  @include mq(md) {
+    margin-top: rem(14);
   }
 }
 

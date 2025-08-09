@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .tab-panel{
-  padding: rem(24);
+  padding: rem(23);
   display: none;
   gap: rem(8);
   grid-template-columns: repeat(1, 1fr);
@@ -20,9 +20,10 @@
 
 .tab-panel__title {
   position: relative;
-  padding-bottom: rem(8);
+  padding-bottom: rem(9);
   font-size: rem(24);
   font-weight: $bold;
+  line-height: 1;
 }
 
 .tab-panel__title::after {

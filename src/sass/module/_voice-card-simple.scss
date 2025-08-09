@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .voice-card-simple__image {
-  aspect-ratio: 294 / 218;
+  aspect-ratio: 294 / 215;
 }
 
 .voice-card-simple__image img{
@@ -17,7 +17,7 @@
 }
 
 .voice-card-simple__title {
-  margin-top: rem(8);
+  margin-top: rem(4);
   font-size: rem(24);
   font-weight: $medium;
 }

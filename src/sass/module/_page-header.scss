@@ -2,7 +2,7 @@
 
 .page-header__title{
   position: absolute;
-  top: calc(206 / 375) * 100vw;
+  top: calc(201 / 375) * 100vw;
   left: 50%;
   transform: translateX(-50%);
   font-size: rem(40);
@@ -13,7 +13,7 @@
   color: $white;
   z-index: 100;
   @include mq("md"){
-    top: rem(274);
+    top: rem(265);
     font-size: rem(80);
   }
 }

@@ -29,11 +29,16 @@
 
 .page-campaign__cards{
   margin-top: rem(40);
+  padding: 0 rem(33);
   @include mq("md"){
    margin-top: rem(34);
+   padding: 0;
   }
 }
 
 .page-campaign__pagination{
-  margin-top: rem(80);
+  margin-top: rem(78);
+  @include mq("md"){
+    margin-top: rem(80);
+  }
 }
