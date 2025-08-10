@@ -26,6 +26,14 @@
 }
 
 .sidebar-box__button{
-  margin-top: rem(46);
+  margin-top: rem(40);
   text-align: center;
+}
+
+.sidebar-box__voice-card{
+  padding-bottom: rem(17);
+}
+
+.sidebar-box__campaign-card:not(:first-child){
+  margin-top: rem(40);
 }

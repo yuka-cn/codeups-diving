@@ -6,12 +6,15 @@
 }
 
 .archive-list__year:not(:first-child) {
-  margin-top: rem(10);
+  margin-top: rem(8);
+  @include mq("md"){
+    margin-top: rem(6);
+  }
 }
 
 .archive-list__year-button {
   position: relative;
-  padding-left: 1.2em;
+  padding-left: 1.3em;
   color: $ac-color;
 }
 
@@ -22,9 +25,9 @@
   left: 0;
   width: 0;
   height: 0;
-  border-left: 0.4em solid transparent;
-  border-right: 0.4em solid transparent;
-  border-top: 0.7em solid $ac-color;
+  border-left: 0.48em solid transparent;
+  border-right: 0.48em solid transparent;
+  border-top: 0.75em solid $ac-color;
   transition: transform 0.2s;
 }
 
@@ -34,7 +37,6 @@
 
 .archive-list__month {
   position: relative;
-  margin-top: 0.2em;
   padding-left: 1.2em;
 }
 
@@ -45,14 +47,14 @@ content: "";
   left: 0;
   width: 0;
   height: 0;
-  border-top: 0.4em solid transparent;
-  border-bottom: 0.4em solid transparent;
-  border-left: 0.7em solid $ac-color;
+  border-top: 0.48em solid transparent;
+  border-bottom: 0.48em solid transparent;
+  border-left: 0.75em solid $ac-color;
   transition: transform 0.2s;
 }
 
 .archive-list__year:not(.is-open) .archive-list__year-button::before{
-  transform: rotate(-90deg);
+  transform: rotate(-90deg) translateY(rem(4));
 }
 
 .archive-list__year:not(.is-open) .archive-list__months{

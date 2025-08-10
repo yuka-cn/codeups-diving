@@ -49,3 +49,10 @@
     margin-top: rem(80);
   }
 }
+
+.single-blog__sidebar{
+  padding: 0 rem(25);
+  @include mq("md"){
+    padding: 0;
+  }
+}

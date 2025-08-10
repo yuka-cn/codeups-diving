@@ -238,8 +238,29 @@
   padding-top: calc(188 / 294 * 100%);
 }
 
+.campaign-card--sidebar .campaign-card__body {
+  padding: rem(15) rem(24);
+  @include mq("md"){
+    padding: rem(16) rem(24);
+  }
+}
+
 .campaign-card--sidebar .campaign-card__title {
   margin-top: 0;
+  text-align: center;
+}
+
+.campaign-card--sidebar .campaign-card__note {
+  @include mq("md"){
+    margin-top: rem(10);
+    font-size: rem(14);
+  }
+}
+
+.campaign-card--sidebar .campaign-card__price {
+  @include mq("md"){
+    gap: rem(16);
+  }
 }
 
 .campaign-card--sidebar .campaign-card__selling{

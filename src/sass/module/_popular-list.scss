@@ -25,17 +25,16 @@
   object-fit: cover;
 }
 
-.popular-list__body{
-  line-height: 1;
-}
-
 .popular-list__date {
+  display: block;
   font-size: rem(12);
   font-family: $en-font-family;
+  line-height: 1.8;
 }
 
 .popular-list__title {
-  margin-top: rem(6);
+  margin-top: rem(4);
+  line-height: 1;
 }
 
 .popular-list__mask {
