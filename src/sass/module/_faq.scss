@@ -1,19 +1,19 @@
 @use "global" as *;
 
 .faq__item:not(:first-child){
-  margin-top: rem(40);
+  margin-top: rem(41);
 }
 
 .faq__item summary {
   position: relative;
   cursor: pointer;
   list-style: none;
-  padding: rem(18) rem(16);
+  padding: rem(16);
   color: $white;
   background: $ac-color;
   @include mq("md"){
     font-size: rem(20);
-    padding: rem(24) rem(40);
+    padding: rem(24.5) rem(40);
   }
 }
 
@@ -57,7 +57,8 @@
 }
 
 .faq__item p{
-  padding: rem(24) rem(16);
+  padding: rem(23) rem(16) rem(25);
+  line-height: 1.4;
   border: 1px solid $ac-color;
   opacity: 0;
   transform: translateY(-0.5em);

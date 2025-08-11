@@ -9,7 +9,7 @@
 }
 
 .price-table__heading {
-  padding: rem(8) 0;
+  padding: rem(7) 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -38,17 +38,21 @@
   border: 1px solid $ac-color;
 }
 
+.price-table__body tr:first-child{
+  min-height: rem(64);
+}
+
 .price-table__body tr{
   position: relative;
-  padding: rem(8) 0;
-  min-height: rem(64);
+  padding: rem(3) 0;
+  min-height: rem(58);
   display: grid;
   align-items: center;
   grid-template-columns: 240fr 106fr;
   @include mq("md"){
-    padding: rem(18) 0;
-    min-height: rem(60);
-    grid-template-columns: rem(340) auto;
+    padding: rem(15) 0;
+    min-height: rem(59);
+    grid-template-columns: rem(337) auto;
   }
 }
 
@@ -65,7 +69,7 @@
   width: 1px;
   background-color: $ac-color;
   @include mq("md"){
-    left: rem(340);
+    left: rem(337);
   }
 }
 
@@ -73,13 +77,13 @@
   text-align: center;
   @include mq("md"){
     text-align-last: left;
-    padding-left: rem(16);
+    padding-left: rem(14);
   }
 }
 
 
 .price-table__body td{
-  padding-right: rem(16);
+  padding-right: rem(15);
   text-align: right;
 }
 
