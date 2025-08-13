@@ -2,16 +2,16 @@
 
 .page-site-map__main {
   position: relative;
-  margin-top: rem(52);
+  margin-top: rem(39);
   @include mq("md"){
-    margin-top: rem(150);
+    margin-top: rem(137);
   }
 }
 
 .page-site-map__main::before {
   content: "";
   position: absolute;
-  top: rem(-19.5);
+  top: rem(-12.5);
   left: rem(15);
   width: rem(120);
   height: rem(55);
@@ -24,5 +24,9 @@
   }
 }
 
-
-
+.page-site-map__contact{
+  margin-top: rem(92);
+  @include mq("md"){
+    margin-top: rem(128);
+  }
+}

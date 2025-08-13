@@ -121,3 +121,16 @@
 .nav--site-map .nav__items .nav__item--multiline::before {
   background-image: url(../images/pages/site-map_1.png);
 }
+
+.nav--site-map .nav__left{
+  width: 57%;
+  @include mq("md"){
+    width:60%;
+  }
+}
+
+.nav--site-map .nav__right .nav__block:first-child {
+  @include mq(md) {
+    width: 82%;
+  }
+}

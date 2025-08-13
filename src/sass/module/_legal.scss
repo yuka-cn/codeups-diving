@@ -11,19 +11,24 @@
 }
 
 .legal__lead,
+.legal__text{
+  margin-top: rem(42);
+  line-height: 2;
+  @include mq("md"){
+  margin-top: rem(46);
+  }
+}
+
 .legal__body,
 .legal__text,
 .legal__footer{
-  margin-top: rem(44);
+  margin-top: rem(32);
   line-height: 2;
-  @include mq("md"){
-    margin-top: rem(46);
-  }
 }
 
 .legal__text.legal__text--numbered {
   margin-top: 0;
-  padding-left: 1em;
+  padding-left: rem(23);
   text-indent: -1em;
 }
 
