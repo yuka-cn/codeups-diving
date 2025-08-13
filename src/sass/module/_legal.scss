@@ -10,12 +10,11 @@
   }
 }
 
-.legal__lead,
-.legal__text{
+.legal__lead{
   margin-top: rem(42);
   line-height: 2;
   @include mq("md"){
-  margin-top: rem(46);
+  margin-top: rem(43);
   }
 }
 
@@ -28,8 +27,8 @@
 
 .legal__text.legal__text--numbered {
   margin-top: 0;
-  padding-left: rem(23);
-  text-indent: -1em;
+  padding-left: rem(24);
+  text-indent: rem(-17);
 }
 
 .legal__text.legal__text--tight{
@@ -37,9 +36,6 @@
 }
 
 .legal__text--numbered.legal__text--spaced{
-  margin-top: rem(44);
+  margin-top: rem(32);
   line-height: 2;
-  @include mq("md"){
-    margin-top: rem(46);
-  }
 }
