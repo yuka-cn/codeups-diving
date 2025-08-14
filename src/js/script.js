@@ -297,10 +297,10 @@ jQuery(function ($) {
 
     if (hasError) {
       // エラーページへ
-      window.location.href = "codeups-diving/page-contact-error.html";
+      window.location.href = "page-contact-error.html";
     } else {
       // 完了ページへ
-      window.location.href = "codeups-diving/page-contact-thanks.html";
+      window.location.href = "page-contact-thanks.html";
     }
   });
 
