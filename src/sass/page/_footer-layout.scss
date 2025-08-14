@@ -14,3 +14,10 @@
   margin-top: rem(132);
   }
 }
+
+.footer-layout--404{
+  margin-top: rem(-1);
+  @include mq("md"){
+    margin-top: rem(-1);
+  }
+}

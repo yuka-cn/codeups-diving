@@ -35,6 +35,8 @@
 
 .not-found__breadcrumb {
   margin-top: rem(8);
+  position: relative;
+  z-index: 1;
 }
 
 .not-found__main{
