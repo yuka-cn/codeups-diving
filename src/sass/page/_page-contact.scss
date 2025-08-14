@@ -2,7 +2,7 @@
 
 .page-contact__main {
   position: relative;
-  margin-top: rem(50);
+  margin-top: rem(54);
   @include mq("md"){
     margin-top: rem(150);
   }
@@ -11,7 +11,7 @@
 .page-contact__main::before {
   content: "";
   position: absolute;
-  top: rem(-23);
+  top: rem(-27);
   left: rem(15);
   width: rem(120);
   height: rem(55);
@@ -33,24 +33,24 @@
 }
 
 .page-contact__error{
-  display: none;
   font-size: rem(14);
   max-width: 16em;
   margin: 0 auto;
-  padding-bottom: rem(46);
+  padding-bottom: rem(52);
   padding-left: 1em;
   text-indent: -1em;
+  line-height: 1;
   color: #C94800;
   @include mq("md"){
     max-width: none;
-    padding-bottom: rem(43);
+    padding-bottom: rem(47);
     padding-left: 0;
     text-align: center;
   }
 }
 
 .page-contact__error br,
-.page-contact__thanks br{
+.page-contact__thanks-body br{
   @include mq("md"){
   display: none;
   }
@@ -63,12 +63,17 @@
   }
 }
 
-.page-contact__thanks{
-  display: none;
+.page-contact__thanks-title{
   text-align: center;
-  line-height: 1.2;
+  line-height: 1;
 }
 
-.page-contact__thanks p:nth-of-type(2){
-  margin-top: rem(40);
+.page-contact__thanks-body{
+  margin-top: rem(39);
+  text-align: center;
+  line-height: 1.45;
+  @include mq("md"){
+    margin-top: rem(40);
+    line-height: 1.2;
+  }
 }

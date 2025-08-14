@@ -6,7 +6,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="robots" content="noindex">
     <!-- meta情報 -->
-    <title>沖縄のダイビングショップCodeUps｜404 Not Found</title>
+    <title>沖縄のダイビングショップCodeUps｜お問い合わせ</title>
     <meta name="description" content="沖縄のダイビングならCodeUps！初心者向け体験ダイビングや上級者向けツアー、ライセンス取得も対応。">
     <meta name="keywords" content="ダイビング,沖縄,体験ダイビング, ダイビングツアー, ダイビングライセンス,初心者,上級者">
     <meta name="author" content="CodeUps">
@@ -31,7 +31,7 @@
     <!-- JavaScript -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
     <script src="assets/js/jquery.inview.min.js"></script>
     <script defer src="./assets/js/script.js"></script>
   </head>
@@ -160,32 +160,107 @@
     </header>
     
     <main>
-      <section class="not-found">
-        <nav class="not-found__breadcrumb breadcrumb" aria-label="パンくずリスト">
-          <div class="breadcrumb__inner inner">
-            <ol class="breadcrumb__list">
-              <li class="breadcrumb__item"><a href="/">TOP</a></li>
-              <li class="breadcrumb__item" aria-current="page">404</li>
-            </ol>
+      <section class="page-contact">
+        <!-- ページタイトル -->
+        <div class="page-contact__header page-header">
+          <h1 class="page-header__title">Contact</h1>
+          <div class="page-header__image">
+            <picture>
+              <source srcset="./assets/images/pages/contact-fv-sp.jpg" media="(max-width: 767px)">
+              <source srcset="./assets/images/pages/contact-fv-pc.jpg" media="(min-width: 768px)">
+              <img src="./assets/images/pages/contact-fv-sp.jpg" alt="">
+            </picture>
           </div>
-        </nav>
-        <div class="not-found__main">
-          <div class="not-found__code">404</div>
-          <h1 class="not-found__text">
-            申し訳ありません。<br>お探しのページが見つかりません。
-          </h1>
-          <div class="not-found__button">
-            <a href="/" class="button button--404">
-              Page TOP
-              <span></span>
-            </a>
+          <!-- パンくずリスト -->
+          <nav class="page-header__breadcrumb breadcrumb" aria-label="パンくずリスト">
+            <div class="breadcrumb__inner inner">
+              <ol class="breadcrumb__list">
+                <li class="breadcrumb__item"><a href="/">TOP</a></li>
+                <li class="breadcrumb__item"><a href="page-contact.html">お問い合わせ</a></li>
+                <li class="breadcrumb__item" aria-current="page">お問い合わせエラー</li>
+              </ol>
+            </div>
+          </nav>
+        </div>
+        
+        <!-- ページコンテンツ -->
+        <div class="page-contact__main">
+          <div class="page-contact__inner inner">
+            <!-- エラーメッセージ -->
+            <div class="page-contact__error">
+              ※必須項目が入力されていません。<br>入力してください。
+            </div>
+
+            <!-- お問い合わせフォーム -->
+            <form class="page-contact__body form" action="#" method="post" id="contactForm" novalidate>
+              <div class="form__row  form__row--error">
+                <label class="form__label" for="name">お名前<span>必須</span></label>
+                <input class="form__input" type="text" id="name" name="name" placeholder="沖縄　太郎" required>
+              </div>
+          
+              <div class="form__row">
+                <label class="form__label" for="email">メールアドレス<span>必須</span></label>
+                <input class="form__input" type="email" id="email" name="email" placeholder="aaa000@ggmail.com" required>
+              </div>
+          
+              <div class="form__row">
+                <label class="form__label" for="tel">電話番号<span>必須</span></label>
+                <input class="form__input" type="tel" id="tel" name="tel" placeholder="000-0000-0000" required>
+              </div>
+          
+              <div class="form__row">
+                <div class="form__label">お問合せ項目<span>必須</span></div>
+                <div class="form__checkbox">
+                  <label><input type="checkbox" name="inquiry[]" value="ダイビング講習" required>ダイビング講習について</label>
+                  <label><input type="checkbox" name="inquiry[]" value="ファンダイビング">ファンダイビングについて</label>
+                  <label><input type="checkbox" name="inquiry[]" value="体験ダイビング">体験ダイビングについて</label>
+                </div>
+              </div>
+          
+              <div class="form__row">
+                <label class="form__label" for="campaign">キャンペーン</label>
+                <div class="form__input-wrapper">
+                  <select class="form__input form__input--select" id="campaign" name="campaign">
+                    <option value="">キャンペーン内容を選択</option>
+                    <option value="A">ライセンス取得</option>
+                    <option value="B">貸切体験ダイビング</option>
+                    <option value="C">ナイトダイビング</option>
+                    <option value="D">貸切ファンダイビング</option>
+                  </select>
+                </div>
+              </div>
+          
+              <div class="form__row">
+                <label class="form__label" for="message">お問合せ内容<span>必須</span></label>
+                <textarea class="form__input form__input--textarea" id="message" name="message" rows="8" required></textarea>
+              </div>
+          
+              <div class="form__agreement">
+                <label><input type="checkbox" name="privacy" required>個人情報の取り扱いについて同意のうえ<br>送信します。</label>
+              </div>
+          
+              <div class="form__button">
+                <button type="submit" class="button">Send<span></span></button>
+              </div>
+            </form>
           </div>
         </div>
       </section>
     </main>
 
+    <!-- topへ戻るボタン -->
+    <div class="to-top">
+      <a href="#top">
+        <picture>
+          <source media="(max-width: 767px)" srcset="./assets/images/common/to-top-sp.png">
+          <source media="(min-width: 768px)" srcset="./assets/images/common/to-top-pc.png">
+          <img src="./assets/images/common/to-top-sp.png" alt="topへ戻る">
+        </picture>
+      </a>
+    </div>
+    
     <!-- フッター -->
-    <footer class="footer">
+    <footer class="footer footer-layout footer-layout--contact">
       <div class="footer__inner inner">
         <div class="footer__header">
           <div class="footer__logo">

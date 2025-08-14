@@ -281,100 +281,35 @@ jQuery(function ($) {
     });
   });
 
-  //contactフォーム
+//contactフォーム
   const form = document.getElementById("contactForm");
   if (!form) return;
 
-  let errorShown = false; // エラーを表示したかどうか
-
-  form.addEventListener("submit", function (e) {
+  form.addEventListener("submit", function(e) {
     e.preventDefault();
     let hasError = false;
-    errorShown = true;
 
-    // 全てのエラークラスを外す
-    form.querySelectorAll(".form__row--error, .form__agreement--error")
-        .forEach(el => el.classList.remove("form__row--error", "form__agreement--error"));
-
-    // 必須項目のエラー要素を格納する配列
-    const errorElements = [];
-
-    // 必須項目チェック
-    form.querySelectorAll("[required]").forEach(input => {
-      if (!checkInput(input)) {
-        hasError = true;
-        addErrorClass(input);
-        errorElements.push(input);
-      }
-    });
+  form.querySelectorAll("[required]").forEach(input => {
+    if (!checkInput(input)) {
+      hasError = true;
+    }
+  });
 
     if (hasError) {
-      e.preventDefault();
-      if (errorElements.length > 0) {
-      // 最初のエラー項目にスクロール
-      errorElements[0].scrollIntoView({ behavior: 'smooth', block: 'center' });
-      errorElements[0].focus();
-      }
+      // エラーページへ
+      window.location.href = "/page-contact-error.html";
     } else {
-    form.style.display = 'none';
-    const thanks = document.querySelector('.page-contact__thanks');
-    if (thanks) {
-      thanks.style.display = 'block';
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      // 完了ページへ
+      window.location.href = "/page-contact-thanks.html";
     }
-  }
   });
 
-  // 送信後に入力があったらエラー解除
-  form.querySelectorAll("[required]").forEach(input => {
-    input.addEventListener("input", () => {
-      if (errorShown && checkInput(input)) {
-        removeErrorClass(input);
-      }
-    });
-    input.addEventListener("change", () => {
-      if (errorShown && checkInput(input)) {
-        removeErrorClass(input);
-      }
-    });
-  });
-
-  // 入力値があるか判定
+  // 必須項目チェック
   function checkInput(input) {
     if (input.type === "checkbox" || input.type === "radio") {
-      const group = form.querySelectorAll(`[name="${input.name}"]`);
+      const group = document.querySelectorAll(`[name="${input.name}"]`);
       return Array.from(group).some(i => i.checked);
     }
     return input.value.trim() !== "";
   }
-
-  //エラー時の処理
-  function addErrorClass(input) {
-    const row = input.closest(".form__row");
-    const agreement = input.closest(".form__agreement");
-    const errorMessage = document.querySelector('.page-contact__error');
-    
-    if (row) row.classList.add("form__row--error");
-    if (agreement) agreement.classList.add("form__agreement--error");
-    
-    if (errorMessage) {
-      errorMessage.style.display = 'block';
-    }
-  }
-  
-  //エラー解除時の処理
-  function removeErrorClass(input) {
-    const row = input.closest(".form__row");
-    const agreement = input.closest(".form__agreement");
-    const errorMessage = document.querySelector('.page-contact__error');
-
-    if (row) row.classList.remove("form__row--error");
-    if (agreement) agreement.classList.remove("form__agreement--error");
-
-    const hasErrors = document.querySelector('.form__row--error, .form__agreement--error');
-    if (!hasErrors && errorMessage) {
-      errorMessage.style.display = 'none';  // エラーメッセージ非表示
-    }
-  }
-
 });

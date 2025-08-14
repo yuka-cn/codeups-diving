@@ -7,3 +7,10 @@
     margin-top: rem(160);
   }
 }
+
+.footer-layout--contact{
+  margin-top: rem(145);
+  @include mq("md"){
+  margin-top: rem(132);
+  }
+}

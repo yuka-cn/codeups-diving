@@ -6,7 +6,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="robots" content="noindex">
     <!-- meta情報 -->
-    <title>沖縄のダイビングショップCodeUps｜404 Not Found</title>
+    <title>沖縄のダイビングショップCodeUps｜お問い合わせ</title>
     <meta name="description" content="沖縄のダイビングならCodeUps！初心者向け体験ダイビングや上級者向けツアー、ライセンス取得も対応。">
     <meta name="keywords" content="ダイビング,沖縄,体験ダイビング, ダイビングツアー, ダイビングライセンス,初心者,上級者">
     <meta name="author" content="CodeUps">
@@ -31,7 +31,7 @@
     <!-- JavaScript -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
     <script src="assets/js/jquery.inview.min.js"></script>
     <script defer src="./assets/js/script.js"></script>
   </head>
@@ -160,32 +160,59 @@
     </header>
     
     <main>
-      <section class="not-found">
-        <nav class="not-found__breadcrumb breadcrumb" aria-label="パンくずリスト">
-          <div class="breadcrumb__inner inner">
-            <ol class="breadcrumb__list">
-              <li class="breadcrumb__item"><a href="/">TOP</a></li>
-              <li class="breadcrumb__item" aria-current="page">404</li>
-            </ol>
+      <section class="page-contact">
+        <!-- ページタイトル -->
+        <div class="page-contact__header page-header">
+          <h1 class="page-header__title">Contact</h1>
+          <div class="page-header__image">
+            <picture>
+              <source srcset="./assets/images/pages/contact-fv-sp.jpg" media="(max-width: 767px)">
+              <source srcset="./assets/images/pages/contact-fv-pc.jpg" media="(min-width: 768px)">
+              <img src="./assets/images/pages/contact-fv-sp.jpg" alt="">
+            </picture>
           </div>
-        </nav>
-        <div class="not-found__main">
-          <div class="not-found__code">404</div>
-          <h1 class="not-found__text">
-            申し訳ありません。<br>お探しのページが見つかりません。
-          </h1>
-          <div class="not-found__button">
-            <a href="/" class="button button--404">
-              Page TOP
-              <span></span>
-            </a>
+          <!-- パンくずリスト -->
+          <nav class="page-header__breadcrumb breadcrumb" aria-label="パンくずリスト">
+            <div class="breadcrumb__inner inner">
+              <ol class="breadcrumb__list">
+                <li class="breadcrumb__item"><a href="/">TOP</a></li>
+                <li class="breadcrumb__item"><a href="page-contact.html">お問い合わせ</a></li>
+                <li class="breadcrumb__item" aria-current="page">送信完了</li>
+              </ol>
+            </div>
+          </nav>
+        </div>
+        
+        <!-- ページコンテンツ -->
+        <div class="page-contact__main">
+          <div class="page-contact__inner inner">
+            <!-- 送信完了メッセージ -->
+            <p class="page-contact__thanks-title">
+              お問い合わせ内容を送信完了しました。
+            </p>
+            <div class="page-contact__thanks-body">
+              <p>このたびは、お問い合わせ頂き<br>誠にありがとうございます。</p>
+              <p>お送り頂きました内容を確認の上、<br>3営業日以内に折り返しご連絡させて頂きます。</p>
+              <p>また、ご記入頂いたメールアドレスへ、<br>自動返信の確認メールをお送りしております。</p>
+            </div>
           </div>
         </div>
       </section>
     </main>
 
+    <!-- topへ戻るボタン -->
+    <div class="to-top">
+      <a href="#top">
+        <picture>
+          <source media="(max-width: 767px)" srcset="./assets/images/common/to-top-sp.png">
+          <source media="(min-width: 768px)" srcset="./assets/images/common/to-top-pc.png">
+          <img src="./assets/images/common/to-top-sp.png" alt="topへ戻る">
+        </picture>
+      </a>
+    </div>
+    
     <!-- フッター -->
-    <footer class="footer">
+    <footer class="footer footer-layout footer-layout--contact">
       <div class="footer__inner inner">
         <div class="footer__header">
           <div class="footer__logo">

@@ -51,17 +51,17 @@
   letter-spacing: 0.5em;
   text-indent: 0.5em;
   @include mq("md"){
-    margin-top: rem(119);
+    margin-top: rem(134);
     font-size: rem(160);
   }
 }
 
 .not-found__text {
-  margin-top: rem(4);
+  margin-top: rem(3);
   font-size: rem(16);
   font-weight: $regular;
   @include mq("md"){
-    margin-top: rem(24);
+    margin-top: rem(40);
   }
 }
 
@@ -72,3 +72,6 @@
   }
 }
 
+.not-found__button .button{
+  gap: rem(17);
+}

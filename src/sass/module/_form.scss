@@ -2,9 +2,9 @@
 
 .form__row {
   position: relative;
-  padding: rem(23) 0;
+  padding: rem(25) 0;
   display: grid;
-  gap: rem(16);
+  gap: rem(20);
   grid-template-columns: repeat(1, 1fr);
   border-bottom: 1px dotted $ac-color;
   @include mq("md") {
@@ -19,13 +19,12 @@
 
 .form__label {
   font-weight: $bold;
+  line-height: 1;
 }
 
 .form__label span{
   margin-left: rem(8);
   padding: rem(2) rem(11) rem(2) rem(16);
-  position: relative;
-  top: rem(-1);
   font-size: rem(12);
   font-weight: $regular;
   letter-spacing: 0.4em;
@@ -66,9 +65,9 @@
   transform: translateY(-50%);
   width: 0;
   height: 0;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-top: 10px solid $ac-color;
+  border-left: rem(5) solid transparent;
+  border-right: rem(5) solid transparent;
+  border-top: rem(10) solid $ac-color;
   pointer-events: none;
   opacity: 1;
   transition: opacity 0.2s;
@@ -86,15 +85,20 @@
   gap: rem(8);
 }
 
-.form__agreement label{
+.form__agreement{
   margin-top: rem(40);
+  @include mq("md"){
+    margin-top: rem(80);
+  }
+}
+
+.form__agreement label{
   display: flex;
   align-items: flex-start;
   justify-content: center;
   gap: rem(8);
   font-size: rem(14);
   @include mq("md"){
-    margin-top: rem(80);
     gap: rem(16);
   }
 }
@@ -121,6 +125,7 @@
 .form__agreement input[type="checkbox"] {
   width: rem(20);
   height: rem(20);
+  transform: translateY(rem(-2));
 }
 
 .form__checkbox input[type="checkbox"]:checked::after,
@@ -145,11 +150,17 @@
 }
 
 .form__button {
-  margin-top: rem(26);
+  margin-top: rem(24);
   text-align: center;
   @include mq("md"){
-    margin-top: rem(40);
+    margin-top: rem(39);
+    padding-bottom: rem(28);
   }
+}
+
+.form__button .button{
+  gap: rem(18);
+  padding: rem(20) rem(55);
 }
 
 .form__row--error .form__input{
