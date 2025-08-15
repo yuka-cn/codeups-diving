@@ -3,9 +3,9 @@ jQuery(function ($) {
 
 // ローディングアニメーション終了後に全セクションを表示する
   if (window.matchMedia("(max-width: 767px)").matches) {
-  window.addEventListener("load", function () {
-    mvSwiper();
-  });
+    window.addEventListener("load", function () {
+      mvSwiper();
+    });
   } else {
     const loadingEl = document.querySelector(".loading");
     if (loadingEl) {
@@ -24,7 +24,7 @@ jQuery(function ($) {
     }
   }
 
-//メインビューのスライダー
+  // メインビューのスライダー
   function mvSwiper() {
     new Swiper(".js-mvSwiper", {
       effect: "fade",
