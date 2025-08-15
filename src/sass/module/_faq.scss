@@ -8,12 +8,12 @@
   position: relative;
   cursor: pointer;
   list-style: none;
-  padding: rem(16);
+  padding: rem(16) rem(52) rem(16) rem(16);
   color: $white;
   background: $ac-color;
   @include mq("md"){
     font-size: rem(20);
-    padding: rem(24.5) rem(40);
+    padding: rem(24.5) rem(92) rem(24.5) rem(40);
   }
 }
 

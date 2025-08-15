@@ -171,7 +171,7 @@
 }
 
 .campaign-card--page-campaign.is-active{
-  display: block;
+  display: flex;
 }
 
 .campaign-card--page-campaign .campaign-card__image::before{
@@ -192,6 +192,7 @@
     padding-bottom: rem(7);
     font-size: rem(24);
     font-weight: $medium;
+    flex-grow: 0;
   }
 }
 
@@ -213,6 +214,7 @@
 .campaign-card--page-campaign .campaign-card__text{
   @include mq(md) {
     margin-top: rem(14);
+    flex-grow: 1;
   }
 }
 
